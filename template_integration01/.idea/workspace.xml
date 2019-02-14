@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e13a67a0-a263-4fae-bdb3-93cc467c996e" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" executionDataType="PHAR" phpInterpreterId="d393060a-d232-4be6-9761-c969886a9906" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <pharPath>$PROJECT_DIR$/composer.phar</pharPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-665792104">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.527" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.composer.actions">
+        <counts>
+          <entry key="create-project_from_ComposerProjectGenerator" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.composer.command.options">
+        <counts>
+          <entry key="create-project_with_--ansi_--no-interaction_--no-progress.default" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="jpg" value="1" />
+          <entry key="json" value="1" />
+          <entry key="php" value="11" />
+          <entry key="twig" value="139" />
+          <entry key="yml" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="1" />
+          <entry key="JSON" value="1" />
+          <entry key="PHP" value="11" />
+          <entry key="Twig" value="139" />
+          <entry key="YAML" value="7" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="json" value="5" />
+          <entry key="php" value="72" />
+          <entry key="twig" value="726" />
+          <entry key="txt" value="29" />
+          <entry key="yml" value="44" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JSON" value="5" />
+          <entry key="PHP" value="72" />
+          <entry key="PLAIN_TEXT" value="29" />
+          <entry key="Twig" value="726" />
+          <entry key="YAML" value="44" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.your.proposals.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+              <folding>
+                <element signature="e#12#36#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/config/routing.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="178" column="62" selection-start-line="178" selection-start-column="62" selection-end-line="178" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Controller/WorkroomController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="92" column="20" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+              <folding>
+                <element signature="e#222#261#0#PHP" expanded="true" />
+                <element signature="e#381#421#0#PHP" expanded="true" />
+                <element signature="e#536#571#0#PHP" expanded="true" />
+                <element signature="e#691#731#0#PHP" expanded="true" />
+                <element signature="e#846#881#0#PHP" expanded="true" />
+                <element signature="e#996#1031#0#PHP" expanded="true" />
+                <element signature="e#1145#1179#0#PHP" expanded="true" />
+                <element signature="e#1297#1335#0#PHP" expanded="true" />
+                <element signature="e#1450#1485#0#PHP" expanded="true" />
+                <element signature="e#1604#1643#0#PHP" expanded="true" />
+                <element signature="e#1766#1809#0#PHP" expanded="true" />
+                <element signature="e#1935#1981#0#PHP" expanded="true" />
+                <element signature="e#2105#2149#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/view_Proposal.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+              <folding>
+                <element signature="e#12#45#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>d__company__list</find>
+      <find>d__featured__companies</find>
+      <find>add_Job</find>
+    </findStrings>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="c dump-autoload" />
+      <command text="s generate:bundle" />
+      <command text="s generate:controller" />
+    </commandsHistory>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Controller/NavigationController.php" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/hire.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/login.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/home.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Controller/DashboardController.php" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.feature.your.company.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.contract.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.add.job.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.jobs.posted.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.offers.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/add.job.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d-others.proposals.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.add.company.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.messages.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.deposits.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.withdrawls.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.payment.method.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.membership.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.featured.job.list.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.feature.a.job.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.featured.profiles.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.feature.your.profile.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.company.list.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.featured.companies.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.profile.image.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.password.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/profile.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/edit.profile.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/job.post.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/send.message.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/link.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/file.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/bug.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/dashboard.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/dashboard_Workroom_Base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/dashboard_Base.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/workroom.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/timesheat.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/task.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/rate.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/rate.freelancer.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/payment.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/milestone.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/work.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/pricing.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/how.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Controller/WorkroomController.php" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.your.proposals.html.twig" />
+        <option value="$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/view_Proposal.html.twig" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/sensio/generator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/sensio/distribution-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/sensiolabs/security-checker" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/link" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/vendor/symfony/symfony" />
+      <path value="$PROJECT_DIR$/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/swiftmailer-bundle" />
+      <path value="$PROJECT_DIR$/vendor/fig/link-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="400" />
+    <option name="y" value="24" />
+    <option name="width" value="821" />
+    <option name="height" value="530" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="template_integration01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="template_integration01" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="template_integration01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="template_integration01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="template_integration01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="template_integration01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TemplateBundle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="template_integration01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="template_integration01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TemplateBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="template_integration01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="template_integration01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TemplateBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="template_integration01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="template_integration01" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TemplateBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Symfony2.SettingsForm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\template_integration01\app\Resources\views" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e13a67a0-a263-4fae-bdb3-93cc467c996e" name="Default Changelist" comment="" />
+      <created>1550056205940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1550056205940</updated>
+      <workItem from="1550056207528" duration="19271000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="19271000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Command Line Tools Console" visible="true" weight="0.32923076" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#95#8724#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.feature.your.company.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.contract.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.jobs.posted.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="70" column="42" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Controller/NavigationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+          <folding>
+            <element signature="e#220#257#0#PHP" expanded="true" />
+            <element signature="e#372#409#0#PHP" expanded="true" />
+            <element signature="e#524#561#0#PHP" expanded="true" />
+            <element signature="e#679#719#0#PHP" expanded="true" />
+            <element signature="e#833#869#0#PHP" expanded="true" />
+            <element signature="e#985#1023#0#PHP" expanded="true" />
+            <element signature="e#1143#1185#0#PHP" expanded="true" />
+            <element signature="e#1303#1343#0#PHP" expanded="true" />
+            <element signature="e#1466#1511#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.offers.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d-others.proposals.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="88" column="29" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="92" column="42" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Controller/DashboardController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#225#267#0#PHP" expanded="true" />
+            <element signature="e#391#436#0#PHP" expanded="true" />
+            <element signature="e#556#578#0#PHP" expanded="true" />
+            <element signature="e#724#772#0#PHP" expanded="true" />
+            <element signature="e#901#951#0#PHP" expanded="true" />
+            <element signature="e#1070#1110#0#PHP" expanded="true" />
+            <element signature="e#1235#1281#0#PHP" expanded="true" />
+            <element signature="e#1405#1450#0#PHP" expanded="true" />
+            <element signature="e#1571#1613#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.add.company.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="e#2085#2093#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.payment.method.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.membership.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="67" column="29" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.featured.job.list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="88" column="32" selection-start-line="88" selection-start-column="32" selection-end-line="88" selection-end-column="32" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.feature.a.job.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.featured.profiles.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="100" column="29" selection-start-line="100" selection-start-column="29" selection-end-line="100" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.feature.your.profile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.company.list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.withdrawls.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.deposits.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.messages.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.featured.companies.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.password.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.profile.image.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/profile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="471" selection-start-line="471" selection-end-line="471" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/edit.profile.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.achanger.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="5" selection-start-line="5" selection-end-line="109" selection-end-column="28" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/add.job.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="18" lean-forward="true" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/job.post.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/link.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="e#314#322#0#Twig" expanded="true" />
+            <element signature="e#399#408#0#Twig" expanded="true" />
+            <element signature="e#473#477#0#Twig" expanded="true" />
+            <element signature="e#537#546#0#Twig" expanded="true" />
+            <element signature="e#611#615#0#Twig" expanded="true" />
+            <element signature="e#675#679#0#Twig" expanded="true" />
+            <element signature="e#739#742#0#Twig" expanded="true" />
+            <element signature="e#801#808#0#Twig" expanded="true" />
+            <element signature="e#871#887#0#Twig" expanded="true" />
+            <element signature="e#4694#4701#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/file.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="17" column="89" selection-start-line="17" selection-start-column="89" selection-end-line="17" selection-end-column="89" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="e#314#322#0#Twig" expanded="true" />
+            <element signature="e#399#408#0#Twig" expanded="true" />
+            <element signature="e#473#477#0#Twig" expanded="true" />
+            <element signature="e#537#546#0#Twig" expanded="true" />
+            <element signature="e#611#615#0#Twig" expanded="true" />
+            <element signature="e#675#679#0#Twig" expanded="true" />
+            <element signature="e#739#742#0#Twig" expanded="true" />
+            <element signature="e#801#808#0#Twig" expanded="true" />
+            <element signature="e#871#887#0#Twig" expanded="true" />
+            <element signature="e#6267#6274#1#HTML" expanded="true" />
+            <element signature="e#7202#7210#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/bug.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-326">
+          <caret line="127" column="3" selection-start-line="127" selection-start-column="3" selection-end-line="127" selection-end-column="3" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="e#314#322#0#Twig" expanded="true" />
+            <element signature="e#399#408#0#Twig" expanded="true" />
+            <element signature="e#473#477#0#Twig" expanded="true" />
+            <element signature="e#537#546#0#Twig" expanded="true" />
+            <element signature="e#611#615#0#Twig" expanded="true" />
+            <element signature="e#675#679#0#Twig" expanded="true" />
+            <element signature="e#739#742#0#Twig" expanded="true" />
+            <element signature="e#801#808#0#Twig" expanded="true" />
+            <element signature="e#871#887#0#Twig" expanded="true" />
+            <element signature="e#2180#2188#0#Twig" expanded="true" />
+            <element signature="e#3304#3312#0#Twig" expanded="true" />
+            <element signature="e#4441#4449#0#Twig" expanded="true" />
+            <element signature="e#5568#5576#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-start-column="2" selection-end-line="4" selection-end-column="16" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+            <element signature="e#110#6284#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard_Workroom_Base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="284" selection-start-line="284" selection-end-line="284" />
+          <folding>
+            <element signature="e#0#2276#0#Twig" />
+            <element signature="e#2278#5722#0#Twig" />
+            <element signature="e#5724#10961#0#Twig" />
+            <element signature="e#11130#11138#0#Twig" expanded="true" />
+            <element signature="e#11215#11224#0#Twig" expanded="true" />
+            <element signature="e#11289#11293#0#Twig" expanded="true" />
+            <element signature="e#11353#11362#0#Twig" expanded="true" />
+            <element signature="e#11427#11431#0#Twig" expanded="true" />
+            <element signature="e#11491#11495#0#Twig" expanded="true" />
+            <element signature="e#11555#11558#0#Twig" expanded="true" />
+            <element signature="e#11617#11624#0#Twig" expanded="true" />
+            <element signature="e#11687#11703#0#Twig" expanded="true" />
+            <element signature="e#11910#13720#0#Twig" />
+            <element signature="e#13722#15745#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/work.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="359" selection-start-line="359" selection-end-line="359" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/milestone.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="140" column="8" selection-start-line="140" selection-start-column="8" selection-end-line="140" selection-end-column="8" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/payment.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/rate.freelancer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/rate.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/send.message.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/task.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="207" selection-start-line="207" selection-end-line="207" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/timesheat.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/workroom.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="155" selection-start-line="155" selection-end-line="155" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/dashboard_Base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="269" column="14" selection-start-line="269" selection-start-column="14" selection-end-line="269" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#2276#0#Twig" />
+            <element signature="e#2278#5722#0#Twig" />
+            <element signature="e#5724#10961#0#Twig" />
+            <element signature="e#11005#12815#0#Twig" />
+            <element signature="e#12817#14840#0#Twig" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/pricing.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Navigation/how.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="178" column="62" selection-start-line="178" selection-start-column="62" selection-end-line="178" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Controller/WorkroomController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="92" column="20" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+          <folding>
+            <element signature="e#222#261#0#PHP" expanded="true" />
+            <element signature="e#381#421#0#PHP" expanded="true" />
+            <element signature="e#536#571#0#PHP" expanded="true" />
+            <element signature="e#691#731#0#PHP" expanded="true" />
+            <element signature="e#846#881#0#PHP" expanded="true" />
+            <element signature="e#996#1031#0#PHP" expanded="true" />
+            <element signature="e#1145#1179#0#PHP" expanded="true" />
+            <element signature="e#1297#1335#0#PHP" expanded="true" />
+            <element signature="e#1450#1485#0#PHP" expanded="true" />
+            <element signature="e#1604#1643#0#PHP" expanded="true" />
+            <element signature="e#1766#1809#0#PHP" expanded="true" />
+            <element signature="e#1935#1981#0#PHP" expanded="true" />
+            <element signature="e#2105#2149#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Dashboard/d.your.proposals.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="46" column="41" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+          <folding>
+            <element signature="e#12#36#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TemplateBundle/Resources/views/Workroom/view_Proposal.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
+          <folding>
+            <element signature="e#12#45#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

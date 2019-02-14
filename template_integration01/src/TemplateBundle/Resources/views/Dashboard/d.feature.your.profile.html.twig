@@ -1,0 +1,54 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Feature_Your_Profile{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="work-box">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+
+                    <div class="col-lg-12 middle-sec" style="padding-top: 10px; padding-bottom:5px;">
+                        <div class="col-lg-12">
+                            <img src="assets/img/users/2.jpg" class="img-circle img-thumbnail" alt="Image"/>
+                            <h3><a href="">Alex Grantte</a></h3>
+                            <h4><span class="label label-mint">Your Profile</span></h4>
+                        </div><!-- .col-lg-3 -->
+                    </div>
+
+                </div><!-- .col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- .work-box -->
+
+        <div class="job-box">
+            <div class="job-header">
+                <h4>Feature your Profile</h4>
+            </div>
+            <form method="post" id="addform">
+
+                <div class="form-group">
+                    <label>Days for the ad to run.</label>
+                    <p>
+                        <a href="" class="unselected">5 days</a>
+                        <a href="" class="unselected">10 days</a>
+                        <a href="" class="selected">15 days</a>
+                        <a href="" class="unselected">1 month</a>
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>Budget depending on the days you have choosen.</label>
+                    <p>
+                        <a href="" class="unselected">$15</a>
+                        <a href="" class="unselected">$35</a>
+                        <a href="" class="selected">$60</a>
+                        <a href="" class="unselected">$100</a>
+                    </p>
+                </div>
+
+                <button class="kafe-btn kafe-btn-mint-small full-width">Proceed to Checkout</button>
+            </form>
+        </div><!-- /.job-box -->
+
+    </div><!-- /.col-md-9 -->	{% endblock %}
