@@ -1,0 +1,135 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+      <head>
+
+
+
+          <!-- ==============================================
+          Favicons
+          =============================================== -->
+          <link rel="icon" href="{{ asset('img/logo.jpg') }}">
+          <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.html') }}">
+          <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicons/apple-touch-icon-72x72.html') }}">
+          <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/favicons/apple-touch-icon-114x114.html') }}">
+
+          <!-- ==============================================
+          CSS
+          =============================================== -->
+          <!-- Style-->
+          <link type="text/css" href="{{ asset('css/style.css') }}" rel="stylesheet" />
+          <link type="text/css" href="{{ asset('css/login.css') }}" rel="stylesheet" />
+
+          <!-- ==============================================
+          Feauture Detection
+          =============================================== -->
+          <script src="{{ asset('js/modernizr-custom.html') }}"></script>
+
+          <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+          <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+
+      </head>
+      <body>
+      <header class="header-login top-page">
+    <div class="container">
+        <div class="content">
+            <div class="row">
+                <h1 class="revealOnScroll" data-animation="fadeInDown"> The Kafe</h1>
+            </div><!-- /.row -->
+        </div><!-- /.content -->
+    </div><!-- /.container -->
+</header><!-- /header -->
+
+
+<section class="banner-login">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="main main-signup col-lg-12">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+
+
+                    <div class="form-sign">
+                        <form method="post">
+                            <div class="form-head">
+                                <h3>Login</h3>
+                            </div><!-- /.form-head -->
+                            <div class="margin-space"></div>
+                            <a href="{{ path('template_Register') }}" class="kafe-btn btn-facebook full-width">
+                                <i class="fa fa-facebook pull-left"></i> Sign in with Facebook</a>
+                            <div class="margin-space"></div>
+                            <a href="{{ path('template_Register') }}" class="kafe-btn btn-twitter full-width">
+                                <i class="fa fa-twitter pull-left"></i> Sign in with Twitter</a>
+                            <div class="margin-space"></div>
+                            <a href="{{ path('template_Register') }}" class="kafe-btn btn-google-plus full-width">
+                                <i class="fa fa-google-plus pull-left"></i> Sign in with Google Plus</a>
+                            <div class="margin-space"></div>
+                            <div class="form-body">
+
+                                <div class="form-row">
+                                    <div class="form-controls">
+                                        <input name="email" placeholder="Email" class="field" type="text">
+                                    </div><!-- /.form-controls -->
+                                </div><!-- /.form-row -->
+
+                                <div class="form-row">
+                                    <div class="form-controls">
+                                        <input name="password" placeholder="Password" class="field" type="password">
+                                    </div><!-- /.form-controls -->
+                                </div><!-- /.form-row -->
+
+                                <div class="form-row">
+                                    <div class="material-switch pull-left">
+                                        <input id="someSwitchOptionSuccess" name="remember" type="checkbox"/>
+                                        <label for="someSwitchOptionSuccess" class="label-success"></label>
+                                        <span>Remember Me</span>
+                                    </div>
+                                </div><!-- /.form-row -->
+
+                            </div><!-- /.form-body -->
+
+                            <div class="form-foot">
+                                <div class="form-actions">
+                                    <input type="hidden" name="token" value="<?php echo Token::generate(); ?>" />
+                                    <input value="Login" class="kafe-btn kafe-btn-default full-width" type="submit">
+                                    <div class="margin-space"></div>
+                                    <a href="{{ path('template_Register') }}" class="kafe-btn kafe-btn-danger full-width">Register</a>
+                                </div><!-- /.form-actions -->
+                                <div class="form-head">
+                                    <a href="#" class="more-link">Forgot Password?</a>
+                                </div>
+                            </div><!-- /.form-foot -->
+                        </form>
+
+                    </div><!-- /.form-sign -->
+                </div><!-- /.col-lg-6 -->
+            </div>
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /section -->
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
