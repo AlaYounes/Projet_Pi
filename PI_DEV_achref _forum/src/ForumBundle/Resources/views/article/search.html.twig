@@ -1,0 +1,148 @@
+
+
+{% extends 'base.html.twig' %}
+      {% block header %}
+          {{ parent() }}
+      {% endblock %}
+      {% block container %}
+          {{ parent() }}
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+          <body>
+
+
+
+      <section class="dashboard section-padding">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-sm-4 col-md-3">
+
+
+
+                      <ul class="sidebar-menu" data-widget="tree">
+                          <li>
+                              <a href="{{ path('listegenerral') }}">
+                                  <i class="fa fa-align-left"></i> <span>listegenerral</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="{{ path('mes_article') }}">
+                                  <i class="fa fa-image"></i> <span>mes_question</span>
+                              </a>
+                          </li>
+                          <li>
+                              <div class="col-lg-2">
+                                  <a href="{{ path('add_article') }}" class="kafe-btn kafe-btn-mint-small"><i class="fa fa-user"></i> add question</a>
+                              </div>
+                          </li>
+                      </ul>
+
+                  </div>
+
+                  <div class="col-sm-8 col-md-9">
+
+                      <div class="box">
+                          <div class="box-header">
+                              <h3 class="box-title">Question List</h3>
+                          </div><!-- /.box-header -->
+
+                          <div class="box-body">
+                              <div class="table-responsive">
+                                  <div class="col-md-2">
+                                      <form method="get" action="search">
+                                          <input class="form-control" type="text" placeholder="Search statut..." name="search">
+                                          <input style="margin-top: 5px; margin-left: 80px" type="submit" name="Search" class="btn btn-success" value="Search">
+                                      </form>
+                                  </div>
+
+                                  <table id="example1" class="table table-bordered table-hover">
+                                      <thead>
+
+                                      <tr>
+                                          <th>QUESTION</th>
+
+                                          <th>DATE post</th>
+                                          <th>post by</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      {% for entity in liste  %}
+
+
+
+                                          <tr>
+                                              <td>
+                                                  <img src="{{ asset('img/logo.jpg') }}"
+                                                       class="img-responsive img-circle pull-left" width="50" height="50"
+                                                       alt="Image"/>
+                                                  <a href="{{ path("new",{'id':entity.id } )}}">{{ entity.titre  }}</a>
+                                              </td>
+                                              <td><span class="label label-mint">{{ entity.date|date("m/d/y") }}</span></td>
+                                              <td>
+                                                  {% for entity2 in users %}
+                                                      {% if entity2.id == entity.user.id %}
+                                                          <a href="">{{ entity2.username }}</a>
+                                                      {% endif %}
+                                                  {% endfor %}</td>
+                                              <td>
+                                                  <a href="{{ path('article_like',{'id':entity.id}) }}" class ="btn btn-link js-like">
+                                                      {% if app.user and entity.isLikedByUser(app.user) %}
+
+                                                          <i class="fas fa-thumbs-up"></i>
+                                                      {% else %}
+                                                          <i class="far fa-thumbs-up"></i>
+                                                      {% endif %}
+                                                      <span class="js-likes">{{ entity.likes| length }}</span>
+
+                                                      <span class="hljs-label">like</span>
+                                                  </a>
+                                              </td>
+
+
+                                          </tr>
+
+
+                                      {% endfor %}
+
+
+
+
+
+                                      </tbody>
+                                      <div class="navigation">
+                                          {{ knp_pagination_render(liste) }}
+                                      </div>
+                                  </table>
+                              </div>
+                          </div><!-- /.box-body -->
+                      </div><!-- /.box -->
+
+
+                  </div><!-- /.col-md-9 -->
+              </div><!-- /.row -->
+          </div><!-- /.container -->
+      </section>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script>
+          function onClickBtnLike(event){
+              event.preventDefault();
+              const url = this.href;
+              const spanCount = this.querySelector('span.js-likes');
+              const icone = this.querySelector('i')
+              axios.get(url).then(function(responce) {
+
+                  spanCount.textContent = responce.data.likes;
+                  if (icone.classList.contains('fas')){ icone.classList.replace('fas','far');}
+                  else {icone.classList.replace('far','fas');}
+              }).cache(function (error) {
+                  if(error.responce.status === 403){
+                      window.alert("non conncter")}
+
+              })
+          }
+          document.querySelectorAll('a.js-like').forEach(function(link) {
+              link.addEventListener('click',onClickBtnLike);
+          })
+      </script>
+      {% endblock %}

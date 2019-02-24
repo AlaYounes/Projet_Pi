@@ -1,0 +1,56 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+
+
+
+
+
+
+
+
+
+  <section class="dashboard section-padding">
+      <body class="container">
+      <div class="row">
+
+      <div class="col-sm-4 col-md-3">
+
+
+
+          <ul class="sidebar-menu" data-widget="tree">
+              <li>
+                  <a href="{{ path('listegenerral') }}">
+                      <i class="fa fa-user"></i> <span>listegenerral</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="{{ path('mes_article') }}">
+                      <i class="fa fa-image"></i> <span>mes_article</span>
+                  </a>
+              </li>
+              <li>
+                  <a href="{{ path('add_article') }}">
+                      <i class="fa fa-lock"></i> <span>add_article</span>
+                  </a>
+              </li>
+          </ul>
+
+      </div>
+      </div>
+
+      {% form_theme form 'bootstrap_3_layout.html.twig' %}
+      {{ form_start(form) }}
+          {{ form_widget(form) }}
+          <button type="submit" class="btn btn-success">add</button>
+
+
+
+      {{ form_end(form) }}
+
+
+  {% endblock %}

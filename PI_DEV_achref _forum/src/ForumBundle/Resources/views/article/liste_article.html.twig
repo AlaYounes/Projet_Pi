@@ -1,0 +1,41 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+<center>
+    <h1>recherche</h1>
+    <form method="POST">
+        titre<input type="text" name="titre">
+        <input type="submit"name="submit"value="rechercher">
+    </form>
+    <h1>liste des article</h1>
+    <table border="1" >
+        <thead>
+        <tr>
+            <th>id</th>new
+            <th>titre</th>
+            <th>date</th>
+
+        </tr>
+        {% for entity in liste %}
+            <tr>
+                <td>{{ entity.id }}</td>
+                <td> {{ entity.titre  }}</td>
+                <td> {{ entity.date|date("m/d/y") }}</td>
+                <td><a href="{{ path("new",{'id':entity.id ,'user_id':entity.user } )}}" >voir </a></td>
+
+
+
+            </tr>
+
+
+
+
+        {% endfor %}
+
+        </thead>
+    </table>
+</center>
+  {% endblock %}
