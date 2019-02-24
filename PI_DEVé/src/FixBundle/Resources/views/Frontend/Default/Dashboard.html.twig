@@ -1,0 +1,290 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container %}
+      {{ parent() }}
+
+
+      <section class="dashboard section-padding">
+          <div class="container">
+              <div class="row">
+
+                  <div class="col-sm-4 col-md-3">
+
+                      <ul class="sidebar-menu" data-widget="tree">
+                          <li class="active">
+                              <a href="{{ path('template_dashb') }}">
+                                  <i class="fa fa-life-ring"></i> <span>Dashboard</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Contract') }}">
+                                  <i class="fa fa-align-left"></i> <span>Contracts</span>
+                              </a>
+                          </li>
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-files-o"></i> <span>Jobs</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_JobPasted') }}"><i class="fa fa-circle-o"></i> Jobs Posted</a></li>
+                                  <li><a href="PostAjob.html.twig"><i class="fa fa-circle-o"></i> Add a Job</a></li>
+                              </ul>
+                          </li>
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-clone"></i> <span>Proposals</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_YourPorposals') }}"><i class="fa fa-circle-o"></i> Your Proposals</a></li>
+                                  <li><a href="{{ path('template_OtherPorposals') }}"><i class="fa fa-circle-o"></i> Other Proposals</a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Offers') }}">
+                                  <i class="fa fa-file"></i> <span>Offers</span>
+                              </a>
+                          </li>
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-copyright"></i> <span>Companies</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_CompanyList') }}"><i class="fa fa-circle-o"></i> Company List</a></li>
+                                  <li><a href="{{ path('template_AddCompany') }}"><i class="fa fa-circle-o"></i> Add a Company</a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Message') }}">
+                                  <i class="fa fa-envelope"></i> <span>Messages</span>
+                                  <span class="pull-right-container">
+				  <small class="label pull-right bg-green">4</small>
+				</span>
+                              </a>
+                          </li>
+                      </ul>
+
+                      <ul class="sidebar-menu" data-widget="tree">
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-exchange"></i> <span>Wallet</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_Deposits') }}"><i class="fa fa-circle-o"></i> Deposits</a></li>
+                                  <li><a href="{{ path('template_Withdrawals') }}"><i class="fa fa-circle-o"></i> Withdrawals</a></li>
+                              </ul>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Payementmethod') }}">
+                                  <i class="fa fa-dot-circle-o"></i> <span>Payment Method</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Numbership') }}">
+                                  <i class="fa fa-credit-card"></i> <span>Membership</span>
+                              </a>
+                          </li>
+                      </ul>
+
+                      <ul class="sidebar-menu" data-widget="tree">
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-external-link-square"></i> <span>Feature a Job</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_Featured_Job_List') }}"><i class="fa fa-circle-o"></i> Jobs Featured List</a></li>
+                                  <li><a href="{{ path('template_Featured_A_Job') }}"><i class="fa fa-circle-o"></i> Feature a Job</a></li>
+                              </ul>
+                          </li>
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-external-link-square"></i> <span>Feature a Profile</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_Featured_Profiles') }}"><i class="fa fa-circle-o"></i> Profile Featured List</a></li>
+                                  <li><a href="{{ path('template_Featured_Your_Profile') }}"><i class="fa fa-circle-o"></i> Feature your Profile </a></li>
+                              </ul>
+                          </li>
+                          <li class="treeview">
+                              <a href="#">
+                                  <i class="fa fa-external-link-square"></i> <span>Feature a Company</span>
+                                  <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                              </a>
+                              <ul class="treeview-menu">
+                                  <li><a href="{{ path('template_Featured_Companies') }}"><i class="fa fa-circle-o"></i> Companies Featured List</a></li>
+                                  <li><a href="{{ path('template_Featured_Your_Company') }}"><i class="fa fa-circle-o"></i> Feature your Companies </a></li>
+                              </ul>
+                          </li>
+                      </ul>
+
+                      <ul class="sidebar-menu" data-widget="tree">
+                          <li>
+                              <a href="{{ path('template_EditProfile') }}">
+                                  <i class="fa fa-user"></i> <span>Edit Profile</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Profile_Image') }}">
+                                  <i class="fa fa-image"></i> <span>Change Profile Image</span>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="{{ path('template_Password') }}">
+                                  <i class="fa fa-lock"></i> <span>Change Password</span>
+                              </a>
+                          </li>
+                      </ul>
+
+                  </div>
+
+                  <div class="col-sm-8 col-md-9">
+
+                      <div class="dashboard-info">
+
+                          <div class="row">
+
+                              <div class="col-sm-3">
+                                  <div class="fun-fact">
+                                      <div class="media-body">
+                                          <h1>$0.00</h1>
+                                          <span>Total Amount</span>
+                                      </div>
+                                  </div><!-- /.fun-fact -->
+                              </div><!-- /.col-sm-4 -->
+
+                              <div class="col-sm-3">
+                                  <div class="fun-fact">
+                                      <div class="media-body">
+                                          <h1>0</h1>
+                                          <span>Contracts</span>
+                                      </div>
+                                  </div><!-- /.fun-fact -->
+                              </div><!-- /.col-sm-4 -->
+
+                              <div class="col-sm-3">
+                                  <div class="fun-fact">
+                                      <div class="media-body">
+                                          <h1>0:00:00</h1>
+                                          <span>Total Logged</span>
+                                      </div>
+                                  </div><!-- /.fun-fact -->
+                              </div><!-- /.col-sm-4 -->
+
+                              <div class="col-sm-3">
+                                  <div class="fun-fact">
+                                      <div class="media-body">
+                                          <h1>0</h1>
+                                          <span>Total Milestones</span>
+                                      </div>
+                                  </div><!-- /.fun-fact -->
+                              </div><!-- /.col-sm-4 -->
+
+                          </div><!-- ./row -->
+
+
+                      </div><!-- /.dashboard-info -->
+
+                      <div class="prop-info text-center">
+                          <i class="fa fa-align-left fa-5x"></i>
+                          <h3>You have no recent contracts.</h3>
+                          <p>Look for work here <a href="#">Home</a></p>
+                      </div><!-- /.prop-info -->
+
+                      <div class="box">
+                          <div class="box-header">
+                              <h3 class="box-title">Contracts</h3>
+                          </div><!-- /.box-header -->
+                          <div class="box-body">
+                              <div class="table-responsive">
+                                  <table id="example1" class="table table-bordered table-hover">
+                                      <thead>
+                                      <tr>
+                                          <th>Freelancer</th>
+                                          <th>Job Title</th>
+                                          <th>Workroom</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                          <td>
+                                              <img src="{{ asset('img/users/1.jpg') }}" class="img-responsive img-circle pull-left" width="50" height="50" alt="Image"/>
+                                              <a href="{{ path('template_Company') }}">Anna Morgan</a>
+                                          </td>
+                                          <td><a href="{{ path('template_Workroom') }}">I need a designer to design a logo & questionnaire for a Nutrition Company</a></td>
+                                          <td><a href="{{ path('template_Workroom') }}" class="kafe-btn kafe-btn-mint-small"> Go to Workroom</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <img src="{{ asset('img/users/3.jpg') }}" class="img-responsive img-circle pull-left" width="50" height="50" alt="Image"/>
+                                              <a href="{{ path('template_Company') }}">Benjamin Robinson</a>
+                                          </td>
+                                          <td><a href="{{ path('template_Workroom') }}">Professional writer required</a></td>
+                                          <td><a href="{{ path('template_Workroom') }}" class="kafe-btn kafe-btn-mint-small"> Go to Workroom</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <img src="{{ asset('img/users/4.jpg') }}" class="img-responsive img-circle pull-left" width="50" height="50" alt="Image"/>
+                                              <a href="{{ path('template_Company') }}">Sean Coleman</a>
+                                          </td>
+                                          <td><a href="{{ path('template_Workroom') }}">Content Writers Needed</a></td>
+                                          <td><a href="{{ path('template_Workroom') }}" class="kafe-btn kafe-btn-mint-small"> Go to Workroom</a></td>
+                                      </tr>
+                                      <tr>
+                                          <td>
+                                              <img src="{{ asset('img/users/5.jpg') }}" class="img-responsive img-circle pull-left" width="50" height="50" alt="Image"/>
+                                              <a href="{{ path('template_Company') }}d">Vanessa Wells</a>
+                                          </td>
+                                          <td><a href="{{ path('template_Workroom') }}">Website Design</a></td>
+                                          <td><a href="{{ path('template_Workroom') }}" class="kafe-btn kafe-btn-mint-small"> Go to Workroom</a></td>
+                                      </tr>
+                                      </tbody>
+                                      <tfoot>
+                                      <tr>
+                                          <th>Client</th>
+                                          <th>Job Title</th>
+                                          <th>Freelancer</th>
+                                      </tr>
+                                      </tfoot>
+                                  </table>
+                              </div><!-- /.table-responsive -->
+                          </div><!-- /.box-body -->
+                      </div><!-- /.box -->
+
+
+
+
+                  </div><!-- /.col-md-9 -->
+              </div><!-- /.row -->
+          </div><!-- /.container -->
+      </section>
+
+
+
+      </body>
+
+
+  {% endblock %}
+
+
+
