@@ -1,0 +1,413 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container %}
+      {{ parent() }}
+<body>
+
+<body>
+
+
+<section class="dashboard section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 col-md-3">
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="{{ path('template_Dashboard') }}">
+                            <i class="fa fa-life-ring"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Contract') }}">
+                            <i class="fa fa-align-left"></i> <span>Contracts</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i> <span>Jobs</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_JobPasted') }}"><i class="fa fa-circle-o"></i> Jobs Posted</a></li>
+                            <li><a href="{{ path('template_AddJob') }}"><i class="fa fa-circle-o"></i> Add a Job</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-clone"></i> <span>Proposals</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_YourPorposals') }}"><i class="fa fa-circle-o"></i> Your Proposals</a></li>
+                            <li><a href="{{ path('template_OtherPorposals') }}"><i class="fa fa-circle-o"></i> Other Proposals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Offers') }}">
+                            <i class="fa fa-file"></i> <span>Offers</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-copyright"></i> <span>Companies</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_CompanyList') }}"><i class="fa fa-circle-o"></i> Company List</a></li>
+                            <li><a href="{{ path('template_AddCompany') }}"><i class="fa fa-circle-o"></i> Add a Company</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="{{ path('template_Message') }}">
+                            <i class="fa fa-envelope"></i> <span>Messages</span>
+                            <span class="pull-right-container">
+				  <small class="label pull-right bg-green">4</small>
+				</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-exchange"></i> <span>Wallet</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Deposits') }}"><i class="fa fa-circle-o"></i> Deposits</a></li>
+                            <li><a href="{{ path('template_Withdrawals') }}"><i class="fa fa-circle-o"></i> Withdrawals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Payementmethod') }}">
+                            <i class="fa fa-dot-circle-o"></i> <span>Payment Method</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Numbership') }}">
+                            <i class="fa fa-credit-card"></i> <span>Membership</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Job</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Job_List') }}"><i class="fa fa-circle-o"></i> Jobs Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_A_Job') }}"><i class="fa fa-circle-o"></i> Feature a Job</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Profile</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Profiles') }}"><i class="fa fa-circle-o"></i> Profile Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_Your_Profile') }}"><i class="fa fa-circle-o"></i> Feature your Profile </a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Company</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Companies') }}"><i class="fa fa-circle-o"></i> Companies Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_Your_Company') }}"><i class="fa fa-circle-o"></i> Feature your Companies </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="{{ path('template_EditProfile') }}">
+                            <i class="fa fa-user"></i> <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Profile_Image') }}">
+                            <i class="fa fa-image"></i> <span>Change Profile Image</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Password') }}">
+                            <i class="fa fa-lock"></i> <span>Change Password</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-sm-8 col-md-9">
+
+
+
+                <div class="messages-box">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 no-pdd">
+                            <div class="messages-container">
+
+                                <div class="message-header">
+                                    <div class="message-title">
+                                        <h4>Messages</h4>
+                                    </div><!--/ message-title-->
+                                    <div class="search-area">
+                                        <div class="input-field">
+                                            <input placeholder="Search" type="text">
+                                            <i class="fa fa-search"></i>
+                                        </div>
+                                    </div><!--/ search-area-->
+                                </div><!--/ message-header-->
+
+                                <div class="messages-list">
+                                    <ul>
+                                        <li class="active">
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/3.jpg') }}" class="img-responsive img-circle" alt="">
+                                                    <span class="user-online"></span>
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Anthony McCartney</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                                <span class="message-notification">1</span>
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/4.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Sean Coleman</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/5.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Vanessa Wells</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/6.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Clifford Graham</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/7.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Grace Karen</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/8.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Alex Grantte</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/9.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Anna Morgan</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/10.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Francis Long</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+                                        <li>
+                                            <div class="user-message-details">
+                                                <div class="user-message-img">
+                                                    <img src="{{ asset('img/users/11.jpg') }}" class="img-responsive img-circle" alt="">
+                                                </div>
+                                                <div class="user-message-info">
+                                                    <h4>Eleanor Harper</h4>
+                                                    <p>Lorem ipsum dolor ...</p>
+                                                    <span class="time-posted">1:55 PM</span>
+                                                </div><!--/ user-message-info -->
+                                            </div><!--/ user-message-details -->
+                                        </li>
+
+                                    </ul>
+                                </div><!--/ messages-list -->
+
+                            </div><!--/ messages-container-->
+                        </div><!--/ col-lg-4 -->
+
+                        <div class="col-lg-8 col-md-12 pd-right-none pd-left-none">
+                            <div class="conversation-box">
+
+                                <div class="conversation-header">
+                                    <div class="user-message-details">
+                                        <div class="user-message-img">
+                                            <img src="{{ asset('img/users/3.jpg') }}" class="img-responsive img-circle" alt="">
+                                        </div>
+                                        <div class="user-message-info">
+                                            <h4>Anthony McCartney</h4>
+                                            <p>Online</p>
+                                        </div><!--/ user-message-info -->
+                                    </div><!--/ user-message-details -->
+                                </div><!--/ conversation-header -->
+
+                                <div class="conversation-container">
+
+                                    <div class="convo-box pull-right">
+                                        <div class="convo-area">
+                                            <div class="convo-message">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
+                                            </div><!--/ convo-message-->
+                                            <span>Sat, Aug 23, 1:08 PM</span>
+                                        </div><!--/ convo-area -->
+                                        <div class="convo-img">
+                                            <img src="{{ asset('img/users/2.jpg') }}" alt="" class="img-responsive img-circle">
+                                        </div><!--/ convo-img -->
+                                    </div><!--/ convo-box -->
+
+                                    <div class="convo-box convo-left">
+                                        <div class="convo-area convo-left">
+                                            <div class="convo-message">
+                                                <p>Cras ultricies ligula.</p>
+                                            </div><!--/ convo-message-->
+                                            <span>5 minutes ago</span>
+                                        </div><!--/ convo-area -->
+                                        <div class="convo-img">
+                                            <img src="{{ asset('img/users/3.jpg') }}" alt="" class="img-responsive img-circle">
+                                        </div><!--/ convo-img -->
+                                    </div><!--/ convo-box -->
+
+                                    <div class="convo-box pull-right">
+                                        <div class="convo-area">
+                                            <div class="convo-message">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
+                                            </div><!--/ convo-message-->
+                                            <span>Sat, Aug 23, 1:08 PM</span>
+                                        </div><!--/ convo-area -->
+                                        <div class="convo-img">
+                                            <img src="{{ asset('img/users/2.jpg') }}" alt="" class="img-responsive img-circle">
+                                        </div><!--/ convo-img -->
+                                    </div><!--/ convo-box -->
+
+                                    <div class="convo-box convo-left">
+                                        <div class="convo-area convo-left">
+                                            <div class="convo-message">
+                                                <p>Lorem ipsum dolor sit amet</p>
+                                            </div><!--/ convo-message-->
+                                            <span>2 minutes ago</span>
+                                        </div><!--/ convo-area -->
+                                        <div class="convo-img">
+                                            <img src="{{ asset('img/users/3.jpg') }}" alt="" class="img-responsive img-circle">
+                                        </div><!--/ convo-img -->
+                                    </div><!--/ convo-box -->
+
+                                    <div class="convo-box pull-right">
+                                        <div class="convo-area">
+                                            <div class="convo-message">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor.</p>
+                                            </div><!--/ convo-message-->
+                                            <span>Sat, Aug 23, 1:08 PM</span>
+                                        </div><!--/ convo-area -->
+                                        <div class="convo-img">
+                                            <img src="{{ asset('img/users/2.jpg') }}" alt="" class="img-responsive img-circle">
+                                        </div><!--/ convo-img -->
+                                    </div><!--/ convo-box -->
+
+                                    <div class="convo-box convo-left">
+                                        <div class="convo-area convo-left">
+                                            <div class="convo-message">
+                                                <p>Typing...</p>
+                                            </div><!--/ convo-message-->
+                                            <span>2 minutes ago</span>
+                                        </div><!--/ convo-area -->
+                                        <div class="convo-img">
+                                            <img src="{{ asset('img/users/3.jpg') }}" alt="" class="img-responsive img-circle">
+                                        </div><!--/ convo-img -->
+                                    </div><!--/ convo-box -->
+
+                                </div><!--/ conversation-container -->
+                                <div class="type_messages">
+                                    <div class="input-field">
+                                        <textarea placeholder="Type something &amp; press enter"></textarea>
+                                        <ul class="imoji">
+                                            <li><a href="#" class="kafe-btn kafe-btn-mint-small">Send</a></li>
+                                        </ul><!--/ imoji -->
+                                    </div><!--/ input-field -->
+                                </div><!--/ type_messages -->
+
+                            </div><!--main-conversation-box end-->
+                        </div><!--/ col-lg-8 -->
+
+                    </div><!--/ row -->
+                </div><!--/ messages-box -->
+
+            </div><!-- /.col-md-9 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+
+  {% endblock %}
