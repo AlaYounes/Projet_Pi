@@ -12,241 +12,190 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <pharPath>$PROJECT_DIR$/composer.phar</pharPath>
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1643885937">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.25" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.386" value="1" />
-          <entry key="project.opened" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.composer.actions">
-        <counts>
-          <entry key="create-project_from_ComposerProjectGenerator" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.php.composer.command.options">
-        <counts>
-          <entry key="create-project_with_--ansi_--no-interaction_--no-progress.default" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="1" />
-          <entry key="json" value="1" />
-          <entry key="php" value="22" />
-          <entry key="twig" value="28" />
-          <entry key="yml" value="25" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="1" />
-          <entry key="JSON" value="1" />
-          <entry key="PHP" value="20" />
-          <entry key="PLAIN_TEXT" value="2" />
-          <entry key="Twig" value="28" />
-          <entry key="YAML" value="25" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="387" />
-          <entry key="twig" value="84" />
-          <entry key="txt" value="78" />
-          <entry key="yml" value="333" />
+          <entry key="txt" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="376" />
-          <entry key="PLAIN_TEXT" value="89" />
-          <entry key="Twig" value="84" />
-          <entry key="YAML" value="333" />
-        </counts>
-      </usages-collector>
-    </session>
-    <session id="-1479101766">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="14" />
-          <entry key="project.open.time.1" value="3" />
-          <entry key="project.open.time.101" value="1" />
-          <entry key="project.open.time.22" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.39" value="1" />
-          <entry key="project.open.time.42" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.62" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="14" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="36" />
-          <entry key="php" value="2174" />
-          <entry key="twig" value="3292" />
-          <entry key="txt" value="225" />
-          <entry key="yml" value="336" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="36" />
-          <entry key="HTML" value="1" />
-          <entry key="PHP" value="2174" />
-          <entry key="PLAIN_TEXT" value="225" />
-          <entry key="SQL" value="233" />
-          <entry key="Twig" value="3058" />
-          <entry key="YAML" value="336" />
+          <entry key="PLAIN_TEXT" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="14" />
-          <entry key="gitignore" value="1" />
-          <entry key="htaccess" value="1" />
-          <entry key="html" value="4" />
-          <entry key="js" value="15" />
-          <entry key="php" value="136" />
-          <entry key="twig" value="171" />
-          <entry key="yml" value="62" />
+          <entry key="twig" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="14" />
-          <entry key="HTML" value="4" />
-          <entry key="JavaScript" value="15" />
-          <entry key="PHP" value="136" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Twig" value="171" />
-          <entry key="YAML" value="62" />
-          <entry key="htaccess" value="1" />
+          <entry key="Twig" value="3" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutCompetence.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutExperience.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutFormation.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="76" column="53" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/Profile.html.twig">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/config/routing.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+            <state relative-caret-position="170">
+              <caret line="10" column="27" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="true" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Controller/DefaultController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-281">
+              <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
               <folding>
-                <element signature="e#13#27#0#Twig" expanded="true" />
+                <element signature="e#45#87#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/AjouterAnnonce.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1717">
+              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/datatableannonces.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-559">
+              <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/calendar.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2797">
+              <caret line="119" column="46" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/Hire.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-476">
+              <caret line="41" column="80" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/modfier_demande.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-355">
+              <caret line="77" column="108" selection-start-line="77" selection-start-column="101" selection-end-line="77" selection-end-column="108" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Entity/AnnoncesPosts.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="78" column="36" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/Work.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3383">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>design</find>
-      <find>Next</find>
-      <find>click</find>
-      <find>work</find>
-      <find>Work</find>
-      <find>next</find>
-      <find>account</find>
-      <find>claim</find>
-      <find>form</find>
-      <find>echercher un Groupe</find>
-      <find>Action</find>
-      <find>table</find>
-      <find>Hire</find>
-      <find>contact</find>
-      <find>Porfo</find>
+      <find>find</find>
+      <find>findbes</find>
+      <find>ajouter</find>
+      <find>getda</find>
+      <find>iduserD</find>
+      <find>motivation</find>
+      <find>getdatefi</find>
+      <find>ajout</find>
+      <find>redire</find>
+      <find>return</find>
+      <find>get</find>
+      <find>calendar</find>
+      <find>calender</find>
+      <find>description</find>
+      <find>best</find>
+      <find>date</find>
+      <find>data</find>
+      <find>web</find>
+      <find>a href</find>
+      <find>liste</find>
+      <find>listeDemande</find>
+      <find>iduser</find>
+      <find>datet</find>
+      <find>findDemandeDQL</find>
+      <find>annonce</find>
+      <find>etat</find>
+      <find>script</find>
+      <find>Listedemandes</find>
+      <find>path</find>
+      <find>json</find>
     </findStrings>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
-      <command text="c dump-autoload" />
+      <command text="s doctrine:generate:form FixBundle:Service" />
+      <command text="s doctrine:generate:form FixBundle:Offre" />
+      <command text="s doctrine:schema:update --force " />
+      <command text="s doctrine:database:create" />
       <command text="s doctrine:schema:update" />
       <command text="s doctrine:schema:update --force" />
+      <command text="s generate:bundle" />
       <command text="c dump-autoload" />
-      <command text="c require knplabs/knp-paginator-bundle" />
-      <command text="`php -d memory_limit=-1 composer.phar install`" />
-      <command text="c require knplabs/knp-paginator-bundle" />
-      <command text="c dump-autoload" />
-      <command text="c require knplabs/knp-paginator-bundle" />
-      <command text="s doctrine:schema:update --dump-sql " />
-      <command text="s doctrine:schema:update --force " />
-      <command text="s generate:bundle " />
       <command text="s doctrine:generate:entity " />
-      <command text="s doctrine:schema:update" />
+      <command text="s doctrine:schema:update --force " />
+      <command text="s doctrine:generate:form AnnoncesPosts" />
+      <command text="s doctrine:generate:form JobpostsBundle:AnnoncesPosts" />
+      <command text="composer require beberlei/doctrineextensions" />
+      <command text="composer.phar require beberlei/doctrineextensions" />
+      <command text="require beberlei/doctrineextensions" />
+      <command text="c require beberlei/doctrineextensions" />
+      <command text="composer require beberlei/doctrineextensions" />
+      <command text="c require beberlei/doctrineextensions" />
+      <command text="php composer require beberlei/doctrineextensions" />
+      <command text="php composer.phar require beberlei/doctrineextensions" />
+      <command text="s cache:clear" />
+      <command text="php composer.phar require beberlei/doctrineextensions" />
       <command text="s doctrine:schema:update --force" />
-      <command text="s doctrine:generate:entity " />
+      <command text="c clear-cache" />
       <command text="s doctrine:schema:update --force " />
-      <command text="s doctrine:generate:form " />
-      <command text="s doctrine:generate:form CvBundle:InfoG" />
-      <command text="s doctrine:generate:form CvBundle:Formations" />
-      <command text="s doctrine:generate:form CvBundle:Experiences" />
-      <command text="s doctrine:generate:form CvBundle:Competences" />
-      <command text="c dump-autoload" />
-      <command text="s doctrine:schema:update --force " />
-      <command text="composer require cmen/google-charts-bundle" />
     </commandsHistory>
   </component>
   <component name="HighlightingSettingsPerFile">
@@ -255,57 +204,52 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Controller/file.php" />
+        <option value="$PROJECT_DIR$/app/Resources/views/dashboard_home.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/indeex.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/other-proposals.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base1.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Backend/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Controller/BackendController.php" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/config/Backend_routing.yml" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Entity/Service.php" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Ajout_Service.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Form/ServiceType.php" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Ajout_Offre.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Form/OffreType.php" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Modifier_Service.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Modifier_Offre.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Afficher_Service.html.twig" />
         <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Afficher_Offre.html.twig" />
         <option value="$PROJECT_DIR$/src/FixBundle/Controller/FrontendController.php" />
         <option value="$PROJECT_DIR$/src/FixBundle/Entity/Offre.php" />
         <option value="$PROJECT_DIR$/src/FixBundle/Resources/config/Frontend_routing.yml" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Entity/Reclamation.php" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Repository/ReponseRepository.php" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Entity/Reponse.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Entity/Experiences.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Entity/InfoG.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Entity/Formations.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/listInfo.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/competence.html.twig" />
-        <option value="$PROJECT_DIR$/web/css/style-claim.css" />
-        <option value="$PROJECT_DIR$/web/css/style-infG.css" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/web/js/pro-bar.js" />
-        <option value="$PROJECT_DIR$/web/css/pro-barr.css" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Entity/Competences.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Form/InfoGType.php" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/content.twig.html" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/content.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/mylist.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/new.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/list.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/base1.html.twig" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Form/ReponseType.php" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/replyAdmin.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/show.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Form/FormationsType.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Form/ExperiencesType.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Form/CompetencesType.php" />
         <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/AjouterAnnonce.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Entity/Demande.php" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/datatableannonces.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/modfier_demande.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Form/AnnoncesPostsType.php" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/config/routing.yml" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/search.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Repository/ReclamationRepository.php" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/searchh.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/listAll.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutInfo.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Controller/DefaultController.php" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutFormation.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutExperience.html.twig" />
-        <option value="$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutCompetence.html.twig" />
-        <option value="$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/Profile.html.twig" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Repository/AnnoncesPostsRepository.php" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Entity/AnnoncesPosts.php" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Repository/DemandeRepository.php" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/Hire.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/Work.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/calendar.html.twig" />
+        <option value="$PROJECT_DIR$/src/JobpostsBundle/Controller/DefaultController.php" />
       </list>
     </option>
   </component>
@@ -376,15 +320,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-icu" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-apcu" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
-      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
-      <path value="$PROJECT_DIR$/vendor/cmen/google-charts-bundle" />
+      <path value="$PROJECT_DIR$/vendor/beberlei/DoctrineExtensions" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -408,34 +350,56 @@
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CvBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CvBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CvBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CvBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CvBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -443,7 +407,7 @@
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="CvBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="JobpostsBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="Default" type="462c0819:PsiDirectoryNode" />
@@ -451,48 +415,7 @@
             <path>
               <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
               <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FixBundle" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FixBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FixBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FixBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="FixBundle" type="462c0819:PsiDirectoryNode" />
-              <item name="Resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="Default" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PI_DEV" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PI_DEV" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ReclamationBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -502,22 +425,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../untitled6" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../bin/php/php7.0.33/php.exe" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PI_DEV\web\calendarcss" />
+      <recent name="C:\xampp\htdocs\PI_DEV\web\js" />
+      <recent name="C:\wamp64\www\PI_DEV\app\Resources\views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\PI_DEV\web\libjscalendar" />
+      <recent name="C:\xampp\htdocs\PI_DEV\src\JobpostsBundle\Resources\views\Default" />
+      <recent name="C:\xampp\htdocs\PI_DEV\web\img" />
       <recent name="C:\wamp64\www\PI_DEV\src\FixBundle\Resources\views\Crud" />
       <recent name="C:\wamp64\www\PI_DEV\app\Resources\views\default" />
-      <recent name="C:\wamp64\www\PI_DEV\web" />
-      <recent name="C:\wamp64\www\PI_DEV\app\Resources\views" />
-      <recent name="C:\wamp64\www\PI_DEV\src\FixBundle\Resources\views\Frontend" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\PI_DEV\app\Resources\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -547,34 +471,25 @@
       <workItem from="1550434004375" duration="10382000" />
       <workItem from="1550455618479" duration="760000" />
       <workItem from="1550504122153" duration="2185000" />
-      <workItem from="1550599944097" duration="2148000" />
-      <workItem from="1550612286330" duration="1494000" />
-      <workItem from="1550613872266" duration="1605000" />
-      <workItem from="1550666905611" duration="27583000" />
-      <workItem from="1550737501754" duration="8884000" />
-      <workItem from="1550756064562" duration="72000" />
-      <workItem from="1550763912754" duration="863000" />
-      <workItem from="1550843340194" duration="21610000" />
-      <workItem from="1550879358100" duration="5482000" />
-      <workItem from="1550888754494" duration="4477000" />
-      <workItem from="1550927631277" duration="34387000" />
-      <workItem from="1551014441190" duration="2870000" />
-      <workItem from="1551022347863" duration="4006000" />
-      <workItem from="1551028106901" duration="27484000" />
+      <workItem from="1550933155045" duration="1762000" />
+      <workItem from="1550934964693" duration="26006000" />
+      <workItem from="1551015331769" duration="39910000" />
+      <workItem from="1551113355320" duration="4842000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163905000" />
+    <option name="totallyTimeSpent" value="93460000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24054463" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2700454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32786885" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -583,14 +498,36 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.552459" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="10" visible="true" weight="0.33551556" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Command Line Tools Console" order="10" weight="0.3289689" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -599,245 +536,149 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/indeex.html.twig" />
+    <entry file="file://$PROJECT_DIR$/web/pages/UI/icons.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/Dashboard.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="21" column="48" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/config/services.yml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/other-proposals.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3164">
+          <caret line="221" column="84" selection-start-line="221" selection-start-column="84" selection-end-line="221" selection-end-column="84" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/content.html.twig" />
     <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Backend/Admin.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/config/Frontend_routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-526" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/listAll.twig.html" />
-    <entry file="file://$PROJECT_DIR$/app/.htaccess">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/new.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2006">
-          <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/base1.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6324">
-          <caret line="372" column="92" selection-start-line="372" selection-start-column="92" selection-end-line="372" selection-end-column="92" />
+        <state relative-caret-position="7871">
+          <caret line="463" selection-start-line="463" selection-end-line="463" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/replyAdmin.html.twig">
+    <entry file="file://$USER_HOME$/Downloads/VoitureController.php" />
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Form/ServiceType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="71" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Ajout_Offre.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Form/ReclamationType.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-          <folding>
-            <element signature="e#12#27#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Form/ReponseType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Entity/Reponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-176" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Entity/Formations.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Form/ExperiencesType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Form/FormationsType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Entity/Competences.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-296" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/mylist.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-523">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Repository/ReponseRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/searchh.twig.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Repository/ReclamationRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="90" column="30" selection-start-line="90" selection-start-column="30" selection-end-line="90" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/search.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
-          <folding>
-            <element signature="e#12#27#0#Twig" expanded="true" />
-            <element signature="e#176#221#0#HTML" expanded="true" />
-            <element signature="e#337#361#0#HTML" expanded="true" />
-            <element signature="e#485#645#0#HTML" expanded="true" />
-            <element signature="e#684#759#0#HTML" expanded="true" />
-            <element signature="e#937#958#0#HTML" expanded="true" />
-            <element signature="e#1806#1850#0#HTML" expanded="true" />
-            <element signature="e#1979#2015#0#HTML" expanded="true" />
-            <element signature="e#2989#3031#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Entity/Reclamation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-842" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/searchh.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="84" column="34" lean-forward="true" selection-start-line="84" selection-start-column="34" selection-end-line="84" selection-end-column="34" />
-          <folding>
-            <element signature="e#12#27#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/listAll.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/config/routing.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Form/CompetencesType.php">
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Entity/Service.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Modifier_Service.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/config/routing.yml">
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Ajout_Service.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Modifier_Offre.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Form/OffreType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Entity/Offre.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="101" selection-start-line="28" selection-start-column="101" selection-end-line="28" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Afficher_Offre.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Crud/Afficher_Service.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Controller/BackendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Default/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="59" column="65" selection-start-line="59" selection-start-column="65" selection-end-line="59" selection-end-column="65" />
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FixBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Controller/DefaultController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="224" selection-start-line="224" selection-end-line="303" selection-end-column="5" />
-          <folding>
-            <element signature="e#48#72#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/FixBundle/Controller/FrontendController.php">
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299" />
+        <state relative-caret-position="476">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/config/Backend_routing.yml">
@@ -847,71 +688,187 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/services.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="186" selection-start-line="184" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/config/Frontend_routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="26" column="45" lean-forward="true" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FixBundle/Controller/FrontendController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="50" column="24" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="66" column="67" selection-start-line="66" selection-start-column="63" selection-end-line="66" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config_prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="147" selection-start-line="147" selection-end-line="147" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/libjscalendar/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ReclamationBundle/Resources/views/Default/list.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Repository/AnnoncesPostsRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="49" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="49" />
+        <state relative-caret-position="276">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Entity/Demande.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="54" />
+        <state relative-caret-position="161">
+          <caret line="74" column="6" lean-forward="true" selection-start-line="74" selection-start-column="5" selection-end-line="74" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Controller/DefaultController.php">
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Form/AnnoncesPostsType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="197" column="41" selection-start-line="197" selection-start-column="41" selection-end-line="197" selection-end-column="41" />
+        <state relative-caret-position="127">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Repository/DemandeRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Entity/AnnoncesPosts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="25" selection-end-line="78" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/AjouterAnnonce.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/calendar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2797">
+          <caret line="119" column="46" selection-start-line="119" selection-start-column="46" selection-end-line="119" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/datatableannonces.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-559">
+          <caret line="47" column="49" selection-start-line="47" selection-start-column="49" selection-end-line="47" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/Hire.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-476">
+          <caret line="41" column="80" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/modfier_demande.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-355">
+          <caret line="77" column="108" selection-start-line="77" selection-start-column="101" selection-end-line="77" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/views/Default/Work.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3383">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-281">
+          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
           <folding>
-            <element signature="e#903#936#0#PHP" expanded="true" />
-            <element signature="e#1640#1678#0#PHP" expanded="true" />
-            <element signature="e#6485#6508#1#PHP" expanded="true" />
-            <element signature="e#6582#6606#0#PHP" expanded="true" />
+            <element signature="e#45#87#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutInfo.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/JobpostsBundle/Resources/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1640">
-          <caret line="145" column="48" selection-start-line="145" selection-start-column="48" selection-end-line="145" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutCompetence.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutFormation.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="76" column="53" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CvBundle/Resources/views/Default/ajoutExperience.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="76" column="51" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FixBundle/Resources/views/Frontend/Default/Profile.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
-          <folding>
-            <element signature="e#13#27#0#Twig" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="27" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>

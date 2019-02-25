@@ -17,12 +17,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
             new FixBundle\FixBundle(),
-            new ReclamationBundle\ReclamationBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
-            new CvBundle\CvBundle(),
-            new CMEN\GoogleChartsBundle\CMENGoogleChartsBundle(),
-
+            new JobpostsBundle\JobpostsBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

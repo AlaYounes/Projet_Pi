@@ -61,8 +61,6 @@
                             <li><a href="{{ path('template_Work') }}">GoWork</a></li>
                             <li><a href="{{ path('template_Pricing') }}">Pricing</a></li>
                             <li><a href="{{ path('template_How') }}">How it works</a></li>
-                            <li><a href="{{ path('claim_list') }}">reclamation</a></li>
-                            <li><a href="{{ path('ajouter_infoG') }}">CV</a></li>
                         </ul>
                     </div>
                 </div><!-- /.navbar-left -->
@@ -146,9 +144,16 @@
     <!-- ==============================================
     Scripts
     =============================================== -->
-    <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
+  <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/kafe.js') }}"></script>
+
+    <link rel="stylesheet" href="{{ asset('js/datetimepicker/jquery.datetimepicker.min.css')}}" />
+    <script type="text/javascript" src="{{ asset('js/datetimepicker/jquery.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/datetimepicker/jquery.datetimepicker.full.js')}}"></script>
+
+
 
 {% endblock %}
 {% block javascripts %}{% endblock %}

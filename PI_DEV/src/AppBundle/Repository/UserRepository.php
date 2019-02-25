@@ -10,10 +10,4 @@ namespace AppBundle\Repository;
  */
 class UserRepository extends \Doctrine\ORM\EntityRepository
 {
-
-    public function countUser()
-    {
-        $query = $this->getEntityManager()->createQuery('SELECT count(R.id) as nm from AppBundle:User R');
-        return $query->getResult();
-    }
 }
