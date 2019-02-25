@@ -1,0 +1,26 @@
+{% extends 'base1.html.twig' %}
+
+
+
+{% block container %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="div_chart1"></div>
+                <script type="text/javascript">
+                    {{ gc_draw(piechart, 'div_chart1') }}
+                </script>
+            </div>
+
+            <div class="col-md-6">
+                <div id="div_chart2"></div>
+                <script type="text/javascript">
+                    {{ gc_draw(piechartTreated, 'div_chart2') }}
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

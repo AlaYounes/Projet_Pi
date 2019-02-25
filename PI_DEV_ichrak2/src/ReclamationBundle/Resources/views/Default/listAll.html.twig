@@ -1,0 +1,37 @@
+{% extends 'base1.html.twig' %}
+
+{% block nbre %}
+    {% for i in count %}
+        {{ i.nm }}
+    {% endfor %}
+{% endblock %}
+
+{% block claim %}
+    {% for i in claims %}
+        {{ i.nm }}
+    {% endfor %}
+{% endblock %}
+
+{% block body %}
+    <div class="container" style="margin-top: 40px; margin-bottom: 50px">
+        <div class="row">
+
+            <div class="col-md-1"></div>
+            <div class="col-md-8" >
+                <h1 style=" font-size:56px; margin-bottom: 20px; text-align: center;color: #fe3859; text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.18); font-family: 'Pacifico', cursive;">Claims list</h1>
+                <div style="background-color: #CCCCCC; padding: 15px 15px;      border-radius: 10px;"  >
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th style="width: 100px;">Date</th>
+                            <th>Statut</th>
+                            <th>Text</th>
+                            <th>Treated</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+"
+
+
+{% endblock %}
