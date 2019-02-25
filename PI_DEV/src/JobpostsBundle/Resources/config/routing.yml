@@ -1,0 +1,47 @@
+jobposts_homepage:
+    path:     jobposts_homepage/
+    defaults: { _controller: JobpostsBundle:Default:index }
+
+
+AjouterAnnonce:
+    path:     AjouterAnnonce/
+    defaults: { _controller: JobpostsBundle:Default:AjouterAnnonce }
+
+Listeannonces:
+    path:     Listeannonces/
+    defaults: { _controller: JobpostsBundle:Default:Listeannonces }
+
+Listedemandes:
+    path:     Listedemandes/
+    defaults: { _controller: JobpostsBundle:Default:Listedemandes }
+
+
+Approuverdemande:
+    path:     Approuverdemande/{id}
+    defaults: { _controller: JobpostsBundle:Default:Approuverdemande }
+
+ListeAnnoncesdatatable:
+    path:     ListeAnnoncesdatatable/
+    defaults: { _controller: JobpostsBundle:Default:ListeAnnoncesdatatable }
+
+SupprimerAnnonce:
+    path:     SupprimerAnnonce/{id}
+    defaults: { _controller: JobpostsBundle:Default:SupprimerAnnonce }
+
+
+
+
+modifierAnnonce:
+    path:     /modifierAnnonce/{id}
+    defaults: { _controller: JobpostsBundle:Default:modifierAnnonce }
+
+
+
+JsonDemandes:
+    path:     /JsonDemandes/
+    defaults: { _controller: JobpostsBundle:Default:JsonDemandes }
+
+calendar:
+    path:     /calendar/
+    defaults: { _controller: JobpostsBundle:Default:calendar }
+

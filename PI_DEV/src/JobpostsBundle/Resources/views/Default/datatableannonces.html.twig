@@ -1,0 +1,112 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+
+
+
+<section class="featured-users">
+    <div class="container">
+        <div class="section-title" style="padding-top: 20px;">
+            <h1>Freelancers</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9">
+
+                <div class="row">
+
+
+                        <table id="datatable" border="0" class="table table-striped">
+                            <thead>
+                            <tr class="active">
+                                <th>Id</th>
+                                <th>titre</th>
+                                <th>date debut</th>
+                                <th>date fin</th>
+                                <th>salaire</th>
+
+                                <th>specialite</th>
+                                <th>supprimer</th>
+                                <th>modifier</th>
+
+                            </tr>
+                            </thead>
+
+                            {% for Annonce in listeAnnonce %}
+
+                                <tr>
+                                    <td>{{ Annonce.id }}</td>
+                                    <td>{{ Annonce.titre }}</td>
+                                    <td>{{ Annonce.datedebut }}</td>
+                                    <td>{{ Annonce.datefin }}</td>
+                                    <td>{{ Annonce.salaire }}</td>
+                                    <td>{{ Annonce.speciality }}</td>
+                                    <td><a href="{{ path('SupprimerAnnonce',{'id':Annonce.id}) }}"><i class="medium material-icons "> supprimer</i></a></td>
+                                    <td><a href="{{ path('modifierAnnonce',{'id':Annonce.id}) }}"><i class="medium material-icons "> modifier</i></a></td>
+
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+
+
+                </div><!-- row -->
+
+            </div><!-- col-md-9 -->
+
+            <div class="col-sm-4 col-md-3">
+
+                <div class="widget">
+                    <h3 class="widget_title">Category</h3>
+                    <ul class="tr-list">
+                        <li><a href="#" class="active"><i class="fa fa-code"></i> Web & Mobile Development</a></li>
+                        <li><a href="#"><i class="fa fa-eye"></i>  Design, Arts & Multimedia</a></li>
+                        <li><a href="#"><i class="fa fa-edit"></i>  Writing & Translation</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i>  Admin Support</a></li>
+                        <li><a href="#"><i class="fa fa-table"></i>  Management & Finance</a></li>
+                        <li><a href="#"><i class="fa fa-bullhorn"></i>  Sales & Marketing</a></li>
+                    </ul>
+                    <div class="margin-space"></div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="widget_title_small">Feedback Rating</h3>
+                            <ul class="tr-list">
+                                <li><a href="#" class="active">Any</a></li>
+                                <li><a href="#">5 Stars</a></li>
+                                <li><a href="#">4.5+ Stars</a></li>
+                                <li><a href="#">4+ Stars</a></li>
+                                <li><a href="#">3+ Stars</a></li>
+                                <li><a href="#">No feedback yet</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <h3 class="widget_title_small">Hours Worked</h3>
+                            <ul class="tr-list">
+                                <li><a href="#" class="active">Any</a></li>
+                                <li><a href="#">800+ Hours</a></li>
+                                <li><a href="#">500+ Hours</a></li>
+                                <li><a href="#">300+ Hours</a></li>
+                                <li><a href="#">100+ Hours</a></li>
+                                <li><a href="#">No Hours</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div><!-- /.widget -->
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

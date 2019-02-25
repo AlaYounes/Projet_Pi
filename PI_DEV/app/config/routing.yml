@@ -1,14 +1,10 @@
-cv:
-    resource: "@CvBundle/Resources/config/routing.yml"
-    prefix:   /
+jobposts:
+    resource: "@JobpostsBundle/Resources/config/routing.yml"
+    prefix:   /jobposts
 
 fix:
     resource: "@FixBundle/Resources/config/routing.yml"
     prefix:   /
-
-rec:
-    resource: "@ReclamationBundle/Resources/config/routing.yml"
-    prefix:   /freelancer
 
 app:
     resource: '@AppBundle/Controller/'
