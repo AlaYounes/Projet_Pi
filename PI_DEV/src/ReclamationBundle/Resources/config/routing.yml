@@ -1,0 +1,40 @@
+claim_index:
+  path:     /index
+  defaults: { _controller: "ReclamationBundle:Default:index" }
+  methods:  GET
+
+claim_show:
+  path:     /show/{id}
+  defaults: { _controller: "ReclamationBundle:Default:show" }
+  methods:  GET
+
+claim_new:
+  path:     /new
+  defaults: { _controller: "ReclamationBundle:Default:new" }
+  methods:  [GET, POST]
+
+claim_edit:
+  path:     /edit/{id}
+  defaults: { _controller: "ReclamationBundle:Default:edit" }
+  methods:  [GET, POST]
+
+claim_delete:
+  path:     /delete/{id}
+  defaults: { _controller: "ReclamationBundle:Default:delete" }
+  methods:  DELETE
+
+claim_reply:
+  path:     /reply/{id}
+  defaults: { _controller: "ReclamationBundle:Default:reply" }
+
+claim_list:
+  path:     /list
+  defaults: { _controller: "ReclamationBundle:Default:list" }
+
+admin_search:
+  path:   /search
+  defaults: { _controller: "ReclamationBundle:Default:search" }
+
+groups_search:
+  path:     /searchh
+  defaults: { _controller: "ReclamationBundle:Default:searchh" }

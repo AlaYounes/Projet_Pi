@@ -1,0 +1,122 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+
+    <div class="container" style="margin-top: 40px; margin-bottom: 50px">
+        <div class="row">
+
+            <div class="col-md-3">
+                <a href="{{ path('new_claim') }}" class="btn" style="text-decoration: none ; color: #fff; background-color: #F91212;  border-radius: 10px;">
+                    <span style="color: #458E8B">
+                        <i class="fa fa-plus-circle"></i>
+                    </span>
+                    Add new
+                </a>
+            </div>
+            <div class="col-md-6" >
+                <h1 style=" font-size:56px; margin-bottom: 20px; text-align: center;color: #458E8B; text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.18); font-family: 'Pacifico', cursive;">Claims list</h1>
+                <div style="background-color: #6DC3FF; padding: 25px 25px; border-radius: 10px;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th style="width: 100px;"><i class="fab fa-nutritionix"></i> Date</th>
+                            <th style="width: 100px;"><i class="fab fa-stack-overflow"></i> Statut</th>
+                            <th style="width: 100px;"><i class=""></i> Content</th>
+                            <th style="width: 100px;">Treated</th>
+                            <th style="width: 100px;"><i class="fa fa-edit"></i>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for c in claims %}
+                            <tr>
+                                <td>{% if c.date %}{{ c.date|date('Y-m-d H:i:s') }}{% endif %}</td>
+                                <td>{{ c.statut }}</td>
+                                <td>{{ c.text }}</td>
+
+                                <td>{% if c.treated %}
+
+                                            <form action="" method="get" data-toggle="modal" data-target="#myModal{{ c.id }}">
+                                                <input id="btn" class="btn btn-danger"  type="submit" value="View" >
+                                                <input type="text" name="id" value="{{ c.id }}" hidden>
+                                                <script src="{{ asset('js/jquery-2.2.3.min.js') }}"></script>
+                                                <script>
+                                                    $('#btn').click(function (e) {
+                                                        var id = '{{ c.id }}';
+                                                        console.log('id: '+ id);
+                                                        var path = "/pi/web/app_dev.php/claim/listeeee?id="+id;
+                                                        var state = {
+                                                            "canBeAnything": true
+                                                        };
+                                                        history.pushState(state, "New Title", path);
+                                                        //e.preventDefault();
+                                                    });
+                                                </script>
+                                            </form>
+
+                                    {% else %}No{% endif %}</td>
+
+                                <td>
+                                    <a class="btn btn-warning" style="width: 67px;" href="{{ path('edit_claim', { 'id': c.id }) }}">
+                                        <i class="fa fa-edit"></i>
+                                        Edit
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+                    <div>
+                    {{ knp_pagination_render(claims) }}
+                </div>
+
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                Order Byyyy
+                <form action="" method="get">
+                    <select onchange="this.form.submit()" name="order" class="form-control" style="width: 200px; height: 34px">
+                        <optgroup label="Choose">
+                            <option value="date">Date</option>
+                            <option value="treated">Treated</option>
+                            <option selected></option>
+                        </optgroup>
+                    </select>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    {% for c in claims %}
+        <div  id="myModal{{ c.id}}" class="modal fade" role="dialog">
+            <div style="margin-top: 300px" class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Response</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+                    <div class="modal-body">
+
+
+                            <h4 style="font-size: 20px; color: #000;" class="modal-title">Sent on: <span style="font-size: 14px">{{ c.date|date }}</span></h4>
+
+                            <h4 style="font-size: 20px; color: #000;" class="modal-title">Response: <span style="font-size: 14px"></span></h4>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {% endfor %}
+
+
+{% endblock %}
