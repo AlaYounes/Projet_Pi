@@ -1,4 +1,8 @@
 {%  extends 'base.html.twig' %}
+{% block stylesheat %}
+    {{ parent() }}
+    <script src="{{ asset('js/modernizr.custom.js') }}"></script>
+{% endblock %}
 {% block header %}
     {{ parent() }}
 {% endblock %}
@@ -195,6 +199,7 @@
                                         <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Delete"><span class="fa fa-trash"></span></a>
                                         <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Hide from Public"><span class="fa fa-lock"></span></a></td>
                                 </tr>
+
                                 <tr>
                                     <td><a href="{{ path('template_JobPasted') }}">Content Writers Needed</a></td>
                                     <td><span class="label label-mint">Not Public</span></td>
@@ -237,3 +242,16 @@
         </div><!-- /.row -->
     </div><!-- /.container -->
   {% endblock %}
+
+    {% block javascripts %}
+    {{ parent() }}
+    <!-- DATA TABES SCRIPT -->
+<script src="{{ asset('/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+<script>
+    $(function () {
+        $("#example1").dataTable();
+    });
+</script>
+<script src="{{ asset('/js/kafe.js') }}"></script>
+    {% endblock %}

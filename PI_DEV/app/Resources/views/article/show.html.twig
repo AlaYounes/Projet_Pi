@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+{% block stylesheat %}
+    {{ parent() }}
+    {#<link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">#}
+{% endblock %}
+
+{% block container %}
+    <h1>Article</h1>
+
+    <table class="table table-bordered table-hover">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ article.id }}</td>
+        </tr>
+        <tr>
+            <th>Titre</th>
+            <td>{{ article.titre }}</td>
+        </tr>
+        <tr>
+            <th>Auteur</th>
+            <td>{{ article.auteur }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ article.description }}</td>
+        </tr>
+        <tr>
+            <th>Datecreation</th>
+            <td>{% if article.dateCreation %}{{ article.dateCreation|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Dateedition</th>
+            <td>{% if article.dateEdition %}{{ article.dateEdition|date('Y-m-d H:i:s') }}{% endif %}</td>
+        </tr>
+        <tr>
+            <th>Image</th>
+            <td>
+                <a href="{{ path('blog_homepage', {'id': article.id}) }}">
+                    <img src="{{ asset('uploads/images/article/'~article.image ) }}" height="200px" alt="aaaaa"> </a></td>
+        </tr>
+        <tr>
+            <th>Categorie_name</th>
+            <td>{{ article.categorie.nom }} <h4>son id est</h4> {{ article.categorie.id }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul class="sidebar-menu" data-widget="tree">
+        <li>
+            <a href="{{ path('article_index') }}" class="kafe-btn kafe-btn-mint-small">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('article_edit', { 'id': article.id }) }}" class="kafe-btn kafe-btn-mint-small">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+            <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

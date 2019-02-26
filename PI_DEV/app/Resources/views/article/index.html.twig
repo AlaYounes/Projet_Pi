@@ -1,0 +1,255 @@
+{% extends 'base.html.twig' %}
+{% block stylesheat %}
+    {{ parent() }}
+{% endblock %}
+{% block container %}
+    {#{{ form_start(form,{'attr':{'novalidate':'novalidate' }}) }}#}
+
+    {#<div class="form-group">#}
+    {#{{ form_row(form.titre,{'attr':{'class':'form-control'}}) }}#}
+    {#</div>#}
+
+    {#Test du modification du Formulaire#}
+    {#<div class="form-group">#}
+    {#{{ form_label(form.titre,'Rechercher Par Titre') }}#}
+    {#{{ form_widget(form.titre,{'attr':{'class':'form-control'}}) }}#}
+    {#{{ form_errors(form.titre) }}#}
+    {#</div>#}
+
+    <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block responsive-flex">
+                    <div class="ui-block-title">
+                        <div class="h6 title">Rechercher un Article Par son titre</div>
+
+
+                        <form class="w-search">
+                            <div class="form-group with-button is-empty">
+                                <input class="form-control search" type="text"
+                                       placeholder="Taper le Titre de l'article">
+                                {#<button>#}
+                                {#<svg class="olymp-magnifying-glass-icon">#}
+                                {#<use xlink:href="#olymp-magnifying-glass-icon"></use>#}
+                                {#</svg>#}
+                                {#</button>#}
+                                <span class="material-input"></span></div>
+                            {#<div class="inline-items" id="entitiesNav">#}
+
+                            {#</div>#}
+                        </form>
+                        {#<a href="#" class="more">#}
+                        {#<svg class="olymp-three-dots-icon">#}
+                        {#<use xlink:href="#olymp-three-dots-icon"></use>#}
+                        {#</svg>#}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container inline-items" id="entitiesNav2">
+
+    </div>
+
+    <div class="blog-categories">
+        <div class="container">
+            <label for="drop" class="drop"></label>
+            <ul class="nav navbar-nav">
+                <li class="cat-item current-cat">
+                    <a href="{{ path('article_Order') }}">Latest</a>
+                </li>
+                {% for categorie in categories %}
+                    <li class="cat-item">
+
+                        <a href="{{ path('article_search_Categorie',{'id': categorie.id}) }}">{{ categorie.nom }}</a>
+                        {#<a href="{{ path('article_search_Politique') }}">Politique</a>#}
+                    </li>
+                {% endfor %}
+            </ul><!-- /ul.cat -->
+            {#{% endfor %}#}
+
+        </div><!-- /.container -->
+    </div>
+    {#method="post" id="addform" action="{{ path('article_rechercher', { 'auteur': articles.test }) }}"#}
+    <h1><a href="{{ path('article_index') }}">Articles list</a></h1>
+
+    {#<form class="navbar-form navbar-right" method="post" action="{{ path('article_search',{'motcle': articles.nom}) }}">#}
+    {#<input type="text" class="form-control" placeholder="Search..." name="motcle">#}
+    {#</form>#}
+    {#{{ form(form_search) }}#}
+
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Description</th>
+            <th>DateCreation</th>
+            <th>DateEdition</th>
+            <th>Image</th>
+            <th>Catégorie_Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>
+                <td>{{ article.titre }}</td>
+                <td>{{ article.auteur }}</td>
+                <td>{{ article.description }}</td>
+                <td>{% if article.dateCreation %}{{ article.dateCreation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if article.dateEdition %}{{ article.dateEdition|date('Y-m-d H:i:s') }}{% endif %}</td>
+                {#Rendre le lien dynamique en cliquant sur l'image#}
+                <td><a href="{{ path('blog_homepage', {'id': article.id}) }}">
+                        <img src="{{ asset('uploads/images/article/'~article.image ) }}" height="200px"
+                             alt="image description"></a></td>
+                <td>{{ article.categorie.nom }}</td>
+                <td>
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="{{ path('article_show', { 'id': article.id }) }}"
+                               class="kafe-btn kafe-btn-mint-small">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('article_edit', { 'id': article.id }) }} "
+                               class="kafe-btn kafe-btn-mint-small">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('article_new') }}">Create a new article</a>
+        </li>
+    </ul>
+
+
+    {#<!-- jQuery is necessary -->#}
+    {#<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>#}
+
+    {#<script type="text/javascript">#}
+    {#jQuery(document).ready(function () {#}
+    {#var searchRequest = null;#}
+    {#$(".search").keyup(function () {#}
+    {#var minlength = 1;#}
+    {#var that = this;#}
+    {#var value = $(this).val();#}
+    {#var entitySelector = $("#entitiesNav2").html('');#}
+    {#if (value.length >= minlength) {#}
+    {#if (searchRequest != null)#}
+    {#searchRequest.abort();#}
+    {#searchRequest = $.ajax({#}
+    {#type: "GET",#}
+    {#url: "{{ path('RechercheAjax') }}",#}
+    {#data: {#}
+    {#'q': value#}
+    {#},#}
+    {#dataType: "text",#}
+    {#success: function (msg) {#}
+    {#//we need to check if the value is the same#}
+    {#if (value == $(that).val()) {#}
+    {#var result = JSON.parse(msg);#}
+    {#$.each(result, function (key, arr) {#}
+    {#$.each(arr, function (id, value) {#}
+    {#if (key == 'entities') {#}
+    {#if (id != 'error') {#}
+    {#entitySelector.append('<a href="/Pi_DEV/web/app_dev.php/Blog/' + id +#}
+    {#' <div class="autho"><center><img src="{{ asset('uploads/images/article/') }}'#}
+    {#+ value[1] + '" alt="avatar" style="width:120px; height: 120px"></center></div>'#}
+    {#+ '<div class="notification-event">'#}
+    {#+ '<span class="h6 notification-friend"><center><h1><b>'#}
+    {#+ value[0] + '</b></h1></center></span></a>'#}
+    {#+ ' '#}
+    {#+ '</br>'#}
+    {#+ '</div>\n'#}
+    {#+ '<span class="notification-icon"><svg class="\' + escape(item.icon) + \'">' +#}
+    {#'<use xlink:href="icons/icons.svg#\' + escape(item.icon) + \'"></use></svg></span>'#}
+    {#+ '</a></li>');#}
+
+    {#} else {#}
+    {#entitySelector.append('<table class="table">' + value + '</table>');#}
+    {#}#}
+    {#}#}
+    {#});#}
+    {#});#}
+    {#}#}
+    {#}#}
+    {#});#}
+    {#}#}
+    {#});#}
+    {#});#}
+    {#</script>#}
+
+    <!-- jQuery is necessary -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var searchRequest = null;
+            $(".form-control").keyup(function () {
+                var minlength = 1;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $(".table").html('');
+                if (value.length >= minlength) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('RechercheAjax') }}",
+                        data: {
+                            'q': value
+                        },
+                        dataType: "text",
+                        success: function (msg) {
+                            //we need to check if the value is the same
+                            if (value == $(that).val()) {
+                                var result = JSON.parse(msg);
+                                $.each(result, function (key, arr) {
+                                    $.each(arr, function (id, value) {
+                                        if (key == 'entities') {
+                                            if (id != 'error') {
+
+                                                {#console.log({{ path("claim_show", {'id':"id"  }) }});#}
+//                                                 entitySelector.append('<tr><td>'+id+'</td><td>'+value.date.date+'</td><td>'+value.statut+'</td><td>'+value.text+'</td><td>'+value.treated+'</td><td><a class="btn btn-primary" href=""> <i class="fa fa-eye"></i> show </a></td></tr>');
+
+                                                entitySelector.append('<tr><td>' + value[0] + '</td><td>' + value[1] +
+                                                    '</td><td>' + value[2] + '</td><td>' + value[3].date + '</td><td><a class="btn btn-primary" href="">' +
+                                                    ' <i class="fa fa-eye"></i> show </a></td></tr>');
+
+                                                {#'<img src="{{ asset('uploads/images/article/') }}'+ '" alt="avatar" style="width:120px; height: 120px">'#}
+                                                /* entitySelector.append('<a href="/Pi-Dev-Web/web/app_dev.php/groups/' + id + '/show">' +
+                                                     ' <div class="autho"><center><img src="{{ asset('images/') }}' + value[1] + '" alt="avatar" style="width:120px; height: 120px"></center></div>' +
+                                                    '<div class="notification-event">' +
+                                                    '<span class="h6 notification-friend"><center><h1><b>' + value[0] +'</b></h1></center></span></a>' + ' ' +
+                                                    '</br>' +
+                                                    '</div>\n' +
+                                                    '<span class="notification-icon"><svg class="\' + escape(item.icon) + \'"><use xlink:href="icons/icons.svg#\' + escape(item.icon) + \'"></use></svg></span>' + '</a></li>');
+*/
+                                            } else {
+                                                entitySelector.append('<li class="errorLi">' + value + '</li>');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+{% endblock %}

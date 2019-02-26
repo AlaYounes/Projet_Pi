@@ -3,8 +3,7 @@ imports:
     - { resource: security.yml }
     - { resource: services.yml }
     - { resource: "@FixBundle/Resources/config/services.yml" }
-    - { resource: "@JobpostsBundle/Resources/config/services.yml" }
-
+    - { resource: "@BlogBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -12,8 +11,9 @@ parameters:
     locale: en
 
 framework:
+    translator: { fallbacks: ["%locale%"] }
     #esi: ~
-    translator: ~
+
     secret: '%secret%'
     router:
         resource: '%kernel.project_dir%/app/config/routing.yml'
@@ -62,10 +62,6 @@ doctrine:
         auto_generate_proxy_classes: '%kernel.debug%'
         naming_strategy: doctrine.orm.naming_strategy.underscore
         auto_mapping: true
-        dql:
-            datetime_functions:
-                strtodate: DoctrineExtensions\Query\Mysql\StrToDate
-
 
 # Swiftmailer Configuration
 swiftmailer:
@@ -73,6 +69,7 @@ swiftmailer:
     host: '%mailer_host%'
     username: '%mailer_user%'
     password: '%mailer_password%'
+    encryption: '%mailer_encryptation%'
     spool: { type: memory }
 
 fos_user:
@@ -82,3 +79,13 @@ fos_user:
     from_email:
         address: "fradj.mili@esprit.tn"
         sender_name: "mili_fradj"
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationType
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        article_images:
+            uri_prefix:         '%app.path.article_images%'
+            upload_destination: "%kernel.project_dir%/web/uploads/images/article"

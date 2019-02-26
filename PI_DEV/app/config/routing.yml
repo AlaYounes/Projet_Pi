@@ -1,6 +1,6 @@
-jobposts:
-    resource: "@JobpostsBundle/Resources/config/routing.yml"
-    prefix:   /jobposts
+blog:
+    resource: "@BlogBundle/Resources/config/routing.yml"
+    prefix:   /Blog
 
 fix:
     resource: "@FixBundle/Resources/config/routing.yml"

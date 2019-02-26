@@ -1,0 +1,48 @@
+article_index:
+    path:     /
+    defaults: { _controller: "BlogBundle:Article:index" }
+#    methods:  GET
+
+article_show:
+    path:     /{id}/show
+    defaults: { _controller: "BlogBundle:Article:show" }
+    methods:  GET
+
+article_new:
+    path:     /new
+    defaults: { _controller: "BlogBundle:Article:new" }
+    methods:  [GET, POST]
+
+article_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "BlogBundle:Article:edit" }
+    methods:  [GET, POST]
+
+article_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "BlogBundle:Article:delete" }
+    methods:  DELETE
+
+article_Order:
+    path:     /orderBy
+    defaults: { _controller: "BlogBundle:Article:Order" }
+
+#Juste Politique :/
+article_search_Categorie:
+    path:     /articleByCategorie/{id}/
+    defaults: { _controller: "BlogBundle:Article:findByCategorie" }
+
+article_rechercher_Auteur:
+    path:     /rechercher/{auteur}
+    defaults: { _controller: "BlogBundle:Article:findAuteur" }
+
+article_searchtest:
+  path:     /searchtest
+  defaults: { _controller: "BlogBundle:Article:SearchArticle" }
+
+RechercheDQL:
+    path:     /RechercheDQL
+    defaults: { _controller: "BlogBundle:Article:rechercheIdDQL"}
+RechercheAjax:
+    path:     /RechercheAjax
+    defaults: { _controller: "BlogBundle:Article:search"}

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+{% block stylesheat %}
+    {{ parent() }}
+{% endblock %}
+{% block container %}
+    {{ form(form) }}
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Description</th>
+            <th>DateCreation</th>
+            <th>DateEdition</th>
+            <th>Image</th>
+            <th>Catégorie_Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+            <tr>
+                <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>
+                <td>{{ article.titre }}</td>
+                <td>{{ article.auteur }}</td>
+                <td>{{ article.description }}</td>
+                <td>{% if article.dateCreation %}{{ article.dateCreation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if article.dateEdition %}{{ article.dateEdition|date('Y-m-d H:i:s') }}{% endif %}</td>
+                {#Rendre le lien dynamique en cliquant sur l'image#}
+                <td><a href="{{ path('blog_homepage', {'id': article.id}) }}">
+                        <img src="{{ asset('uploads/images/article/'~article.image ) }}" height="200px"
+                             alt="image description"></a></td>
+                <td>{{ article.categorie.nom }}</td>
+                <td>
+                    <ul class="sidebar-menu">
+                        <li>
+                            <a href="{{ path('article_show', { 'id': article.id }) }}"
+                               class="kafe-btn kafe-btn-mint-small">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('article_edit', { 'id': article.id }) }} "
+                               class="kafe-btn kafe-btn-mint-small">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('article_new') }}">Create a new article</a>
+        </li>
+    </ul>
+
+{% endblock %}
