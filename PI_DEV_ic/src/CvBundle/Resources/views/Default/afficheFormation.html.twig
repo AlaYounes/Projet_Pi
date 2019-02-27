@@ -1,0 +1,29 @@
+{% extends '@Fix/Frontend/Default/Profile.html.twig' %}
+
+{% block container %}
+
+    {% for c in list %}
+        <form>
+
+            <fieldset>
+                {% if (c.titre != null) and (c.dateDebut != null)  and (c.dateFin != null)
+                    and (c.description != null) %}
+
+                titre: {{ c.titre }} <br>
+                date de début : {{ c.dateDebut|date('Y-m-d ') }} <br>
+                date de fin : {{ c.datefin|date('Y-m-d ') }} <br>
+                description : {{ c.description }} <br>
+
+                {% endif %}
+    {% else  %}
+        <h4>vous n'avez pas encore rédiger votre CV </h4>
+
+
+
+            </fieldset>
+        </form>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

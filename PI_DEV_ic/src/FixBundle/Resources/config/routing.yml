@@ -1,0 +1,11 @@
+fix_homepage:
+    path:     /
+    defaults: { _controller: FixBundle:Default:index }
+fixit_fronted:
+    prefix:   /freelancer
+    resource: "@FixBundle/Resources/config/Frontend_routing.yml"
+
+admin:
+    prefix:   /admi
+    resource: "@FixBundle/Resources/config/Backend_routing.yml"
+

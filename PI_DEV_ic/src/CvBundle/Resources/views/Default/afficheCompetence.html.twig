@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+
+    {% for c in list %}
+        <form>
+
+            <fieldset>
+
+                certificats : {{ c.nomComp }} <br>
+
+                compétences : {{ c.nomCertif }} <br>
+
+                langues : {{ c.langues }} <br>
+
+
+
+
+
+            </fieldset>
+        </form>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

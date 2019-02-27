@@ -1,0 +1,31 @@
+{% extends '@Fix/Frontend/Default/Profile.html.twig' %}
+
+{% block container %}
+
+{% for c in list %}
+    <form>
+
+        <fieldset>
+            {% if (c.prenom != null) and (c.nom != null) and (c.dateNais != null)  and (c.adresse != null)
+                and (c.adrMail != null) and (c.tele != null) %}
+
+
+            prenom : {{ c.prenom }} <br>
+            nom : {{ c.nom}} <br>
+            date de naissance  : {{ c.dateNais|date('Y-m-d ') }} <br>
+            adresse : {{ c.adresse}} <br>
+            mail : {{ c.adrMail }} <br>
+            téléphone : {{ c.tele }} <br>
+
+
+            {% endif %}
+             {% else  %}
+                 <h4>vous n'avez pas encore rédiger votre CV </h4>
+
+        </fieldset>
+    </form>
+{% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

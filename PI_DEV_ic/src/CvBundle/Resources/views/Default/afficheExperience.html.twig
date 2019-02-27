@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+
+    {% for c in list %}
+        <form>
+
+            <fieldset>
+
+                titre: {{ c.titre }} <br>
+                date de début : {{ c.dateDebut|date('Y-m-d ') }} <br>
+                date de début : {{ c.dateDebut|date('Y-m-d ') }} <br>
+                description : {{ c.description }} <br>
+
+
+
+
+
+            </fieldset>
+        </form>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
