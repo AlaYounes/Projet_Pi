@@ -1,0 +1,96 @@
+{%  extends 'base1.html.twig' %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container %}
+      {{ parent() }}
+      <body>
+
+
+
+  <section class="dashboard section-padding">
+      <div class="container">
+          <div class="row">
+
+
+
+              <div class="col-sm-8 col-md-9">
+
+                  <div class="box">
+                      <div class="box-header">
+                          <h3 class="box-title">comment problem</h3>
+                      </div><!-- /.box-header -->
+                      <div class="box-body">
+                          <div class="table-responsive">
+                              <div class="row">
+
+
+
+                              </div>
+
+                              <table id="example1" class="table table-bordered table-hover">
+                                  <thead>
+
+                                  <tr>
+                                      <th>comment</th>
+                                      <th>problem </th>
+                                      <th>date</th>
+                                      <th>signal from  </th>
+
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  {% for entity in signal  %}
+
+
+
+                                      <tr>
+                                          {% for entity3 in commant %}
+                                          {% for entity4 in article %}
+                                              {% if entity3.id == entity.commant.id %}
+                                              {% if entity4.id == entity3.article.id %}
+                                                  <td><span> <a href="{{ path("commant",{'id':entity4.id } )}}">{{  entity3.commentaire }}</a></span></td>
+                                              {% endif %}
+                                              {% endif %}
+                                          {% endfor %}
+                                          {% endfor %}
+                                                 <td>{{ entity.description }}</td>
+                                          <td><span class="fa fa-user-times">{{ entity.dateC|date("m/d/y") }}</span></td>
+
+                                          <td>
+                                              {% for entity2 in users %}
+                                                  {% if entity2.id == entity.user.id %}
+                                                      <a href="">{{ entity2.username }}</a>
+                                                  {% endif %}
+                                              {% endfor %}</td>
+                                          {% for entity3 in commant %}
+                                              {% if entity3.id == entity.commant.id %}
+                                          <td>
+
+                                              <a href="{{ path('deletelistcom',{'id':entity3.id}) }}" class="btn btn-danger btn-xs" data-toggle="tooltip"
+                                                 title="Delete"><span class="fa fa-trash"></span></a>
+                                          </td>
+                                              {% endif %}
+                                          {% endfor %}
+
+                                      </tr>
+
+
+                                  {% endfor %}
+
+
+
+                                  </tbody>
+
+                              </table>
+                          </div>
+                      </div><!-- /.box-body -->
+                  </div><!-- /.box -->
+
+
+              </div><!-- /.col-md-9 -->
+          </div><!-- /.row -->
+      </div>
+
+  {% endblock %}

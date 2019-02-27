@@ -1,0 +1,39 @@
+forum_homepage:
+    path:     /
+    defaults: { _controller: ForumBundle:Default:index }
+
+add_article:
+    path:     /add_article
+    defaults: { _controller: ForumBundle:Article:add_article }
+mes_article:
+    path:     /mes_article
+    defaults: { _controller: ForumBundle:Article:mes_article }
+commant:
+    path:     /detail_article/{id}
+    defaults: { _controller: ForumBundle:Article:commant }
+
+deletelist:
+    path:     /deletelist/{id}
+    defaults: { _controller: ForumBundle:Article:deletelist }
+update:
+    path:     /update/{id}
+    defaults: { _controller: ForumBundle:Article:update }
+listegenerral:
+    path:     /listegenerral
+    defaults: { _controller: ForumBundle:Article:listegenerral }
+article_like:
+    path:     /article/{id}/like
+    defaults: { _controller: ForumBundle:Article:like }
+
+question_search:
+    path:     /search
+    defaults: { _controller: ForumBundle:Article:search }
+signaladmin:
+    path:     /signaladmin
+    defaults: { _controller: ForumBundle:Admin:signaladmin }
+signaler:
+    path:     /signaler/{id}
+    defaults: { _controller: ForumBundle:Article:signaler }
+deletelistcom:
+    path:     /deletelistcom/{id}
+    defaults: { _controller: ForumBundle:Admin:deletelistcom }
