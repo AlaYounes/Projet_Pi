@@ -1,0 +1,37 @@
+<center>
+    <h1>LISTE DES AMENDES</h1>
+    <table border="2">
+        <th>MONTANT</th>
+        <th>DATE</th>
+        <th>PENALITE</th>
+        <th>PAYEE</th>
+        <th>CIN Personne</th>
+        {% for a in amende %}
+            <tr>
+                <td>{{ a.montant }}</td>
+                <td>{{ a.date|date() }}</td>
+                <td>{{ a.penalite}}</td>
+                <td>{{ a.payee}}</td>
+                <td>{{ a.personne.cin}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <b><a id="lien" href="{{ path('Penalite') }}">mettre a jour les penalités</a></b>
+    <table border="2" style="border: #aa0400">
+        <tr class="t"><td><center>Ce lien pernet de calculer <br> et mettre à jour toute les penalites des<br> amondes non payés ayant dépasser 3 mois</center> </td></tr>
+    </table>
+</center>
+<script src="{{ asset("js/jquery-3.2.1.js") }}" ></script>
+<script>
+    $(document).ready(function () {
+        $(".t").hide();
+        $('#lien').hover(function () {
+            $('.t').show();
+        });
+        $('#lien').mouseleave(function () {
+            $('.t').hide();
+        });
+
+
+    })
+</script>

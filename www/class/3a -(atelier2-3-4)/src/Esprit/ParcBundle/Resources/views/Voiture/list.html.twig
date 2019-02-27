@@ -1,0 +1,82 @@
+{#<h1>Liste des modèle</h1>
+<ul>
+    {% for entity in marques %}
+        <li>
+            {{ entity }}
+            #}{#Ajout d'un filter
+            {{ entity|upper }}#}{#
+        </li>
+            #}{#condition si le tableau est vide#}{#
+    {% else %}
+        <h1>Le tableau est vide</h1>
+    {% endfor %}
+</ul>#}
+
+<h1>Liste des voitures</h1>
+<h4 id="logo">Afficher logo voiture</h4>
+<img src="{{ asset('logo.png') }}" style="display: none;">
+
+<table border="1" id="myTable">
+    <thead>
+        <tr>
+                <td>Id</td>
+                <td>Série</td>
+                <td>Marque</td>
+                <td>Détail</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entity in voitures %}
+            <tr>
+                    <td>SR{{ entity.id }}</td>
+                    <td>{{ entity.serie }}</td>
+                    <td>{{ entity.marque }}</td>
+                    <td><a href="#">Afficher</a></td>
+            </tr>
+        {% endfor %}
+    <tbody>
+    <tfoot></tfoot>
+
+</table>
+<br>
+<button id="btn" >Cacher</button>
+<button id="btn1" >Afficher</button>
+<button id="btn2" >toggle</button>
+<button id="btn3">Vider</button>
+<button id="btn4">Supprimer</button>
+<script src="{{ asset('js/jquery.js')}}"></script>
+<script>
+        $(document).ready(function () {
+            alert("Script working properly");
+        });
+
+        //question 1 (a,b,c)
+        $('#btn').click(function () {
+            $('table').hide();
+        });
+        $('#btn1').click(function () {
+            $('table').show();
+        });
+        $('#btn2').click(function () {
+            $('table').toggle();
+        });
+        //question 2
+        $('#logo').mouseenter(function (){
+            $('img').show();
+            $(this).html("logo affiché").css('color','red');
+        });
+        //question3
+        $('img').click(function (){
+            $(this).css('width','100px').css('height','100px').slideUp(2000).slideDown(2000);
+
+        });
+        //question4
+        $('#btn3').click(function () {
+            $('tbody').empty()
+        });
+
+        $('#btn4').click(function () {
+            $('table').remove();
+        });
+
+        </script>

@@ -1,0 +1,70 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+  {% block container %}
+      {{ parent() }}
+
+<body>
+<section class="pricing pricing-plan">
+    <div class="container">
+        <div class="section-title" style="padding-top: 20px;">
+            <h1>Pricing for Freelancers</h1>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4">
+                <div class="pricing-box">
+                    <h6>Basic Package</h6>
+                    <div class="price">
+                        <sup>$</sup>0
+                        <span>per month</span>
+                    </div>
+                    <hr>
+                    <p>Bids - <strong>10</strong></p>
+                    <p>Job Fee - <strong>8.95%</strong></p>
+                    <br>
+                    <a class="kafe-btn kafe-btn-mint-small full-width" href="#">Select plan</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="pricing-box">
+                    <h6>Medium Package</h6>
+                    <div class="price">
+                        <sup>$</sup>10
+                        <span>per month</span>
+                    </div>
+                    <hr>
+                    <p>Bids - <strong>50</strong></p>
+                    <p>Job Fee - <strong>8.20%</strong></p>
+                    <br>
+                    <a class="kafe-btn kafe-btn-mint-small full-width" href="#">Select plan</a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="pricing-box">
+                    <h6>Ultimate Package</h6>
+                    <div class="price">
+                        <sup>$</sup>20
+                        <span>per month</span>
+                    </div>
+                    <hr>
+                    <p>Bids - <strong>100</strong></p>
+                    <p>Job Fee - <strong>7.20%</strong></p>
+                    <br>
+                    <a class="kafe-btn kafe-btn-mint-small full-width" href="#">Select plan</a>
+                </div>
+            </div>
+
+
+
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section><!-- /.pricing -->
+
+</body>
+  {% endblock %}
+

@@ -1,0 +1,72 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+
+
+
+<section class="featured-users">
+    <div class="container">
+        <div class="section-title" style="padding-top: 20px;">
+            <h1>Freelancers</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9">
+
+                <div class="row">
+
+
+                        <table id="datatable" border="0" class="table table-striped">
+                            <thead>
+                            <tr class="active">
+                                <th>Id</th>
+                                <th>titre</th>
+                                <th>date debut</th>
+                                <th>date fin</th>
+                                <th>salaire</th>
+
+                                <th>specialite</th>
+                                <th>supprimer</th>
+                                <th>modifier</th>
+
+                            </tr>
+                            </thead>
+
+                            {% for Annonce in listeAnnonce %}
+
+                                <tr>
+                                    <td>{{ Annonce.id }}</td>
+                                    <td>{{ Annonce.titre }}</td>
+                                    <td>{{ Annonce.datedebut }}</td>
+                                    <td>{{ Annonce.datefin }}</td>
+                                    <td>{{ Annonce.salaire }}</td>
+                                    <td>{{ Annonce.speciality }}</td>
+                                    <td><a href="{{ path('SupprimerAnnonce',{'id':Annonce.id}) }}"><i class="medium material-icons "> supprimer</i></a></td>
+                                    <td><a href="{{ path('modifierAnnonce',{'id':Annonce.id}) }}"><i class="medium material-icons "> modifier</i></a></td>
+
+                                </tr>
+                            {% endfor %}
+
+                        </table>
+
+
+                </div><!-- row -->
+
+            </div><!-- col-md-9 -->
+
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,178 @@
+frontend_homepage:
+    path:     /
+    defaults: { _controller: FixBundle:Frontend:index }
+template_AddJob:
+    path:     /addjob
+    defaults: { _controller: FixBundle:Frontend:AddJob }
+template_Dashboard:
+    path:     /dashboard_Home
+    defaults: { _controller: FixBundle:Frontend:Dashboard }
+template_Profile:
+    path:     /profile
+    defaults: { _controller: FixBundle:Frontend:Profile }
+template_EditProfile:
+    path:     /editprofile
+    defaults: { _controller: FixBundle:Frontend:EditProfile }
+template_Login:
+    path:     /login
+    defaults: { _controller: FixBundle:Frontend:Login }
+template_Register:
+    path:     /register
+    defaults: { _controller: FixBundle:Frontend:Register }
+template_Hire:
+    path:     /hire
+    defaults: { _controller: FixBundle:Frontend:Hire }
+template_Work:
+    path:     /work
+    defaults: { _controller: FixBundle:Frontend:Work }
+template_Pricing:
+    path:     /pricing
+    defaults: { _controller: FixBundle:Frontend:Pricing }
+template_How:
+    path:     /how
+    defaults: { _controller: FixBundle:Frontend:How }
+template_dashb:
+    path:     /dash
+    defaults: { _controller: FixBundle:Frontend:Dashboard }
+template_Contract:
+    path:     /contract
+    defaults: { _controller: FixBundle:Frontend:Contract }
+template_JobPasted:
+    path:     /jobpasted
+    defaults: { _controller: FixBundle:Frontend:JobPasted }
+template_YourPorposals:
+    path:     /yourporposals
+    defaults: { _controller: FixBundle:Frontend:YourPorposals }
+template_OtherPorposals:
+    path:     /otherporposals
+    defaults: { _controller: FixBundle:Frontend:OtherPorposals }
+template_Offers:
+    path:     /offers
+    defaults: { _controller: FixBundle:Frontend:Offers }
+template_CompanyList:
+    path:     /companylist
+    defaults: { _controller: FixBundle:Frontend:CompanyList }
+template_AddCompany:
+    path:     /addcompany
+    defaults: { _controller: FixBundle:Frontend:AddCompany }
+template_Message:
+    path:     /message
+    defaults: { _controller: FixBundle:Frontend:Message }
+template_Deposits:
+    path:     /deposits
+    defaults: { _controller: FixBundle:Frontend:Deposits }
+template_Withdrawals:
+    path:     /withdrawals
+    defaults: { _controller: FixBundle:Frontend:Withdrawals }
+template_Payementmethod:
+    path:     /payementmethod
+    defaults: { _controller: FixBundle:Frontend:PayementMethod }
+template_Numbership:
+    path:     /numbership
+    defaults: { _controller: FixBundle:Frontend:Numbership }
+template_Featured_Job_List:
+    path:     /featured_job_list
+    defaults: { _controller: FixBundle:Frontend:Featured_Job_List }
+template_Featured_A_Job:
+    path:     /featured_a_list
+    defaults: { _controller: FixBundle:Frontend:Featured_A_Job}
+template_Featured_Profiles:
+    path:     /featured_profiles
+    defaults: { _controller: FixBundle:Frontend:Featured_Profiles}
+template_Featured_Your_Profile:
+    path:     /featured_your_profile
+    defaults: { _controller: FixBundle:Frontend:Featured_Your_Profile}
+template_Featured_Companies:
+    path:     /featured_companies
+    defaults: { _controller: FixBundle:Frontend:Featured_Companies}
+template_Featured_Your_Company:
+    path:     /featured_your_company
+    defaults: { _controller: FixBundle:Frontend:Featured_Your_Company}
+template_Profile_Image:
+    path:     /profile_image
+    defaults: { _controller: FixBundle:Frontend:Profile_Image}
+template_Password:
+    path:     /password
+    defaults: { _controller: FixBundle:Frontend:Password}
+template_Company:
+    path:     /company
+    defaults: { _controller: FixBundle:Frontend:Company}
+template_Workroom:
+    path:     /workroom
+    defaults: { _controller: FixBundle:Frontend:Workroom}
+template_Jobpost:
+    path:     /jobpost
+    defaults: { _controller: FixBundle:Frontend:Jobpost}
+template_Viewoffer:
+    path:     /viewoffer
+    defaults: { _controller: FixBundle:Frontend:Viewoffer}
+template_Viewporposal:
+    path:     /viewporposal
+    defaults: { _controller: FixBundle:Frontend:Viewporposal}
+template_Milestone:
+    path:     /milestone
+    defaults: { _controller: FixBundle:Frontend:Milestone}
+template_Task:
+    path:     /task
+    defaults: { _controller: FixBundle:Frontend:Task}
+template_Timesheet:
+    path:     /timesheet
+    defaults: { _controller: FixBundle:Frontend:Timesheet}
+template_File:
+    path:     /file
+    defaults: { _controller: FixBundle:Frontend:File}
+template_Link:
+    path:     /link
+    defaults: { _controller: FixBundle:Frontend:Link}
+template_Bug:
+    path:     /bug
+    defaults: { _controller: FixBundle:Frontend:Bug}
+template_Payement:
+    path:     /payement
+    defaults: { _controller: FixBundle:Frontend:Payement}
+template_Rate:
+    path:     /rate
+    defaults: { _controller: FixBundle:Frontend:Rate}
+
+Service_Ajout:
+    path:     /ajout_service
+    defaults: { _controller: FixBundle:Frontend:Ajout_Service}
+Offre_Ajout:
+    path:     /Ajout_Offre
+    defaults: { _controller: FixBundle:Frontend:Ajout_Offre}
+Offre_Supprimer:
+    path:     /Suprimer_Offre/{id}
+    defaults: { _controller: FixBundle:Frontend:Suprimer_Offre}
+Service_Supprimer:
+    path:     /Suprimer_Service/{id}
+    defaults: { _controller: FixBundle:Frontend:Suprimer_Service}
+Service_Modifier:
+    path:     /modifier_Service/{id}
+    defaults: { _controller: FixBundle:Frontend:modifier_Service}
+Offre_Modifier:
+    path:     /modifier_offre/{id}
+    defaults: { _controller: FixBundle:Frontend:Modifier_Offre}
+Offre_Afficher:
+    path:     /offre_afficher
+    defaults: { _controller: FixBundle:Frontend:Afficher_Offre}
+Service_Afficher:
+    path:     /service_afficher
+    defaults: { _controller: FixBundle:Frontend:Afficher_Service}
+
+Applay:
+    path:     /applay
+    defaults: { _controller: FixBundle:Frontend:Applay}
+back_Applay:
+    path:     /back_applay
+    defaults: { _controller: FixBundle:Frontend:Applayback}
+bac_Applay:
+    path:     /bac_applay
+    defaults: { _controller: FixBundle:Frontend:Appli}
+
+event:
+    path:     /event
+    defaults: { _controller: FixBundle:Frontend:event}
+
+AddApplay:
+    path:     /addapplay
+    defaults: { _controller: FixBundle:Frontend:Addapplay}

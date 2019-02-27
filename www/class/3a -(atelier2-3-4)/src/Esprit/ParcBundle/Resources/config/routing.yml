@@ -1,0 +1,11 @@
+esprit_parc_homepage:
+    path:     /
+    defaults: { _controller: EspritParcBundle:Default:index }
+
+esprit_parc_affichage:
+    path:     /afficher/{marque}
+    defaults: { _controller: EspritParcBundle:Voiture:affichage }
+
+esprit_parc_liste:
+    path:     /list
+    defaults: { _controller: EspritParcBundle:Voiture:list }

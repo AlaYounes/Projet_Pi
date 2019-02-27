@@ -1,0 +1,17 @@
+amendes_homepage:
+    path:     /
+    defaults: { _controller: AmendesBundle:Default:index }
+ajouterA:
+    path:     /add
+    defaults: { _controller: AmendesBundle:Amende:Ajouter }
+listeA:
+    path:     /liste
+    defaults: { _controller: AmendesBundle:Amende:lister}
+chercher:
+    path:     /chercher
+    defaults: { _controller: AmendesBundle:Amende:chercher}
+Penalite:
+    path:     /Penalite
+    defaults: { _controller: AmendesBundle:Amende:update}
+
+

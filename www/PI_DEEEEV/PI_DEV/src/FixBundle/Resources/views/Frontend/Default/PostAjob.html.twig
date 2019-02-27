@@ -1,0 +1,275 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+
+<section class="dashboard section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 col-md-3">
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="{{ path('template_Dashboard') }}">
+                            <i class="fa fa-life-ring"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Contract') }}">
+                            <i class="fa fa-align-left"></i> <span>Contracts</span>
+                        </a>
+                    </li>
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i> <span>Jobs</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_JobPasted') }}"><i class="fa fa-circle-o"></i> Jobs Posted</a></li>
+                            <li><a href="PostAjob.html.twig"><i class="fa fa-circle-o"></i> Add a Job</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-clone"></i> <span>Proposals</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_YourPorposals') }}"><i class="fa fa-circle-o"></i> Your Proposals</a></li>
+                            <li><a href="{{ path('template_OtherPorposals') }}"><i class="fa fa-circle-o"></i> Other Proposals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Offers') }}">
+                            <i class="fa fa-file"></i> <span>Offers</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-copyright"></i> <span>Companies</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_CompanyList') }}"><i class="fa fa-circle-o"></i> Company List</a></li>
+                            <li><a href="{{ path('template_AddCompany') }}"><i class="fa fa-circle-o"></i> Add a Company</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Message') }}">
+                            <i class="fa fa-envelope"></i> <span>Messages</span>
+                            <span class="pull-right-container">
+				  <small class="label pull-right bg-green">4</small>
+				</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-exchange"></i> <span>Wallet</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Deposits') }}"><i class="fa fa-circle-o"></i> Deposits</a></li>
+                            <li><a href="{{ path('template_Withdrawals') }}"><i class="fa fa-circle-o"></i> Withdrawals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Payementmethod') }}">
+                            <i class="fa fa-dot-circle-o"></i> <span>Payment Method</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Numbership') }}">
+                            <i class="fa fa-credit-card"></i> <span>Membership</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Job</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Job_List') }}"><i class="fa fa-circle-o"></i> Jobs Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_A_Job') }}"><i class="fa fa-circle-o"></i> Feature a Job</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Profile</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Profiles') }}"><i class="fa fa-circle-o"></i> Profile Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_Your_Profile') }}"><i class="fa fa-circle-o"></i> Feature your Profile </a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Company</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Companies') }}"><i class="fa fa-circle-o"></i> Companies Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_Your_Company') }}"><i class="fa fa-circle-o"></i> Feature your Companies </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="{{ path('template_EditProfile') }}">
+                            <i class="fa fa-user"></i> <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Profile_Image') }}">
+                            <i class="fa fa-image"></i> <span>Change Profile Image</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Password') }}">
+                            <i class="fa fa-lock"></i> <span>Change Password</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-sm-8 col-md-9">
+
+                <div class="job-box">
+                    <div class="job-header">
+                        <h4>Add Job</h4>
+                    </div>
+                    <form method="post" id="addform">
+
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" name="title" class="form-control" placeholder="Title" value=""/>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label>Category</label>
+                                <select name="category" class="form-control">
+                                    <option value="">Admin Support</option>
+                                    <option value="">Web, Software &amp; IT</option>
+                                    <option value="">Design, Art &amp; Multimedia</option>
+                                    <option value="">Writing &amp; Translation</option>
+                                    <option value="">Management &amp; Finance</option>
+                                    <option value="">Sales &amp; Marketing</option>
+                                    <option value="">Engineering &amp; Architecture</option>
+                                    <option value="">Legal</option>
+                                    <option value="">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 job-sec">
+                            <div class="form-group">
+                                <label>Sub Category</label>
+                                <select class="form-control">
+                                    <option value="">HTML5</option>
+                                    <option value="">CSS3</option>
+                                    <option value="">Bootstrap</option>
+                                    <option value="">PHP</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select class="form-control">
+                                <option value="">USA</option>
+                                <option value="">UK</option>
+                                <option value="">Russia</option>
+                                <option value="">Kenya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How would you like to pay?</label>
+                            <p>
+                                <a href="#" class="selected">By Hour</a>
+                                <a href="#" class="unselected">Fixed Cost</a>
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Budget</label>
+                            <input type="text" name="budget" class="form-control" placeholder="Budget" value=""/>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Hours per week</label>
+                            <p>
+                                <a href="#" class="unselected">40+</a>
+                                <a href="#" class="unselected">30-39</a>
+                                <a href="#" class="selected">20-29</a>
+                                <a href="#" class="unselected">10-19</a>
+                                <a href="#" class="unselected">1-9</a>
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Desired Experience Level</label>
+                            <p>
+                                <a href="#" class="unselected">$ Entry Level</a>
+                                <a href="#" class="unselected">$$ Intermediate</a>
+                                <a href="#" class="selected">$$$ Expert</a>
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Job Duration</label>
+                            <p>
+                                <a href="#" class="unselected">Not Sure</a>
+                                <a href="#" class="unselected">6+ Months</a>
+                                <a href="#" class="selected">3 to 6 Months</a>
+                                <a href="#" class="unselected">1 to 3 Months</a>
+                                <a href="#" class="unselected">Less than 1 Month</a>
+                                <a href="#" class="unselected">Less than 1 Week</a>
+                            </p>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea class="form-control" rows="5" placeholder="Provide a more detailed description of your job to get better proposals."></textarea>
+                        </div>
+
+                        <button class="kafe-btn kafe-btn-mint-small full-width">Submit</button>
+                    </form>
+                </div><!-- /.job-box -->
+
+            </div><!-- /.col-md-9 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>
+
+  {% endblock %}
+
+
+

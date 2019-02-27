@@ -1,0 +1,7 @@
+amendes:
+    resource: "@AmendesBundle/Resources/config/routing.yml"
+    prefix:   /Exemp
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

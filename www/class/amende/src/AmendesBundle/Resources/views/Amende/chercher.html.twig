@@ -1,0 +1,35 @@
+<center>
+    <h1> CHERCHER AMENDE </h1>
+    <form method="post">
+        <table>
+            <tr>
+                <td> PAYEE </td>
+                <td><select name="payee">
+                        <option>non</option>
+                        <option>oui</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td colspan="2"><center><input type="submit" value="chercher"></center></td>
+            </tr>
+        </table>
+    </form>
+    <table border="2">
+        <th>IDENTIFIANT</th>
+        <th>MONTANT</th>
+        <th>DATE</th>
+        <th>PENALITE</th>
+        <th>PAYEE</th>
+        <th>CIN Personne</th>
+        {% for a in amende %}
+            <tr>
+                <td>{{ a.id }}</td>
+                <td>{{ a.montant }}</td>
+                <td>{{ a.date|date() }}</td>
+                <td>{{ a.penalite}}</td>
+                <td>{{ a.payee}}</td>
+                <td>{{ a.personne.cin}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</center>

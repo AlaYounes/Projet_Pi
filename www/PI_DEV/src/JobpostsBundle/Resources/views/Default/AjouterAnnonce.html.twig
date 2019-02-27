@@ -1,0 +1,113 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container %}
+      {{ parent() }}
+<link rel="stylesheet" href="{{ asset('js/datetimepicker/jquery.datetimepicker.min.css')}}" />
+<script type="text/javascript" src="{{ asset('js/datetimepicker/jquery.js')}}"></script>
+
+      <script type="text/javascript" src="{{ asset('js/datetimepicker/jquery.datetimepicker.full.js')}}"></script>
+
+
+      {{ form_start(form) }}
+    <div class="container">
+        <div class="col-sm-8">
+
+            <div class="panel panel-default checkoutInfo">
+                <div class="panel-heading bg-color-3 border-color-3">
+                    <h3 class="panel-title">Ajouter offres</h3>
+
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+
+                            <label for="">Titre </label>
+                            {{ form_widget(form.titre ) }}
+                            {#<input type="text" class="form-control border-color-1" id="">#}
+
+                    </div>
+                    <div class="form-group">
+
+                        <label for="">Specialité </label>
+                        {{ form_widget(form.speciality ) }}
+                        {#<input type="text" class="form-control border-color-1" id="">#}
+
+                    </div>
+
+                    <div class="form-group">
+
+                            <label for="">Salaire</label>
+                            {{ form_widget(form.salaire) }}
+                            {#<input type="text" class="form-control border-color-1" id="">#}
+
+                    </div>
+                    <div class="form-group">
+
+                            <label for="">Description</label>
+                            {{ form_widget(form.description) }}
+                            {#<input type="text" class="form-control border-color-1" id="">#}
+
+                    </div>
+
+                    <div class="form-group">
+                    <div class="form-group">
+                                <label for="">date debut</label>
+                                <div class='input-group date'>
+                                    <input type='text' id="datetimepicker6" class="form-control" name="datedebut" data-date-format="DD-MM-YYYY"/>
+                                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+                                </div>
+                            </div>
+
+                <div class="form-group">
+                                <label for="">date fin</label>
+                                <div class='input-group date'>
+                                    <input type='text' id="datetimepicker7" class="form-control" name="datefin" data-date-format="DD-MM-YYYY"/>
+                                    <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+                                </div>
+                            </div>
+                        <script type="text/javascript">
+                            jQuery(function(){
+                                jQuery('#datetimepicker6').datetimepicker({
+                                    format:'Y/m/d',
+                                    onShow:function( ct ){
+                                        this.setOptions({
+                                            maxDate:jQuery('#datetimepicker7').val()?jQuery('#datetimepicker7').val():false
+                                        })
+                                    },
+                                    timepicker:false
+                                });
+                                jQuery('#datetimepicker7').datetimepicker({
+                                    format:'Y/m/d',
+                                    onShow:function( ct ){
+                                        this.setOptions({
+                                            minDate:jQuery('#datetimepicker6').val()?jQuery('#datetimepicker6').val():false
+                                        })
+                                    },
+                                    timepicker:false
+                                });
+                            });
+                        </script>
+                    </div>
+
+                    <div class="form-group">
+                            <label for=""></label>
+                            {{ form_widget(form.save) }}
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ form_end(form) }}
+
+
+  {% endblock %}

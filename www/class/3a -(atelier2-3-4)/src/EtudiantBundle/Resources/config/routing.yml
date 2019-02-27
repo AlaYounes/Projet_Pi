@@ -1,0 +1,11 @@
+etudiant_homepage:
+    path:     /
+    defaults: { _controller: EtudiantBundle:Default:index }
+
+index:
+    path:     /index/{nbr}
+    defaults: { _controller: EtudiantBundle:Etudiant:index }
+
+affichage:
+    path:     /affichage/{nom}
+    defaults: { _controller: EtudiantBundle:Etudiant:affichage }

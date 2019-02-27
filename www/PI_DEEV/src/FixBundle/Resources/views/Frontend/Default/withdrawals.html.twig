@@ -1,0 +1,231 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+<body>
+
+<section class="dashboard section-padding">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 col-md-3">
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="{{ path('template_Dashboard') }}">
+                            <i class="fa fa-life-ring"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Contract') }}">
+                            <i class="fa fa-align-left"></i> <span>Contracts</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-files-o"></i> <span>Jobs</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_JobPasted') }}"><i class="fa fa-circle-o"></i> Jobs Posted</a></li>
+                            <li><a href="{{ path('template_AddJob') }}"><i class="fa fa-circle-o"></i> Add a Job</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-clone"></i> <span>Proposals</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_YourPorposals') }}"><i class="fa fa-circle-o"></i> Your Proposals</a></li>
+                            <li><a href="{{ path('template_OtherPorposals') }}"><i class="fa fa-circle-o"></i> Other Proposals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Offers') }}">
+                            <i class="fa fa-file"></i> <span>Offers</span>
+                        </a>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-copyright"></i> <span>Companies</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_CompanyList') }}"><i class="fa fa-circle-o"></i> Company List</a></li>
+                            <li><a href="{{ path('template_AddCompany') }}"><i class="fa fa-circle-o"></i> Add a Company</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Message') }}">
+                            <i class="fa fa-envelope"></i> <span>Messages</span>
+                            <span class="pull-right-container">
+				  <small class="label pull-right bg-green">4</small>
+				</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-exchange"></i> <span>Wallet</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Deposits') }}"><i class="fa fa-circle-o"></i> Deposits</a></li>
+                            <li><a href="{{ path('template_Withdrawals') }}"><i class="fa fa-circle-o"></i> Withdrawals</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Payementmethod') }}">
+                            <i class="fa fa-dot-circle-o"></i> <span>Payment Method</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Numbership') }}">
+                            <i class="fa fa-credit-card"></i> <span>Membership</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Job</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Job_List') }}"><i class="fa fa-circle-o"></i> Jobs Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_A_Job') }}"><i class="fa fa-circle-o"></i> Feature a Job</a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Profile</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Profiles') }}"><i class="fa fa-circle-o"></i> Profile Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_Your_Profile') }}"><i class="fa fa-circle-o"></i> Feature your Profile </a></li>
+                        </ul>
+                    </li>
+                    <li class="treeview">
+                        <a href="#">
+                            <i class="fa fa-external-link-square"></i> <span>Feature a Company</span>
+                            <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li><a href="{{ path('template_Featured_Companies') }}"><i class="fa fa-circle-o"></i> Companies Featured List</a></li>
+                            <li><a href="{{ path('template_Featured_Your_Company') }}"><i class="fa fa-circle-o"></i> Feature your Companies </a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="sidebar-menu" data-widget="tree">
+                    <li>
+                        <a href="{{ path('template_EditProfile') }}">
+                            <i class="fa fa-user"></i> <span>Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Profile_Image') }}">
+                            <i class="fa fa-image"></i> <span>Change Profile Image</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('template_Password') }}">
+                            <i class="fa fa-lock"></i> <span>Change Password</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-sm-8 col-md-9">
+
+
+                <div class="work-box">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+
+                            <div class="col-lg-12 top-sec">
+                                <h3>Next Payouts.</h3>
+                                <p>Your next Payout of $1700 will be on 15th August 2018</p>
+                            </div>
+
+                        </div><!-- .col-lg-12 -->
+                    </div><!-- /.row -->
+                </div><!-- .work-box -->
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">Withdrawals List</h3>
+                    </div><!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table id="example1" class="table table-bordered table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Amount</th>
+                                    <th>Payout</th>
+                                    <th>Date Processed</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>$1400</td>
+                                    <td><span class="label label-mint">PayPal to themashabrandbusiness@gmail.com</span></td>
+                                    <td>15th July 2018</td>
+                                </tr>
+                                <tr>
+                                    <td>$1100</td>
+                                    <td><span class="label label-mint">Payooner</span></td>
+                                    <td>15th June 2018</td>
+                                </tr>
+                                <tr>
+                                    <td>$1200</td>
+                                    <td><span class="label label-mint">Skrill to themashabrand@gmail.com</span></td>
+                                    <td>15th May 2018</td>
+                                </tr>
+                                <tr>
+                                    <td>$900</td>
+                                    <td><span class="label label-mint">PayPal to themashabrandbusiness@gmail.com</span></td>
+                                    <td>15th April 2018</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th>Amount</th>
+                                    <th>Payout</th>
+                                    <th>Date Processed</th>
+                                </tr>
+                                </tfoot>
+                            </table>
+                        </div><!-- /.table-responsive -->
+                    </div><!-- /.box-body -->
+                </div><!-- /.box -->
+
+
+
+
+            </div><!-- /.col-md-9 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+  {% endblock %}
