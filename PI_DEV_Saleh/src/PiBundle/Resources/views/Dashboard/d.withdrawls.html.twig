@@ -1,0 +1,73 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Withdrawls{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+
+        <div class="work-box">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+
+                    <div class="col-lg-12 top-sec">
+                        <h3>Next Payouts.</h3>
+                        <p>Your next Payout of $1700 will be on 15th August 2018</p>
+                    </div>
+
+                </div><!-- .col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- .work-box -->
+
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Withdrawals List</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Payout</th>
+                            <th>Date Processed</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>$1400</td>
+                            <td><span class="label label-mint">PayPal to themashabrandbusiness@gmail.com</span></td>
+                            <td>15th July 2018</td>
+                        </tr>
+                        <tr>
+                            <td>$1100</td>
+                            <td><span class="label label-mint">Payooner</span></td>
+                            <td>15th June 2018</td>
+                        </tr>
+                        <tr>
+                            <td>$1200</td>
+                            <td><span class="label label-mint">Skrill to themashabrand@gmail.com</span></td>
+                            <td>15th May 2018</td>
+                        </tr>
+                        <tr>
+                            <td>$900</td>
+                            <td><span class="label label-mint">PayPal to themashabrandbusiness@gmail.com</span></td>
+                            <td>15th April 2018</td>
+                        </tr>
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Amount</th>
+                            <th>Payout</th>
+                            <th>Date Processed</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div><!-- /.table-responsive -->
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+
+
+
+
+    </div><!-- /.col-md-9 -->{% endblock %}

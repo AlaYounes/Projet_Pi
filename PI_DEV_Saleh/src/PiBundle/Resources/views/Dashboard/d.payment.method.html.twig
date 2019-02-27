@@ -1,0 +1,34 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Payment_Method{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="job-box">
+            <div class="job-header">
+                <h4>Put your preffered Payment Method</h4>
+            </div>
+            <form method="post" id="addform">
+
+                <div class="form-group">
+                    <label>Payment Methods</label>
+                    <p>
+                        <a href="" class="unselected">Paypal</a>
+                        <a href="" class="unselected">Skrill</a>
+                        <a href="" class="unselected">Payoneer</a>
+                        <a href="" class="selected">Brain Tree</a>
+                        <a href="" class="unselected">Mobile Money</a>
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>Associated Email</label>
+                    <input type="text" name="title" class="form-control" placeholder="Associated Email" value=""/>
+                </div>
+
+                <button class="kafe-btn kafe-btn-mint-small full-width">Submit</button>
+            </form>
+        </div><!-- /.job-box -->
+
+    </div><!-- /.col-md-9 -->{% endblock %}

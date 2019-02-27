@@ -1,0 +1,33 @@
+
+
+{% extends 'dashboard_Base.html.twig' %}
+
+{% block container %}
+    {% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+<div class="col-sm-8 col-md-9">
+
+    <div class="job-box">
+        <div class="job-header">
+            <h4>Add Job</h4>
+        </div>
+        <form id="addForm">
+             <div class="=form-group">
+
+                 {{ form_start(form) }}
+                 {{ form_widget(form) }}
+                 <input type="submit" value="Add the job" class="kafe-btn kafe-btn-mint-small full-width" />
+
+                 {{ form_end(form) }}
+             </div>
+        </form>
+        <br>
+      <ul>
+           <li align="right">
+               <a class="btn btn-default" href="{{ path('d__jobs__posted') }}">Back to the list</a>
+           </li>
+      </ul>
+
+    </div>
+</div>
+{% endblock %}

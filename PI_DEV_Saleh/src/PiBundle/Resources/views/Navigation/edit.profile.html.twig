@@ -1,0 +1,55 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Navigation:edit_Profile{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="job-box">
+            <div class="job-header">
+                <h4>Edit your Profile</h4>
+            </div>
+            <form method="post" id="addform">
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" name="title" class="form-control" placeholder="Name" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Profession</label>
+                    <input type="text" name="title" class="form-control" placeholder="Profession e.g Wordpress Developer" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" name="title" class="form-control" placeholder="Location e.g Nairobi, Kenya" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Hourly Rate</label>
+                    <input type="text" name="title" class="form-control" placeholder="Hourly Rate e.g $20/hr" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Skills</label>
+                    <p>
+                        <a href="" class="selected">HTML5</a>
+                        <a href="" class="selected">CSS3</a>
+                        <a href="" class="selected">Bootstrap</a>
+                        <a href="" class="selected">PHP</a>
+                        <a href="" class="unselected">Wordpress</a>
+                        <a href="" class="unselected">Angular JS</a>
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>About</label>
+                    <textarea class="form-control" rows="5" placeholder="Provide a more detailed description about yourself."></textarea>
+                </div>
+
+                <button class="kafe-btn kafe-btn-mint-small full-width">Submit</button>
+            </form>
+        </div><!-- /.job-box -->
+
+    </div><!-- /.col-md-9 -->{% endblock %}

@@ -1,0 +1,187 @@
+
+pi_offre:
+    resource: "@PiBundle/Resources/config/routing/offre.yml"
+    prefix:   /offre
+
+pi_job:
+    resource: "@PiBundle/Resources/config/routing/job.yml"
+    prefix:   /job
+
+pi_homepage:
+    path:     /
+    defaults: { _controller: PiBundle:Default:index }
+home:
+    path:     /home
+    defaults: { _controller: PiBundle:Navigation:home }
+
+hire:
+    path:     /hire
+    defaults: { _controller: PiBundle:Navigation:hire }
+
+work:
+    path:     /work
+    defaults: { _controller: PiBundle:Navigation:work }
+
+pricing:
+    path:     /pricing
+    defaults: { _controller: PiBundle:Navigation:pricing }
+
+how:
+    path:     /how
+    defaults: { _controller: PiBundle:Navigation:how }
+
+login:
+    path:     /login
+    defaults: { _controller: PiBundle:Navigation:login }
+
+dashboard:
+    path:     /dashboard
+    defaults: { _controller: PiBundle:Navigation:dashboard }
+
+profile:
+    path:     /profile
+    defaults: { _controller: PiBundle:Navigation:profile }
+
+edit__profile:
+    path:     /edit_Profile
+    defaults: { _controller: PiBundle:Navigation:edit_Profile }
+
+add__job:
+    path:     /add_Job
+    defaults: { _controller: PiBundle:Navigation:add_Job }
+
+d__contract:
+    path:     /d_Contract
+    defaults: { _controller: PiBundle:Dashboard:d_Contract }
+
+d__jobs__posted:
+    path:     /d_Jobs_Posted
+    defaults: { _controller: PiBundle:Job:mes_jobs}
+
+#d__add__job:
+#    path:     /d_Add_Job
+#    defaults: { _controller: PiBundle:Dashboard:d_Add_Job }
+
+d__your__proposals:
+    path:     /d_Your_Proposals
+    defaults: { _controller: PiBundle:Dashboard:d_Your_Proposals }
+
+d-_others__proposals:
+    path:     /d_Others_Proposals
+    defaults: { _controller: PiBundle:Dashboard:d_Others_Proposals }
+
+d__offers:
+    path:     /d_Offers
+    defaults: { _controller: PiBundle:Job:mes_jobs }
+
+d__company__list:
+    path:     /d_Company_List
+    defaults: { _controller: PiBundle:Dashboard:d_Company_List }
+
+d__add__company:
+    path:     /d_Add_Company
+    defaults: { _controller: PiBundle:Dashboard:d_Add_Company }
+
+d__messages:
+    path:     /d_Messages
+    defaults: { _controller: PiBundle:Dashboard:d_Messages }
+
+d__deposits:
+    path:     /d_Deposits
+    defaults: { _controller: PiBundle:Dashboard:d_Deposits }
+
+d__withdrawls:
+    path:     /d_Withdrawls
+    defaults: { _controller: TemplateBundle:Dashboard:d_Withdrawls }
+
+d__payment__method:
+    path:     /d_Payment_Method
+    defaults: { _controller: PiBundle:Dashboard:d_Payment_Method }
+
+d__featured__job__list:
+    path:     /d_Featured_Job_List
+    defaults: { _controller: PiBundle:Dashboard:d_Featured_Job_List }
+
+d__feature_a__job:
+    path:     /d_Feature_a_Job
+    defaults: { _controller: TemplateBundle:Dashboard:d_Feature_a_Job }
+
+d__featured__profiles:
+    path:     /d_Featured_Profiles
+    defaults: { _controller: PiBundle:Dashboard:d_Featured_Profiles }
+
+d__feature__your__profile:
+    path:     /d_Feature_Your_Profile
+    defaults: { _controller: PiBundle:Dashboard:d_Feature_Your_Profile }
+
+d__featured__companies:
+    path:     /d_Featured_Companies
+    defaults: { _controller: PiBundle:Dashboard:d_Featured_Companies }
+
+d__feature__your__company:
+    path:     /d_Feature_Your_Company
+    defaults: { _controller: PiBundle:Dashboard:d_Feature_Your_Company }
+
+d__profile__image:
+    path:     /d_Profile_Image
+    defaults: { _controller: PiBundle:Dashboard:d_Profile_Image }
+
+d__password:
+    path:     /d_Password
+    defaults: { _controller: TemplateBundle:Dashboard:d_Password }
+
+d__membership:
+    path:     /d_Membership
+    defaults: { _controller: PiBundle:Dashboard:d_Membership }
+
+workroom:
+    path:     /workroom
+    defaults: { _controller: PiBundle:Workroom:workroom }
+
+milestone:
+    path:     /milestone
+    defaults: { _controller: PiBundle:Workroom:milestone }
+
+task:
+    path:     /task
+    defaults: { _controller: PiBundle:Workroom:task }
+
+timesheat:
+    path:     /timesheat
+    defaults: { _controller: PiBundle:Workroom:timesheat }
+
+file:
+    path:     /file
+    defaults: { _controller: PiBundle:Workroom:file }
+
+link:
+    path:     /link
+    defaults: { _controller: PiBundle:Workroom:link }
+
+bug:
+    path:     /bug
+    defaults: { _controller: PiBundle:Workroom:bug }
+
+payment:
+    path:     /payment
+    defaults: { _controller: PiBundle:Workroom:payment }
+
+rate:
+    path:     /rate
+    defaults: { _controller: PiBundle:Workroom:rate }
+
+job__post:
+    path:     /job_Post
+    defaults: { _controller: PiBundle:Workroom:job_Post }
+
+send__message:
+    path:     /send_Message
+    defaults: { _controller: PiBundle:Workroom:send_Message }
+
+rate__freelancer:
+    path:     /rate_Freelancer
+    defaults: { _controller: PiBundle:Workroom:rate_Freelancer }
+
+view_proposals:
+    path:     /view_Proposals
+    defaults: { _controller: PiBundle:Workroom:view_Proposals }

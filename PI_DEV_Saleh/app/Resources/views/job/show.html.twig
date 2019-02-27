@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+    <h1>Job</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ job.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ job.titre }}</td>
+            </tr>
+            <tr>
+                <th>Categorie</th>
+                <td>{{ job.categorie }}</td>
+            </tr>
+            <tr>
+                <th>Souscategorie</th>
+                <td>{{ job.souscategorie }}</td>
+            </tr>
+            <tr>
+                <th>Pays</th>
+                <td>{{ job.pays }}</td>
+            </tr>
+            <tr>
+                <th>Budget</th>
+                <td>{{ job.budget }}</td>
+            </tr>
+            <tr>
+                <th>Heuresps</th>
+                <td>{{ job.heuresPs }}</td>
+            </tr>
+            <tr>
+                <th>Experience</th>
+                <td>{{ job.experience }}</td>
+            </tr>
+            <tr>
+                <th>Duree</th>
+                <td>{{ job.duree }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ job.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('job_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('job_edit', { 'id': job.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

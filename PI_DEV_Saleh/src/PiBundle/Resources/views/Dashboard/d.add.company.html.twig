@@ -1,0 +1,59 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Add_Company{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="job-box">
+            <div class="job-header">
+                <h4>Add Company</h4>
+            </div>
+            <form method="post" id="addform">
+
+                <div class="form-group">
+                    <label>Company Name</label>
+                    <input type="text" name="title" class="form-control" placeholder="Company Name" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Website</label>
+                    <input type="text" name="title" class="form-control" placeholder="http://..." value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Slogan</label>
+                    <input type="text" name="title" class="form-control" placeholder="Slogan" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Size</label>
+                    <p>
+                        <a href="" class="unselected">1 - 10</a>
+                        <a href="" class="unselected">10 - 20</a>
+                        <a href="" class="selected">30 - 40</a>
+                        <a href="" class="unselected">50+</a>
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>Founded</label>
+                    <input type="text" name="title" class="form-control" placeholder="Founded(Year)" value=""/>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea class="form-control" rows="5" placeholder="Provide details for your company."></textarea>
+                </div>
+
+                <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
+                <label for="file-1" class="label-file"> <span>Choose a file&hellip;</span></label>
+                <br/>
+                <br/>
+
+                <button class="kafe-btn kafe-btn-mint-small full-width">Submit</button>
+            </form>
+        </div><!-- /.job-box -->
+
+    </div><!-- /.col-md-9 -->
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block container %}
+    <h1>Jobs list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titre</th>
+                <th>Categorie</th>
+                <th>Souscategorie</th>
+                <th>Pays</th>
+                <th>Budget</th>
+                <th>Heuresps</th>
+                <th>Experience</th>
+                <th>Duree</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for job in jobs %}
+            <tr>
+                <td><a href="{{ path('job_show', { 'id': job.id }) }}">{{ job.id }}</a></td>
+                <td>{{ job.titre }}</td>
+                <td>{{ job.categorie }}</td>
+                <td>{{ job.souscategorie }}</td>
+                <td>{{ job.pays }}</td>
+                <td>{{ job.budget }}</td>
+                <td>{{ job.heuresPs }}</td>
+                <td>{{ job.experience }}</td>
+                <td>{{ job.duree }}</td>
+                <td>{{ job.description }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('job_show', { 'id': job.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('job_edit', { 'id': job.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('job_new') }}">Create a new job</a>
+        </li>
+    </ul>
+{% endblock %}

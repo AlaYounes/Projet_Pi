@@ -1,0 +1,209 @@
+{% block stylesheat %}
+
+
+
+<head>
+
+    <!-- ==============================================
+    Title and Meta Tags
+    =============================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projet Pi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Add your business website description here">
+    <meta name="keywords" content="Add your, business, website, keywords, here">
+    <meta name="author" content="Add your business, website, author here">
+
+    <!-- ==============================================
+    Favicons
+    =============================================== -->
+    {#<link rel="icon" href="{{ asset('assets/img/logo.jpg') }}">#}
+    <link rel="apple-touch-icon" href="{{ asset('img/favicons/apple-touch-icon.html') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('img/favicons/apple-touch-icon-72x72.html') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('img/favicons/apple-touch-icon-114x114.html') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <style>
+        .jumbotron {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <!-- ==============================================
+    CSS
+    =============================================== -->
+    <!-- Style-->
+    <link type="text/css" href="{{ asset('assets/css/style.css') }}" rel="stylesheet" />
+    <link type="text/css" href="{{ asset('assets/css/login.css') }}" rel="stylesheet" />
+
+    <!-- ==============================================
+    Feauture Detection
+    =============================================== -->
+    <script src="{{ asset('assets/js/modernizr-custom.html') }}"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+
+</head>
+
+{% endblock %}
+
+{% block Navigation %}
+<!-- ==============================================
+    Navigation Section
+    =============================================== -->
+<header class="tr-header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('home') }}"><img src="{{ asset('assets/img/logo.jpg') }}" alt="Image"/>The Kafe</a>
+            </div><!-- /.navbar-header -->
+            <div class="navbar-left">
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ path('offre_index') }}">GoHire</a></li>
+                        <li><a href="{{ path('work') }}">GoWork</a></li>
+                        <li><a href="{{ path('pricing') }}">Pricing</a></li>
+                        <li><a href="{{ path('how') }}">How it works</a></li>
+                    </ul>
+                </div>
+            </div><!-- /.navbar-left -->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><i class="fa fa-user"></i></li>
+                    <li><a href=" {{ path('fos_user_registration_register') }}">Sign In/ Register </a></li>
+
+                    <li class="dropdown mega-avatar">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+                            <span class="avatar w-32"><img src="{{ asset('assets/img/users/2.jpg') }}" class="img-resonsive img-circle" width="25" height="25" alt="..."></span>
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <span>
+Salah		   </span>
+                        </a>
+                        <div class="dropdown-menu w dropdown-menu-scale pull-right">
+                            <a class="dropdown-item" href="{{ path('dashboard') }}"><span>Dashboard</span></a>
+                            <a class="dropdown-item" href="{{ path('profile') }}"><span>Profile</span></a>
+                            <a class="dropdown-item" href="{{ path('edit__profile') }}"><span>Settings</span></a>
+                            <a class="dropdown-item" href="{{ path('fos_user_security_logout') }}">Sign out</a>
+                        </div>
+                    </li><!-- /navbar-item -->
+
+                </ul><!-- /.sign-in -->
+                <a href="{{ path('job_new') }}" class="kafe-btn kafe-btn-mint-small">Post a Job</a>
+            </div><!-- /.nav-right -->
+        </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+</header><!-- Page Header -->
+
+
+
+{% endblock %}
+
+{% block container %}
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                        <li><a href="{{ path('fos_user_profile_edit') }}">
+                                Logged in as {{ app.user.username }}
+                            </a>
+                        </li>
+                        <li><a href="{{ path('fos_user_security_logout') }}">
+                                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                            </a>
+                        </li>
+                    {% else %}
+                        <li><a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            {% block name %}
+            {% endblock name %}
+
+            {% if app.request.hasPreviousSession %}
+                {% for type, messages in app.session.flashbag.all() %}
+                    {% for message in messages %}
+                        <div class="flash-{{ type }} alert-{{ type }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+            {% endif %}
+
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+<!-- ==============================================
+	 Footer Section
+	 =============================================== -->
+<footer class="footerWhite">
+
+    <!-- COPY RIGHT -->
+    <div class="clearfix copyRight">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <div class="copyRightWrapper">
+                        <div class="row">
+
+                            <div class="col-sm-5 col-sm-push-7 col-xs-12">
+                                <ul class="list-inline socialLink">
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div><!-- /col-sm-5 -->
+
+                            <div class="col-sm-7 col-sm-pull-5 col-xs-12">
+                                <div class="copyRightText">
+                                    <p>Copyright © 2018. All Rights Reserved</p>
+                                </div>
+                            </div><!-- /col-sm-7 -->
+
+                        </div><!-- /row -->
+                    </div><!-- /copyRightWrapper -->
+                </div><!-- /col-xs-2 -->
+
+            </div><!-- /row -->
+        </div><!-- /container -->
+    </div><!-- /copyRight -->
+
+</footer>
+{% endblock %}
+
+{% block JavaScript %}
+<a id="scrollup">Scroll</a>
+
+
+<!-- ==============================================
+Scripts
+=============================================== -->
+<script src="{{ asset('assets/js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/kafe.js') }}"></script>
+{% endblock %}

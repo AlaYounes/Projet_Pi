@@ -1,0 +1,110 @@
+{% extends "dashboard_Workroom_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Workroom:timesheat{% endblock %}
+
+{% block container %}
+
+    <div class="button-box">
+        <a href="" class="kafe-btn kafe-btn-mint-small" data-toggle="modal">Start Timer</a>
+    </div><!-- /.prop-info -->
+    <div class="work-box">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+
+                <div class="col-lg-12 middle-sec" style="padding-top: 10px; padding-bottom:5px;">
+                    <div class="col-lg-12">
+                        <img src="assets/img/users/2.jpg" class="img-circle img-thumbnail" alt="Image"/>
+                        <h3><a href="">Alex Grantte</a></h3>
+                        <h4><span class="label label-mint">00:47:24</span></h4>
+                    </div><!-- .col-lg-3 -->
+                </div>
+
+            </div><!-- .col-lg-12 -->
+        </div><!-- /.row -->
+    </div><!-- .work-box -->
+
+
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Tasks</h3>
+        </div><!-- /.box-header -->
+        <div class="box-body">
+            <div class="table-responsive">
+                <table id="example1" class="table table-bordered table-hover">
+                    <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Time Spent</th>
+                        <th>Date Saved</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <img src="assets/img/users/2.jpg" class="img-responsive img-circle pull-left" width="50"
+                                 height="50" alt="Image"/>
+                            <a href="">Alex Grantte</a>
+                        </td>
+                        <td><span class="label label-mint">On</span></td>
+                        <td>23rd July 2018</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Delete"><span
+                                        class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/img/users/2.jpg" class="img-responsive img-circle pull-left" width="50"
+                                 height="50" alt="Image"/>
+                            <a href="">Alex Grantte</a>
+                        </td>
+                        <td><span class="label label-mint">00:23:10</span></td>
+                        <td>14rd July 2018</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Delete"><span
+                                        class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/img/users/2.jpg" class="img-responsive img-circle pull-left" width="50"
+                                 height="50" alt="Image"/>
+                            <a href="">Alex Grantte</a>
+                        </td>
+                        <td><span class="label label-mint">00:50:21</span></td>
+                        <td>7th July 2018</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Delete"><span
+                                        class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="assets/img/users/2.jpg" class="img-responsive img-circle pull-left" width="50"
+                                 height="50" alt="Image"/>
+                            <a href="">Alex Grantte</a>
+                        </td>
+                        <td><span class="label label-mint">1:45:00</span></td>
+                        <td>1st July 2018</td>
+                        <td>
+                            <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Delete"><span
+                                        class="fa fa-trash"></span></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>User</th>
+                        <th>Time Spent</th>
+                        <th>Date Saved</th>
+                        <th>Action</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div><!-- /.table-responsive -->
+        </div><!-- /.box-body -->
+    </div><!-- /.box -->
+
+
+{% endblock %}

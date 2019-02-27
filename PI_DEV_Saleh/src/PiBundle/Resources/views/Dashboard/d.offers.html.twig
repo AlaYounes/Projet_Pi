@@ -1,0 +1,59 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Offers{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Offers from Clients</h3>
+            </div><!-- /.box-header -->
+            <div class="box-body">
+                <div class="table-responsive">
+                    <table id="example1" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Job Title</th>
+                            <th>Assigned</th>
+                            <th>Offer</th>
+                            <th>Action</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for job in jobs %}
+                        <tr>
+
+                            <td>
+                                <img src="assets/img/users/12.jpg" class="img-responsive img-circle pull-left" width="50" height="50" alt="Image"/>
+                               <a href="profile.html"></a>
+                            </td>
+                            <td><a href="jobpost.html">{{ job.titre }}</a></td>
+                            <td><span class="label label-mint">Not Assigned</span></td>
+                            <td><a href="viewoffer.html" class="kafe-btn kafe-btn-mint-small"> View Offer</a></td>
+                            <td>
+                                <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Accept the Job"><span class="fa fa-check"></span></a>
+                                <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" title="Delete"><span class="fa fa-trash"></span></a></td>
+                        </tr>
+                    {% endfor %}
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                            <th>Freelancer</th>
+                            <th>Job Title</th>
+                            <th>Assigned</th>
+                            <th>Offre</th>
+                            <th>Action</th>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </div><!-- /.table-responsive -->
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
+
+
+
+
+    </div><!-- /.col-md-9 -->
+{% endblock %}
