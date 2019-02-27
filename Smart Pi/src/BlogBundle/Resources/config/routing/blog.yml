@@ -1,0 +1,19 @@
+afficher_blog:
+    path:     /afficherBlog
+    defaults: { _controller: BlogBundle:Blog:afficherBlog }
+
+blog_categories_homePage:
+    path:     /articleAfficheByCategorie/{id}/
+    defaults: { _controller: BlogBundle:Blog:blogCategorie }
+
+blog_OrderBy_homePage:
+    path:     /OrderByDate
+    defaults: { _controller: BlogBundle:Blog:Order }
+
+blog_Show_homePage:
+    path:     /BlogShow/{id}
+    defaults: { _controller: BlogBundle:Blog:afficherContenu }
+
+blog_afficherPar_Auteur:
+    path:     /afficherPar/{auteur}
+    defaults: { _controller: BlogBundle:Blog:afficherBlogParAuteur }

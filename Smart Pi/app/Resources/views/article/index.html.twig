@@ -1,0 +1,334 @@
+{% extends 'base1.html.twig' %}
+{% block stylesheat %}
+    {{ parent() }}
+{% endblock %}
+{% block container %}
+    {#{{ form_start(form,{'attr':{'novalidate':'novalidate' }}) }}#}
+
+    {#<div class="form-group">#}
+    {#{{ form_row(form.titre,{'attr':{'class':'form-control'}}) }}#}
+    {#</div>#}
+
+    {#Test du modification du Formulaire#}
+    {#<div class="form-group">#}
+    {#{{ form_label(form.titre,'Rechercher Par Titre') }}#}
+    {#{{ form_widget(form.titre,{'attr':{'class':'form-control'}}) }}#}
+    {#{{ form_errors(form.titre) }}#}
+    {#</div>#}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block responsive-flex">
+                    <div class="ui-block-title">
+                        <div class="h6 title">Rechercher un Article Par son titre</div>
+
+
+                        <form class="w-search">
+                            <div class="form-group with-button is-empty">
+                                <input class="form-control search" type="text"
+                                       placeholder="Taper le Titre de l'article">
+                                {#<button>#}
+                                {#<svg class="olymp-magnifying-glass-icon">#}
+                                {#<use xlink:href="#olymp-magnifying-glass-icon"></use>#}
+                                {#</svg>#}
+                                {#</button>#}
+                                <span class="material-input"></span></div>
+                            {#<div class="inline-items" id="entitiesNav">#}
+
+                            {#</div>#}
+                        </form>
+                        {#<a href="#" class="more">#}
+                        {#<svg class="olymp-three-dots-icon">#}
+                        {#<use xlink:href="#olymp-three-dots-icon"></use>#}
+                        {#</svg>#}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container inline-items" id="entitiesNav2">
+
+    </div>
+
+    <div class="blog-categories">
+        <div class="container">
+            <label for="drop" class="drop"></label>
+            <ul class="nav navbar-nav">
+                <li class="cat-item current-cat">
+                    <a href="{{ path('article_Order') }}">Latest</a>
+                </li>
+                {#{{ dump(categories) }}#}
+                {% for categorie in categories %}
+                    <li class="header">
+
+                        <a href="{{ path('article_search_Categorie',{'id': categorie.id}) }}">{{ categorie.nom }}</a>
+                        {#<a href="{{ path('article_search_Politique') }}">Politique</a>#}
+                    </li>
+                {% endfor %}
+            </ul><!-- /ul.cat -->
+            {#{% endfor %}#}
+
+        </div><!-- /.container -->
+    </div>
+    {#method="post" id="addform" action="{{ path('article_rechercher', { 'auteur': articles.test }) }}"#}
+    <h1><a href="{{ path('article_index') }}">Articles list</a></h1>
+
+    {#<form class="navbar-form navbar-right" method="post" action="{{ path('article_search',{'motcle': articles.nom}) }}">#}
+    {#<input type="text" class="form-control" placeholder="Search..." name="motcle">#}
+    {#</form>#}
+    {#{{ form(form_search) }}#}
+    <table class="table table-bordered table-condensed table-body-center" id="mydata">
+        <thead class="alert-success">
+        <tr>
+            {#<th>Id</th>#}
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Description</th>
+            <th>DateCreation</th>
+            <th>DateEdition</th>
+            <th>Image</th>
+            <th>Catégorie_Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+
+            <tr>
+                {#<td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.id }}</a></td>#}
+                <td><a href="{{ path('article_show', { 'id': article.id }) }}">{{ article.titre }}</a></td>
+                <td>{{ article.auteur }}</td>
+                <td>{{ article.description }}</td>
+                <td>{% if article.dateCreation %}{{ article.dateCreation|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if article.dateEdition %}{{ article.dateEdition|date('Y-m-d H:i:s') }}{% endif %}</td>
+                {#Rendre le lien dynamique en cliquant sur l'image#}
+                <td><a href="{{ path('blog_homepage', {'id': article.id}) }}">
+                        <img src="{{ asset('uploads/images/article/'~article.image ) }}" height="180px" width="200px"
+                             alt="image description"></a></td>
+                <td>{{ article.categorie.nom }}</td>
+                <td>
+
+                    <ul class="sidebar-menu">
+                        <li>
+
+                            <a href="{{ path('article_show', { 'id': article.id }) }}"
+                               class="btn-primary">show</a>
+                        </li>
+
+                        <li>
+                            <a href="{{ path('article_edit', { 'id': article.id }) }} "
+                               class="btn-primary">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {#<button type="submit" class="btn btn-info pull-right"><a href="{{ path('article_new') }}">Create a new article</a>Create a new article</button>#}
+    <ul class="form-sign">
+
+        <a href="{{ path('article_new') }}">  <input class="btn btn-block btn-info" type="submit" value="Créer Un Nouveau Article"></a>
+
+    </ul>
+    </div>
+    {#<table id="testTable">#}
+    {#<thead>#}
+    {#<tr>#}
+
+    {#<th>Titre</th>#}
+    {#<th>Auteur</th>#}
+    {#<th>Description</th>#}
+    {#<th>DateCreation</th>#}
+    {#<th>DateEdition</th>#}
+    {#<th>Image</th>#}
+    {#<th>Catégorie_Name</th>#}
+    {#<th>Actions</th>#}
+    {#</tr>#}
+    {#</thead>#}
+    {#<tbody>#}
+    {#{% for article in articles %}#}
+
+    {#<tr>#}
+
+    {#<td>{{ article.titre }}</td>#}
+    {#<td>{{ article.auteur }}</td>#}
+    {#<td>{{ article.description }}</td>#}
+    {#<td>{% if article.dateCreation %}{{ article.dateCreation|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+    {#<td>{% if article.dateEdition %}{{ article.dateEdition|date('Y-m-d H:i:s') }}{% endif %}</td>#}
+    {#Rendre le lien dynamique en cliquant sur l'image#}
+    {#<td><a href="{{ path('blog_homepage', {'id': article.id}) }}">#}
+    {#<img src="{{ asset('uploads/images/article/'~article.image ) }}" height="200px"#}
+    {#alt="image description"></a></td>#}
+    {#<td>{{ article.categorie.nom }}</td>#}
+    {#<td>#}
+    {#<ul class="sidebar-menu">#}
+    {#<li>#}
+    {#<a href="{{ path('article_show', { 'id': article.id }) }}"#}
+    {#class="kafe-btn kafe-btn-mint-small">show</a>#}
+    {#</li>#}
+    {#<li>#}
+    {#<a href="{{ path('article_edit', { 'id': article.id }) }} "#}
+    {#class="kafe-btn kafe-btn-mint-small">edit</a>#}
+    {#</li>#}
+    {#</ul>#}
+    {#</td>#}
+    {#</tr>#}
+    {#{% endfor %}#}
+    {#</tbody>#}
+    {#</table>#}
+
+
+    {##}
+    {#{% for article in articles %}#}
+    {#<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bb">#}
+    {#<div class="panel">#}
+    {#<a href="blogpage.html" class="caption-link">#}
+    {#<div class="caption">#}
+    {#<div class="caption-content">#}
+    {#<i class="fa fa-angle-right fa-3x"></i>			</div><!-- /.caption -->#}
+    {#</div><!-- /.caption-content -->#}
+    {#<img class="img-responsive panel-img" src="{{ asset('uploads/images/article/'{article.image}) }}" alt="">		  </a>		 </div>#}
+    {#<!-- /.panel -->#}
+    {#<a href="{{ path('blog_homepage', {'id': article.id}) }}" class="a-body">#}
+    {#<div class="panel-body">#}
+    {#<h4>Designing for the reader experience</h4>#}
+    {#<div class="date">April 29th 2016</div>#}
+    {#<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>#}
+    {#<hr>#}
+    {#<ul class="bottom_data">#}
+    {#<li>By John Doe</li>#}
+    {#</ul><!-- /.bottom_data -->#}
+    {#<ul class="bottom_data pull-right">#}
+    {#<li><i class="fa fa-comment-o"></i>19</li>#}
+    {#<li><i class="fa fa-heart-o"></i>3</li>#}
+    {#<li><i class="fa fa-align-left"></i>2 Min Read</li>#}
+    {#</ul><!-- /.bottom_data -->#}
+    {#</div>#}
+    {#<!-- /.panel-body -->#}
+    {#</a>#}
+    {#</div>#}
+    {#{{ dump(article.auteur) }}#}
+    {#{% endfor %}#}
+
+    {#<!-- jQuery is necessary -->#}
+    {#<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>#}
+
+    {#<script type="text/javascript">#}
+    {#jQuery(document).ready(function () {#}
+    {#var searchRequest = null;#}
+    {#$(".search").keyup(function () {#}
+    {#var minlength = 1;#}
+    {#var that = this;#}
+    {#var value = $(this).val();#}
+    {#var entitySelector = $("#entitiesNav2").html('');#}
+    {#if (value.length >= minlength) {#}
+    {#if (searchRequest != null)#}
+    {#searchRequest.abort();#}
+    {#searchRequest = $.ajax({#}
+    {#type: "GET",#}
+    {#url: "{{ path('RechercheAjax') }}",#}
+    {#data: {#}
+    {#'q': value#}
+    {#},#}
+    {#dataType: "text",#}
+    {#success: function (msg) {#}
+    {#//we need to check if the value is the same#}
+    {#if (value == $(that).val()) {#}
+    {#var result = JSON.parse(msg);#}
+    {#$.each(result, function (key, arr) {#}
+    {#$.each(arr, function (id, value) {#}
+    {#if (key == 'entities') {#}
+    {#if (id != 'error') {#}
+    {#entitySelector.append('<a href="/Pi_DEV/web/app_dev.php/Blog/' + id +#}
+    {#' <div class="autho"><center><img src="{{ asset('uploads/images/article/') }}'#}
+    {#+ value[1] + '" alt="avatar" style="width:120px; height: 120px"></center></div>'#}
+    {#+ '<div class="notification-event">'#}
+    {#+ '<span class="h6 notification-friend"><center><h1><b>'#}
+    {#+ value[0] + '</b></h1></center></span></a>'#}
+    {#+ ' '#}
+    {#+ '</br>'#}
+    {#+ '</div>\n'#}
+    {#+ '<span class="notification-icon"><svg class="\' + escape(item.icon) + \'">' +#}
+    {#'<use xlink:href="icons/icons.svg#\' + escape(item.icon) + \'"></use></svg></span>'#}
+    {#+ '</a></li>');#}
+
+    {#} else {#}
+    {#entitySelector.append('<table class="table">' + value + '</table>');#}
+    {#}#}
+    {#}#}
+    {#});#}
+    {#});#}
+    {#}#}
+    {#}#}
+    {#});#}
+    {#}#}
+    {#});#}
+    {#});#}
+    {#</script>#}
+
+    <!-- jQuery is necessary -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var searchRequest = null;
+            // $("#testTable").dataTable();
+            $(".form-control").keyup(function () {
+                var minlength = 1;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $(".table").html('');
+                if (value.length >= minlength) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('RechercheAjax') }}",
+                        data: {
+                            'q': value
+                        },
+                        dataType: "text",
+                        success: function (msg) {
+                            //we need to check if the value is the same
+                            if (value === $(that).val()) {
+                                var result = JSON.parse(msg);
+                                $.each(result, function (key, arr) {
+                                    $.each(arr, function (id, value) {
+                                        if (key === 'entities') {
+                                            if (id !== 'error') {
+
+                                                {#console.log({{ path("claim_show", {'id':"id"  }) }});#}
+//                                                 entitySelector.append('<tr><td>'+id+'</td><td>'+value.date.date+'</td><td>'+value.statut+'</td><td>'+value.text+'</td><td>'+value.treated+'</td><td><a class="btn btn-primary" href=""> <i class="fa fa-eye"></i> show </a></td></tr>');
+
+                                                entitySelector.append("<tr><td>" + value[0] + "</td><td>" + value[1] +
+                                                    "</td><td>" + value[2] + "</td><td>" + value[3].date + "</td><td><a class=\"btn btn-primary\" href=\"\">" +
+                                                    " <i class=\"fa fa-eye\"></i> show </a></td></tr>");
+
+                                                {#'<img src="{{ asset('uploads/images/article/') }}'+ '" alt="avatar" style="width:120px; height: 120px">'#}
+                                                /* entitySelector.append('<a href="/Pi-Dev-Web/web/app_dev.php/groups/' + id + '/show">' +
+                                                     ' <div class="autho"><center><img src="{{ asset('images/') }}' + value[1] + '" alt="avatar" style="width:120px; height: 120px"></center></div>' +
+                                                    '<div class="notification-event">' +
+                                                    '<span class="h6 notification-friend"><center><h1><b>' + value[0] +'</b></h1></center></span></a>' + ' ' +
+                                                    '</br>' +
+                                                    '</div>\n' +
+                                                    '<span class="notification-icon"><svg class="\' + escape(item.icon) + \'"><use xlink:href="icons/icons.svg#\' + escape(item.icon) + \'"></use></svg></span>' + '</a></li>');
+*/
+                                            } else {
+                                                entitySelector.append('<li class="errorLi">' + value + '</li>');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<section class="banner-login">
+    <div class="container">
+        <div class="row">
+            <div class="main main-signup col-lg-12">
+                <div class="col-lg-6 col-lg-offset-3 text-center">
+                    <div class="form-sign">
+                            <div class="form-head">
+                                <h3>Register</h3>
+                            </div><!-- /.form-head -->
+
+                            {{ form_start(form,{'method': 'post', 'action': path('fos_user_registration_register'),'attr': {'class': 'fos_user_registration_register'}}) }}
+
+                            <div class="form-row validate-input"
+                                 data-validate="Valid email is required: ex@abc.xyz">
+                                <div class="form-controls">
+                                    {{ form_widget(form.username, { 'attr': {'class': 'field validate-input', 'placeholder': 'Full Name' } }) }}
+                                    {{ form_errors(form.username) }}
+                                </div>
+                            </div>
+
+                            <div class="form-row validate-input"
+                                 data-validate="Valid email is required: ex@abc.xyz">
+                                <div class="form-controls">
+                                    {#{{ form_label(form.email,'Votre email est') }}#}
+                                    {{ form_widget(form.email, { 'attr': {'class': 'field validate-input', 'placeholder': 'Email' } }) }}
+                                    {{ form_errors(form.email) }}
+                                </div>
+                            </div>
+
+                            <div class="form-row validate-input"
+                                 data-validate="Valid email is required: ex@abc.xyz">
+                                <div class="form-controls">
+                                    {#{{ form_label(form.email,'Votre email est') }}#}
+                                    {{ form_widget(form.name, { 'attr': {'class': 'field validate-input', 'placeholder': 'Username' } }) }}
+                                    {{ form_errors(form.name) }}
+                                </div>
+                            </div>
+
+                            <div class="form-row validate-input" data-validate="Password is required"
+                                 for="password">
+                                <div class="form-controls">
+                                    {#{{ form_label(form.email,'Votre email est') }}#}
+                                    {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'field validate-input', 'placeholder': 'form.password'|trans } }) }}
+                                    {{ form_errors(form.plainPassword.first) }}
+                                </div>
+                            </div>
+
+                            <div class="form-row validate-input" data-validate="Password is required"
+                                 for="password">
+                                <div class="form-controls">
+                                    {#{{ form_label(form.email,'Votre email est') }}#}
+                                    {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'field validate-input', 'placeholder': 'form.password_confirmation'|trans } }) }}
+                                    {{ form_errors(form.plainPassword.second) }}
+                                </div>
+                            </div>
+                            {#<div class="checkbox validate-input">#}
+                            <div class="checkbox">
+                            </div>
+                            {{ form_label(form.conditions,' Agree to the terms and policy') }}
+                            {{ form_widget(form.conditions, { 'attr': {'input': 'checkbox validate-input' } }) }}
+                            {{ form_errors(form.conditions ) }}
+                    </div>
+
+                    <div>
+                        {{ form_rest(form.name) }}
+                        {{ form_widget(form) }}
+
+                        <div class="container-login100-form-btn">
+                            <input type="submit" name="register"
+                                   value="{{ 'registration.submit'|trans }}"
+                                   class="kafe-btn kafe-btn-default full-width"/>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    {{ form_end(form) }}
+</section>
+
