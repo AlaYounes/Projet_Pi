@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Blogcommentaire</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Ref</th>
+                <td>{{ blogCommentaire.ref }}</td>
+            </tr>
+            <tr>
+                <th>Auteurcommentaire</th>
+                <td>{{ blogCommentaire.auteurCommentaire }}</td>
+            </tr>
+            <tr>
+                <th>Contenucommentaire</th>
+                <td>{{ blogCommentaire.contenuCommentaire }}</td>
+            </tr>
+            <tr>
+                <th>Datecommentaire</th>
+                <td>{% if blogCommentaire.dateCommentaire %}{{ blogCommentaire.dateCommentaire|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('blogcommentaire_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('blogcommentaire_edit', { 'ref': blogCommentaire.ref }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

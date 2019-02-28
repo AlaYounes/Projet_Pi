@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block title %}BlogBundle:BlogCommentaire:ViewCommentaire{% endblock %}
+
+{% block body %}
+<h1>Welcome to the BlogCommentaire:ViewCommentaire page</h1>
+    {% for commentaires in commentaires %}
+    {{ commentaires.Auteur }}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,42 @@
+blog:
+    resource: "@BlogBundle/Resources/config/routing.yml"
+    prefix:   /Blog
+
+fix:
+    resource: "@FixBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+sg_datatables_bundle:
+    resource: "@SgDatatablesBundle/Controller/"
+    type:     annotation
+    prefix:   /sg
+
+forum:
+    resource: "@ForumBundle/Resources/config/routing.yml"
+    prefix:   /forum
+
+free:
+    resource: "@JobpostsBundle/Resources/config/routing.yml"
+    prefix:   /jobposts
+
+Pi:
+    resource: "@PiBundle/Resources/config/routing.yml"
+    prefix:   /Pi
+
+CV:
+    resource: "@CvBundle/Resources/config/routing.yml"
+    prefix:   /Cv
+
+Reclamation:
+    resource: "@ReclamationBundle/Resources/config/routing.yml"
+    prefix:   /Reclamation

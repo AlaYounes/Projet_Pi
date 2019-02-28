@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block title %}BlogBundle:BlogCommentaire:ListCommentaires{% endblock %}
+
+{% block container %}
+
+<table id="example1" class="table table-bordered table-hover dataTable" role="grid"
+       aria-describedby="example1_info">
+    <thead>
+    <tr role="row">
+        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending"
+            aria-label="Job Title: activate to sort column descending" style="width: 246px;">ID
+        </th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+            aria-label="Public: activate to sort column ascending" style="width: 65px;">ArticleId
+        </th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+            aria-label="Freelancer: activate to sort column ascending" style="width: 81px;">Auteur
+        </th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+            aria-label="Proposals: activate to sort column ascending" style="width: 115px;">Contenu
+        </th>
+        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
+            aria-label="Action: activate to sort column ascending" style="width: 124px;">Date
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for commentaires in commentaires %}
+    <tr role="row" class="odd">
+        <td class="sorting_1">{{ commentaires.Id }}</td>
+        <td class="sorting_1">{{ commentaires.Article.id }}</td>
+        <td class=" sorting_1">{{ commentaires.auteurCommentaire }}</td>
+        <td class="sorting_1">{{ commentaires.ContenuCommentaire }}</td>
+        <td class="sorting_1">{{ commentaires.DateCommentaire|date }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

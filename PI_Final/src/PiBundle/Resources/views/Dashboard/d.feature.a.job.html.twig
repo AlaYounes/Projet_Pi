@@ -1,0 +1,48 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Feature_a_Job{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="job-box">
+            <div class="job-header">
+                <h4>Feature a Job</h4>
+            </div>
+            <form method="post" id="addform">
+
+                <div class="form-group">
+                    <label>Choose a job you want to feature</label>
+                    <select name="category" class="form-control">
+                        <option value="">Professional writer required</option>
+                        <option value="">I need a designer to design a logo & questionnaire for a Nutrition Company</option>
+                        <option value="">Content Writers Needed</option>
+                        <option value="">Website Design</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Days for the ad to run.</label>
+                    <p>
+                        <a href="" class="unselected">5 days</a>
+                        <a href="" class="unselected">10 days</a>
+                        <a href="" class="selected">15 days</a>
+                        <a href="" class="unselected">1 month</a>
+                    </p>
+                </div>
+
+                <div class="form-group">
+                    <label>Budget depending on the days you have choosen.</label>
+                    <p>
+                        <a href="" class="unselected">$15</a>
+                        <a href="" class="unselected">$35</a>
+                        <a href="" class="selected">$60</a>
+                        <a href="" class="unselected">$100</a>
+                    </p>
+                </div>
+
+                <button class="kafe-btn kafe-btn-mint-small full-width">Proceed to Checkout</button>
+            </form>
+        </div><!-- /.job-box -->
+
+    </div><!-- /.col-md-9 -->{% endblock %}

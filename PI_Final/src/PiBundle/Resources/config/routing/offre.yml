@@ -1,0 +1,56 @@
+offre_index:
+    path:     /
+    defaults: { _controller: "PiBundle:Offre:index" }
+
+
+offre_show:
+    path:     /{id}/show
+    defaults: { _controller: "PiBundle:Offre:show" }
+    methods:  GET
+
+offre_new:
+    path:     /new
+    defaults: { _controller: "PiBundle:Offre:new" }
+    methods:  [GET, POST]
+
+offre_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "PiBundle:Offre:edit" }
+    methods:  [GET, POST]
+
+offre_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "PiBundle:Offre:delete" }
+    methods:  DELETE
+
+offre_liste_recherche:
+    path:     /recherche
+    defaults: { _controller: PiBundle:Offre:rechercheOffre }
+
+offre_liste_recherche_categorie1:
+    path:     /rechercheC1
+    defaults: { _controller: PiBundle:Offre:findByCategorie1 }
+
+offre_liste_recherche_categorie2:
+    path:     /rechercheC2
+    defaults: { _controller: PiBundle:Offre:findByCategorie2 }
+
+offre_liste_recherche_categorie3:
+    path:     /rechercheC3
+    defaults: { _controller: PiBundle:Offre:findByCategorie3 }
+
+offre_liste_recherche_categorie4:
+    path:     /rechercheC4
+    defaults: { _controller: PiBundle:Offre:findByCategorie4 }
+
+offre_liste_recherche_categorie5:
+    path:     /rechercheC5
+    defaults: { _controller: PiBundle:Offre:findByCategorie5 }
+
+mail_contact:
+    path:     /mail
+    defaults: { _controller: PiBundle:Offre:mail }
+
+ajax_search:
+    path:     /search
+    defaults: { _controller: "PiBundle:Offre:search" }

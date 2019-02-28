@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Blogcommentaires list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ref</th>
+                <th>Auteurcommentaire</th>
+                <th>Contenucommentaire</th>
+                <th>Datecommentaire</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for blogCommentaire in blogCommentaires %}
+            <tr>
+                <td><a href="{{ path('blogcommentaire_show', { 'ref': blogCommentaire.ref }) }}">{{ blogCommentaire.ref }}</a></td>
+                <td>{{ blogCommentaire.auteurCommentaire }}</td>
+                <td>{{ blogCommentaire.contenuCommentaire }}</td>
+                <td>{% if blogCommentaire.dateCommentaire %}{{ blogCommentaire.dateCommentaire|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('blogcommentaire_show', { 'ref': blogCommentaire.ref }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('blogcommentaire_edit', { 'ref': blogCommentaire.ref }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('blogcommentaire_new') }}">Create a new blogCommentaire</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container %}
+      {{ parent() }}
+      <body>
+
+
+
+  <section class="dashboard section-padding">
+      <div class="container">
+          <div class="row">
+
+              <div class="col-sm-4 col-md-3">
+
+                  <ul class="sidebar-menu" data-widget="tree">
+                      <li>
+                          <a href="{{ path('template_Dashboard') }}">
+                              <i class="fa fa-life-ring"></i> <span>Dashboard</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Contract') }}">
+                              <i class="fa fa-align-left"></i> <span>Contracts</span>
+                          </a>
+                      </li>
+                      <li class="treeview">
+                          <a href="#">
+                              <i class="fa fa-files-o"></i> <span>Jobs</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_JobPasted') }}"><i class="fa fa-circle-o"></i> Jobs Posted</a>
+                              </li>
+                              <li><a href="{{ path('template_AddJob') }}"><i class="fa fa-circle-o"></i> Add a Job</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <li class="treeview">
+                          <a href="#">
+                              <i class="fa fa-clone"></i> <span>Proposals</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_YourPorposals') }}"><i class="fa fa-circle-o"></i> Your
+                                      Proposals</a></li>
+                              <li><a href="{{ path('template_OtherPorposals') }}"><i class="fa fa-circle-o"></i> Other
+                                      Proposals</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Offers') }}">
+                              <i class="fa fa-file"></i> <span>Offers</span>
+                          </a>
+                      </li>
+                      <li class="treeview active">
+                          <a href="#">
+                              <i class="fa fa-copyright"></i> <span>Companies</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_CompanyList') }}"><i class="fa fa-circle-o"></i> Company
+                                      List</a></li>
+                              <li><a href="{{ path('template_AddCompany') }}"><i class="fa fa-circle-o"></i> Add a Company</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Message') }}">
+                              <i class="fa fa-envelope"></i> <span>Messages</span>
+                              <span class="pull-right-container">
+				  <small class="label pull-right bg-green">4</small>
+				</span>
+                          </a>
+                      </li>
+                  </ul>
+
+                  <ul class="sidebar-menu" data-widget="tree">
+                      <li class="treeview">
+                          <a href="#">
+                              <i class="fa fa-exchange"></i> <span>Wallet</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_Deposits') }}"><i class="fa fa-circle-o"></i> Deposits</a></li>
+                              <li><a href="{{ path('template_Withdrawals') }}"><i class="fa fa-circle-o"></i> Withdrawals</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Payementmethod') }}">
+                              <i class="fa fa-dot-circle-o"></i> <span>Payment Method</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Numbership') }}">
+                              <i class="fa fa-credit-card"></i> <span>Membership</span>
+                          </a>
+                      </li>
+                  </ul>
+
+                  <ul class="sidebar-menu" data-widget="tree">
+                      <li class="treeview">
+                          <a href="#">
+                              <i class="fa fa-external-link-square"></i> <span>Feature a Job</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_Featured_Job_List') }}"><i class="fa fa-circle-o"></i> Jobs Featured List</a>
+                              </li>
+                              <li><a href="{{ path('template_Featured_A_Job') }}"><i class="fa fa-circle-o"></i> Feature a Job</a></li>
+                          </ul>
+                      </li>
+                      <li class="treeview">
+                          <a href="#">
+                              <i class="fa fa-external-link-square"></i> <span>Feature a Profile</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_Featured_Profiles') }}"><i class="fa fa-circle-o"></i> Profile Featured List</a>
+                              </li>
+                              <li><a href="{{ path('template_Featured_Your_Profile') }}"><i class="fa fa-circle-o"></i> Feature your
+                                      Profile </a></li>
+                          </ul>
+                      </li>
+                      <li class="treeview">
+                          <a href="#">
+                              <i class="fa fa-external-link-square"></i> <span>Feature a Company</span>
+                              <span class="pull-right-container">
+				  <i class="fa fa-angle-left pull-right"></i>
+				</span>
+                          </a>
+                          <ul class="treeview-menu">
+                              <li><a href="{{ path('template_Featured_Companies') }}"><i class="fa fa-circle-o"></i> Companies Featured
+                                      List</a></li>
+                              <li><a href="{{ path('template_Featured_Your_Company') }}"><i class="fa fa-circle-o"></i> Feature your
+                                      Companies </a></li>
+                          </ul>
+                      </li>
+                  </ul>
+
+                  <ul class="sidebar-menu" data-widget="tree">
+                      <li>
+                          <a href="{{ path('template_EditProfile') }}">
+                              <i class="fa fa-user"></i> <span>Edit Profile</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Profile_Image') }}">
+                              <i class="fa fa-image"></i> <span>Change Profile Image</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="{{ path('template_Password') }}">
+                              <i class="fa fa-lock"></i> <span>Change Password</span>
+                          </a>
+                      </li>
+                  </ul>
+
+              </div>
+
+              <div class="col-sm-8 col-md-9">
+
+                  <div class="box">
+                      <div class="box-header">
+                          <h3 class="box-title">Company List</h3>
+                      </div><!-- /.box-header -->
+                      <div class="box-body">
+                          <div class="table-responsive">
+                              <div class="row">
+                                  <div class="col-sm-6">
+                                      <div class="dataTables_length" id="example1_length">
+                                          <label class="slider-tick-label-container">
+                                              Show
+                                              <select
+                                                      name="example1_length"
+                                                      class="form-control input-sm">
+                                                  <option value="10">10</option>
+                                                  <option value="25">25</option>
+                                                  <option value="50">50</option>
+                                                  <option value="100">100</option>
+                                              </select>
+                                              entries
+                                          </label>
+                                      </div>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <div id="example1_filter" class="dataTables_filter"><label>Search:<input
+                                                      type="search" class="form-control input-sm" placeholder=""
+                                                      aria-controls="example1"></label></div>
+                                  </div>
+                              </div>
+                              <table id="example1" class="table table-bordered table-hover">
+                                  <thead>
+                                  <tr>
+                                      <th>Image & Name</th>
+                                      <th>Privacy</th>
+                                      <th>Action</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <tr>
+                                      <td>
+                                          <img src="{{ asset('img/logo.jpg') }}"
+                                               class="img-responsive img-circle pull-left" width="50" height="50"
+                                               alt="Image"/>
+                                          <a href="{{ path('template_Company') }}">The Masha Brand</a>
+                                      </td>
+                                      <td><span class="label label-mint">Public</span></td>
+                                      <td>
+                                          <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" title="Edit"><span
+                                                      class="fa fa-edit"></span></a>
+                                          <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip"
+                                             title="Delete"><span class="fa fa-trash"></span></a>
+                                          <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip"
+                                             title="Make it Private"><span class="fa fa-lock"></span></a></td>
+                                  </tr>
+                                  </tbody>
+                                  <tfoot>
+                                  <tr>
+                                      <th>Image & Name</th>
+                                      <th>Privacy</th>
+                                      <th>Action</th>
+                                  </tr>
+                                  </tfoot>
+                              </table>
+                          </div>
+                      </div><!-- /.box-body -->
+                  </div><!-- /.box -->
+
+
+              </div><!-- /.col-md-9 -->
+          </div><!-- /.row -->
+      </div><!-- /.container -->
+  {% endblock %}

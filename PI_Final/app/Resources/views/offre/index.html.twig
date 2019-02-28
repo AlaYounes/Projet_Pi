@@ -1,0 +1,248 @@
+
+{% extends 'base.html.twig' %}
+
+
+{% block container %}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ui-block responsive-flex">
+                    <div class="ui-block-title">
+                        <div class="h6 title"></div>
+
+                                    <br><br>
+                        <form class="w-search">
+                            <div class="form-group with-button is-empty">
+                                <input class="form-control search" type="text" placeholder="Search...">
+
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Main Content Groups -->
+    <div class="container inline-items"  id="entitiesNav2">
+        <section class="featured-users">
+            <div class="container">
+                <div class="section-title" style="padding-top: 20px;">
+                    <h1>Freelancers</h1>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="row">
+
+
+                            {% for offre in offres %}
+                                {% if offre.travailfait >5 %}
+
+                                    <div class="col-md-4">
+                                        <div class="card-box text-center">
+                                            <div class="most-popular">
+                                                <span>Feautured</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="member-card">
+                                                <div class="member-thumb">
+                                                    <a href="{{ path('offre_show', { 'id': offre.id }) }}"><img src="assets/img/users/1.jpg" class="img-circle img-thumbnail" alt="profile-image"></a>
+                                                    <i class="fa fa-star member-star text-success" title="verified user"></i>
+                                                </div>
+
+                                                <div class="small-line-height">
+                                                    <h4><a href="company.html">{{ offre.nom }}</a></h4>
+                                                    <p class="text-muted p-location"><i class="fa fa-map-marker"></i>{{ offre.lieu }}</p>
+                                                    <p class="p-star">
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        {{ offre.rating }}
+                                                    </p>
+                                                </div>
+
+                                                <h5>{{ offre.diplome }}</h5>
+                                                <h6>{{ offre.type }}</h6>
+                                                <p class="text-muted font-16">
+                                                    {{ offre.description }}.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <h6><br>{{ offre.travailfait }}</h6>
+                                                    <p class="bottom">Jobs Done</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h6>{{ offre.heurest }}</h6>
+                                                    <p class="bottom">Hours Worked</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div> <!-- col-md-4 -->
+                                {% else %}
+
+                                    <div class="col-md-4">
+                                        <div class="card-box text-center">
+                                            <div class="clearfix"></div>
+                                            <div class="member-card">
+                                                <div class="member-thumb">
+                                                    <a href="#"><img src="assets/img/users/4.jpg" class="img-circle img-thumbnail" alt="profile-image"></a>
+                                                </div>
+
+                                                <div>
+                                                    <h4><a href="#">{{ offre.nom }}</a></h4>
+                                                    <p class="text-muted p-location"><i class="fa fa-map-marker"></i>{{ offre.lieu }}</p>
+                                                    <p class="p-star">
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        <i class="fa fa-star rating-star"></i>
+                                                        {{ offre.rating }}
+                                                    </p>
+                                                </div>
+
+                                                <h5>{{ offre.diplome }}</h5>
+                                                <p class="text-muted font-16">
+                                                    {{ offre.description }}.
+                                                </p>
+
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-sm-6">
+                                                    <h6><br>{{ offre.travailfait }}</h6>
+                                                    <p class="bottom">Jobs Done</p>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <h6>{{ offre.heurest }}</h6>
+                                                    <p class="bottom">Hours Worked</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div> <!-- col-md-4 -->
+
+                                {% endif %}
+
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-sm-2 col-md-2" >
+
+                        <div class="widget">
+                            <h3 class="widget_title">Category</h3>
+                            <ul class="tr-list">
+                                <li><a href="{{ path('offre_liste_recherche_categorie1') }}" class="active"><i class="fa fa-code"></i> Web & Mobile Development</a></li>
+                                <li><a href="{{ path('offre_liste_recherche_categorie2') }}"><i class="fa fa-eye"></i>  Design, Arts & Multimedia</a></li>
+                                <li><a href="{{ path('offre_liste_recherche_categorie3') }}"><i class="fa fa-edit"></i>  Writing & Translation</a></li>
+                                <li><a href="{{ path('offre_liste_recherche_categorie4') }}"><i class="fa fa-cog"></i>  Admin Support</a></li>
+                                <li><a href="{{ path('offre_liste_recherche_categorie5') }}"><i class="fa fa-table"></i>  Management & Finance</a></li>
+                            </ul>
+
+                        </div><!-- /.widget -->
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- jQuery is necessary -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function() {
+            var searchRequest = null;
+            $(".search").keyup(function() {
+                var minlength = 0;
+                var that = this;
+                var value = $(this).val();
+                var entitySelector = $("#entitiesNav2").html('');
+                if (value.length >= minlength ) {
+                    if (searchRequest != null)
+                        searchRequest.abort();
+                    searchRequest = $.ajax({
+                        type: "GET",
+                        url: "{{ path('ajax_search') }}",
+                        data: {
+                            'q' : value
+                        },
+                        dataType: "text",
+                        success: function(msg){
+                            //we need to check if the value is the same
+                            if (value==$(that).val()) {
+                                var result = JSON.parse(msg);
+                                $.each(result, function(key, arr) {
+                                    $.each(arr, function(id, value) {
+                                        if (key == 'entities') {
+                                            if (id != 'error') {
+
+                                                entitySelector.append(
+
+                                                    '<a href="/smartstart1/web/app_dev.php/pi/offre/' + id + '/show">' +
+
+                                                    '<section class="featured-users">'+
+                                                    '<div class="col-md-4">'+
+                                                    '<div class="card-box text-center">'+
+                                                    '<div class="small-line-height">'+
+                                                    '<div class="autho"><img src="{{ asset('images/') }}' + value[1] + '" alt="avatar" style="width:120px; height: 120px"></div>' +
+                                                    '<span class="h6 notification-friend"><b>' + value[0] +'</b></span></a>' + ' ' +
+                                                    '</br>' +'</br>'+
+                                                    '<span class="h6 notification-friend"><b><p class="p-star">' + value[1] +'</p></b></span></a>' + ' ' +
+                                                    '</br>' +
+                                                    '<span class="h6 notification-friend"><b><p class="p-star">' + value[2] +'</p></b></span></a>' + ' ' +
+                                                    '<span class="h6 notification-friend"><b>' + value[3] +'</b></span></a>' + ' ' +
+                                                    '<span class="h6 notification-friend"><b>' + value[4] +'</b></span></a>' + ' ' +
+                                                    '</br>' +
+                                                    '<span class="h6 notification-friend"><b><p class="text-muted font-16">' + value[5] +'</p></b></span></a>' + ' ' +
+                                                    '</br>' +
+                                                    '<span class="h6 notification-friend"><b><div class="col-sm-6">'+'jobs Done :' +'&nbsp;\n'+ value[6] +'</div></b></span></a>' + ' ' +
+                                                    '<span class="h6 notification-friend"><b><div class="col-sm-6">' +'Hours worked :'+'&nbsp;'+ value[7] +'</div></b></span></a>' + ' ' +
+                                                    '</div>'+
+                                                    '</div>'+
+                                                    '</div>'+
+
+                                                '</section>');
+
+                                            } else {
+                                                entitySelector.append('<li class="errorLi">'+value+'</li>');
+                                            }
+                                        }
+                                    });
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+
+
+
+    <center>       {{ knp_pagination_render(offres) }}</center>
+
+
+
+{% endblock %}

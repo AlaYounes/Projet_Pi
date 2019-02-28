@@ -1,0 +1,153 @@
+{% extends "base.html.twig" %}
+{% block stylesheat %}
+    {{ parent() }}
+    <link href="{{ asset('css/blogcategories.html') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/style1.css') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+{% block title %}BlogBundle:Blog:afficherBlog{% endblock %}
+
+{#{% block container %}#}
+
+    {#{{ dump(articles) }}#}
+    {#<ul class="nav navbar-nav">#}
+        {#{% for categorie in categories %}#}
+            {#<li class="header">#}
+
+                {#<a href="{{ path('blog_categories_homePage',{'id': categorie.id}) }}">{{ categorie.nom }}</a>#}
+                {#<a href="{{ path('article_search_Politique') }}">Politique</a>#}
+            {#</li>#}
+        {#{% endfor %}#}
+    {#</ul>#}
+    {#{{ dump(categories) }}#}
+
+        {#<!-- ==============================================#}
+              {#Blog Section#}
+              {#=============================================== -->#}
+        {#<section class="blog">#}
+            {#<div class="container text-left">#}
+                {#<div class="row mt">#}
+                    {#<div class="col-lg-12">#}
+                        {#<a href="{{ path('blog_OrderBy_homePage') }}"><h3>Recent Posts</h3></a>#}
+                    {#</div><!-- col-lg-12 -->#}
+                    {#<div class="col-lg-8">#}
+                        {#<span></span>#}
+                    {#</div>#}
+                    {#<div class="col-lg-4">#}
+                        {#<span class="pull-right-sm"><a href="{{ path('afficher_blog') }}"><i class="fa fa-angle-right"></i> See All Posts</a></span>#}
+                    {#</div>#}
+                {#</div><!-- row -->#}
+
+                {#<div class="row">#}
+                    {#{% for articles in articles %}#}
+
+                    {#<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bb">#}
+
+                        {#<div class="panel">#}
+                            {#<a href="{{ path('blog_Show_homePage', { 'id': articles.id }) }}" class="caption-link">#}
+                                {#<div class="caption">#}
+                                    {#<div class="caption-content">#}
+                                        {#<i class="fa fa-angle-right fa-3x"></i>#}
+                                    {#</div><!-- /.caption -->#}
+                                {#</div><!-- /.caption-content -->#}
+
+                                {#<img src="{{ asset('uploads/images/article/'~articles.image ) }}" height="225px"#}
+                                     {#width="370px"#}
+                                     {#alt="image description"></a></div>#}
+
+                        {#<!-- /.panel -->#}
+                        {#<a href=" {{ path('blog_Show_homePage',{ 'id': articles.id }) }}" class="a-body">#}
+                            {#<div class="panel-body">#}
+                                {#<h4>25 Examples of flat web &amp; application design</h4>#}
+                                {#<div class="date">April 22nd 2016</div>#}
+                                {#<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>#}
+                                {#<hr>#}
+                                {#<ul class="bottom_data">#}
+                                    {#<li>By John Doe</li>#}
+                                {#</ul><!-- /.bottom-data -->#}
+                                {#<ul class="bottom_data pull-right">#}
+                                    {#<li><i class="fa fa-comment-o"></i>15</li>#}
+                                    {#<li><i class="fa fa-heart-o"></i>10</li>#}
+                                    {#<li><i class="fa fa-align-left"></i>6 Min Read</li>#}
+                                {#</ul><!-- /.bottom-data -->#}
+                            {#</div>#}
+                            {#<!-- /.panel-body -->#}
+                        {#</a>#}
+                    {#</div>#}
+                {#</div>#}
+                {#{% endfor %}#}
+            {#</div>#}
+    {#</div>#}
+    {#</section>#}
+        {#</div>#}
+        {#</div>#}
+
+
+{#{% endblock %}#}
+{% block container %}
+
+
+    <ul class="nav navbar-nav">
+        {% for categorie in categories %}
+            <li class="header">
+
+                <a href="{{ path('blog_categories_homePage',{'id': categorie.id}) }}">{{ categorie.nom }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <section class="blog">
+        <div class="container text-left">
+            <div class="row mt">
+                <div class="col-lg-12">
+                    <a href="{{ path('blog_OrderBy_homePage') }}"><h3>Recent Posts</h3></a>
+                </div><!-- col-lg-12 -->
+                <div class="col-lg-8">
+                    <span>Our latests thoughts about things that only matters to us.</span>
+                </div><!-- col-lg-8-->
+                <div class="col-lg-4">
+                    <span class="pull-right-sm"><a href="{{ path('afficher_blog') }}"><i class="fa fa-angle-right fa-2x"></i> See All Posts</a></span>
+                </div>
+            </div><!-- row -->
+
+            <div class="row">
+                {% for articles in articles %}
+
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 bb">
+
+                    <div class="panel">
+                        <a href="{{ path('blog_Show_homePage', { 'id': articles.id }) }}" class="caption-link">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <i class="fa fa-angle-right fa-3x"></i></div><!-- /.caption -->
+                            </div><!-- /.caption-content -->
+
+                            <img class="img-responsive panel-img" src="{{ asset('uploads/images/article/'~articles.image ) }}"
+                            alt=""> </a></div>
+                    <!-- /.panel -->
+
+                    <a href=" {{ path('blog_Show_homePage',{ 'id': articles.id }) }}" class="a-body">
+
+                        <div class="panel-body">
+                            <h4>{{ articles.titre }}</h4>
+                            <div class="date">{{ articles.DateCreation|date }}</div>
+                            <p>{{ articles.Description }}.</p>
+                            <hr>
+                            <ul class="bottom_data">
+                                <li>By {{ articles.auteur }}</li>
+                            </ul><!-- /.bottom_data -->
+                            <ul class="bottom_data pull-right">
+                                <li><i class="fa fa-comment-o"></i>19</li>
+                                <li><i class="fa fa-heart-o"></i>3</li>
+                            </ul><!-- /.bottom_data -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </a>
+                </div><!-- /.col-lg-4 -->
+
+                {% endfor %}
+
+            </div><!-- row -->
+
+        </div><!-- container -->
+    </section>
+{% endblock %}

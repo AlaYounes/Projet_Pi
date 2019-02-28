@@ -1,0 +1,29 @@
+{% extends "dashboard_Base.html.twig" %}
+
+{% block title %}TemplateBundle:Dashboard:d_Profile_Image{% endblock %}
+
+{% block container %}
+    <div class="col-sm-8 col-md-9">
+
+        <div class="button-box">
+
+            <div class="change-photo">
+                <div class="user-image">
+                    <img src="assets/img/users/2.jpg" alt="Image" class="img-responsive">
+                </div>
+                <div class="upload-photo">
+                    <label class="kafe-btn kafe-btn-danger-small" for="upload-photo">
+                        <input id="upload-photo" type="file">Change Photo
+                    </label>
+                    <h4 class="max-size">Max 20 MB</h4>
+                </div>
+            </div><!-- /.change-photo -->
+
+            <div class="box-footer">
+                <button type="submit" class="kafe-btn kafe-btn-mint full-width">Submit</button>
+            </div>
+
+        </div><!-- /.prop-info -->
+
+    </div><!-- /.col-md-9 -->
+{% endblock %}

@@ -1,0 +1,196 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheat %}
+    {{ parent() }}
+    <link href="{{ asset('css/blogcategories.html') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/style1.css') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+    {% block container %}
+        {#{% for categorie in categories %}#}
+        {#<li class="header">#}
+
+        {#<a href="{{ path('article_affichage_Categorie',{'id': categorie.id}) }}">{{ categorie.nom }}</a>#}
+        {#<a href="{{ path('article_search_Politique') }}">Politique</a>#}
+        {#</li>#}
+        {#{% endfor %}#}
+
+        {#{{ dump(articless) }}#}
+        <section>
+    <span>
+        <div>
+        </div>
+    </span>
+        </section>
+
+        <!-- ==============================================
+        Blog Page Section
+        =============================================== -->
+        <section class="blogpage jobpost" id="blogpage">
+            <div class="container text-left">
+                <div class="row">
+
+                    <div class="col-lg-8 col-lg-offset-2 white-blogpage">
+                        <div class="row mt">
+                            <div class="col-lg-12">
+                                <a href="{{ path('blog_OrderBy_homePage') }}"><h3>Recent Posts</h3></a>
+                            </div><!-- col-lg-12 -->
+                            <div class="col-lg-8">
+                                <span>Our latests thoughts about things that only matters to us.</span>
+                            </div><!-- col-lg-8-->
+                            <div class="col-lg-4">
+                                <span class="pull-right-sm"><a href="{{ path('afficher_blog') }}"><i
+                                                class="fa fa-angle-right fa-2x"></i> See All Posts</a></span>
+                            </div>
+                        </div><!-- row -->
+                        <h4>Designing for the reader experience.</h4>
+                        <hr class="small-hr">
+                        {#{{ dump(articles) }}#}
+                        {#{{ dump(articles.categorie) }}#}
+                        {#{{ dump() }}#}
+                        {#{{ form(search_Form) }}#}
+
+                                <h5> CeatedBy </h5>
+                                {#Methode pour lister tous les articles d'un certain utilisateur(Auteur) #}
+                                <p>
+                                    <a href="{{ path('blog_afficherPar_Auteur', { 'auteur': articles.auteur }) }}"> {{ articles.auteur }} </a>
+                                </p>
+                            </div><!-- /.col-lg-3 -->
+                            <div class="col-lg-3">
+                                <h5> Read Time </h5>
+                                <p><i class="fa fa-align-left"></i> 2 Min Read</p>
+                            </div><!-- /.col-lg-3 -->
+
+                            <div class="col-lg-12">
+                                <hr class="small-hr">
+                            </div> <!-- /.col-lg-12 -->
+                        </div><!-- /.row -->
+
+                        {#A changer avec un Contenue #}
+                        <p>Lorem ipsum dolor sit amet, lorem quaestio similique has at, possit vivendum ne nam. Unum
+                            saepe ea vim, ius sensibus volutpat et, eum legere nostrum explicari ei. Sed ex legere
+                            hendrerit. Ei saperet officiis has, eu usu prompta mandamus. Vix dicat electram ei, ne sea
+                            aeterno ornatus perpetua, ne cum omnis voluptua iracundia.</p>
+                        <p>Pro munere assueverit id, debitis scaevola omittantur vim ex, qui meis tantas et. Vivendo
+                            ponderum id pro. Vidit offendit quaerendum est et, no eos prima tamquam, eu duo ludus noster
+                            praesent. Sea cu quod illum. Affert munere ut vis, ponderum gubergren sit ne. Nam at magna
+                            homero feugait.</p>
+                        <blockquote>
+                            Odio laoreet vivendum ex vis. At mentitum assueverit nam, mel ex dolorem tacimates praesent.
+                            Saepe nemore duo te, no nec cetero eligendi mnesarchum. Ne congue similique eloquentiam has.
+                            Wisi omittantur definitiones vis in. Pro munere assueverit id, debitis scaevola omittantur
+                            vim ex, qui meis tantas et. Vivendo ponderum id pro. Vidit offendit quaerendum est et, no
+                            eos prima tamquam, eu duo ludus noster praesent. Sea cu quod illum. Affert munere ut vis,
+                            ponderum gubergren sit ne. Nam at magna homero feugait.
+                        </blockquote>
+
+
+                        <section class="articles">
+                            <article>
+                                {#<h2>{{ articles.titre }}</h2>#}
+                                <div class="metadata"><h3>Ecrit par {{ articles.auteur }} ,le
+                                        {{ articles.dateCreation|date('d/m/y') }}
+                                        à {{ articles.dateCreation|date('H:m') }}
+                                        dans la catégorie
+                                        <a href="{{ path('blog_categories_homePage', { 'id': articles.categorie.id }) }}"> {{ articles.categorie.nom }}</a>
+                                    </h3>
+                                </div>
+                                <h4>{{ articles.description|raw }}</h4>
+                                <div class="content">
+                                    {#Une methode pour concatiner  :p :p#}
+                                    <center><img src="{{ asset('uploads/images/article/'~articles.image ) }}" alt="aa"
+                                                 width="850px" height="450px"
+                                                 align="center"></center>
+
+                                </div>
+
+                            </article>
+                        </section>
+
+
+                        <p>Odio laoreet vivendum ex vis. At mentitum assueverit nam, mel ex dolorem tacimates praesent.
+                            Saepe nemore duo te, no nec cetero eligendi mnesarchum. Ne congue similique eloquentiam has.
+                            Wisi omittantur definitiones vis in.</p>
+                        <p>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid. Eos
+                            meliore interesset id. Ne has fabellas elaboraret.</p>
+                        <p>Ne iriure reprimique vel. Ex alii pericula pri, idque veritus ius id. Etiam doctus aperiam cu
+                            mea, vel cibo dicunt ad, vim luptatum delicatissimi eu. Diam mentitum explicari no vim,
+                            tantas nominavi eos in. Ei pri omnis verterem antiopam.</p>
+
+                        <h4>Lorem ipsum</h4>
+                        <ul class="square">
+                            <li>Lorem ipsum dolor sit amet, lorem quaestio similique has at, possit vivendum ne nam.
+                            </li>
+                            <li>Pro munere assueverit id, debitis scaevola omittantur vim ex, qui meis tantas et.</li>
+                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
+                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
+                        </ul>
+
+                        <h4>Lorem ipsum</h4>
+                        <ul class="square">
+                            <li>Lorem ipsum dolor sit amet, lorem quaestio similique has at, possit vivendum ne nam.
+                            </li>
+                            <li>Pro munere assueverit id, debitis scaevola omittantur vim ex, qui meis tantas et.</li>
+                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
+                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
+                        </ul>
+                    </div><!-- /.col-lg-8 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /section -->
+
+
+        <section class="blogauthor" id="blogauthor">
+            <div class="container animations fade-in d3">
+                <h3 class="text-center title"><span>Author</span></h3>
+                <div class="row text-center">
+                    <div class="col-lg-12">
+                        <a href="{{ path('blog_afficherPar_Auteur', { 'auteur': articles.auteur }) }}"> <img
+                                    class="img-responsive" src="{{ asset('img/users/1.jpg') }}" alt="" height="300px"
+                                    width="300px"></a>
+                        <h5>
+                            <a href="{{ path('blog_afficherPar_Auteur', { 'auteur': articles.auteur }) }}">{{ articles.auteur }}</a>
+                        </h5>
+
+                    </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+
+                    {#{{ render(controller('BlogBundle:BlogCommentaire:ListCommentaires')) }}#}
+                    {% for e in commentaires %}
+
+
+                        <div class="col-lg-12 comment revealOnScroll animated slideInUp" data-animation="slideInUp"
+                             data-timeout="800">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 comment-logo">
+                                    <a href="#"><img src="img/users/2.png" class="img-responsive" width="65" height="66"
+                                                     alt=""></a>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 comment-body">
+                                    <h6><a href="#" class="pull-right"></a>{{ e.AuteurCommentaire }}</h6>
+                                    <span class="comment-date">{{ e.dateCommentaire|date }}</span>
+                                    <p class="comment-text"> {{ e.contenuCommentaire }}.</p>
+                                </div><!-- /.col-lg-10 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.col-lg-12 -->
+                    {% endfor %}
+
+<section class="contact">
+        <form method="post" name="contactform" id="contactform">
+            <fieldset>
+                <div class="col-lg-6">
+                    {{ form_widget(form.contenuCommentaire, { 'attr': {'class': 'field validate-input', 'placeholder': 'Votre Commentaire svp !!!' } }) }}
+                    {{ form_widget(form.submit, { 'attr': {'class': '"kafe-btn kafe-btn-mint full-width"', 'placeholder': 'Votre Commentaire svp !!!' } }) }}
+                </div>
+
+            </fieldset>
+        </form>
+</section>
+    {% endblock %}
+
+
+    {% block title %}
+    {% endblock %}
+

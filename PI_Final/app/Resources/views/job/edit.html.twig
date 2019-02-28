@@ -1,0 +1,32 @@
+{% extends 'dashboard_home.html.twig' %}
+{% block Navigation %}
+    {{ parent() }}
+{% endblock %}
+{% block dashboard %}
+    {{ parent() }}
+    {% form_theme edit_form 'bootstrap_3_layout.html.twig' %}
+
+<div class="col-sm-8 col-md-9">
+
+    <div class="job-box">
+        <div class="job-header">
+            <h4>Job Edit</h4>
+        </div>
+            <div class="=form-group">
+
+              {{ form_start(edit_form) }}
+              {{ form_widget(edit_form) }}
+               <input type="submit" value="Edit" class="kafe-btn kafe-btn-mint-small full-width"/>
+              {{ form_end(edit_form) }}
+            </div>
+
+<br>
+            <a class="btn btn-default" href="{{ path('job_index') }}">Back to the list</a>
+      <div align="right">
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete" class="btn btn-danger">
+            {{ form_end(delete_form) }}
+      </div>
+    </div>
+</div>
+{% endblock %}

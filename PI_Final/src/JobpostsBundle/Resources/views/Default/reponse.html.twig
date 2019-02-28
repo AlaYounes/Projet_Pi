@@ -1,0 +1,16 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+
+<H1>Vous avez deja un travail lors de cette periode </H1>
+
+      <a href="{{ path('Listeannonces') }}" ><button type="button"   class="btn btn-danger" >
+             Retourner a la liste des annonces
+          </button></a>
+
+
+{% endblock %}

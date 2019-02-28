@@ -1,0 +1,167 @@
+{% extends '@Fix/Frontend/Default/Profile.html.twig' %}
+
+{% block container %}
+
+<!-- Mirrored from lmpixels.com/demo/sunshine-demo/sunshine-version-1/sunshine-v1-html-template/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Feb 2019 02:02:08 GMT -->
+<head>
+
+
+    <link rel="stylesheet" href="{{asset('csss/bootstrap.css')  }}">
+    <link rel="stylesheet" href="{{ asset('csss/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('csss/transition-animations.css')}}">
+    <link rel="stylesheet" href="{{ asset('csss/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('csss/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('csss/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('csss/main.css') }}" type="text/css">
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-92992662-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+    <!-- This styles needs for demo -->
+    <link rel="stylesheet" href="{{ asset('preview/lmpixels-demo-panel.css') }}" type="text/css">
+    <!-- /This styles needs for demo -->
+
+    <script src="{{ asset('jss/jquery-2.1.3.min.js') }}"></script>
+    <script src="{{ asset('jss/modernizr.custom.js') }}"></script>
+
+    <script src='../../../../../www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+<!-- Loading animation -->
+<div class="preloader">
+    <div class="preloader-animation">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+    </div>
+</div>
+<!-- /Loading animation -->
+
+<div id="page" class="page">
+
+
+    <!-- Main Content -->
+    <div id="main" class="site-main">
+        <!-- Page changer wrapper -->
+        <div class="pt-wrapper">
+            <!-- Navigation & Social buttons -->
+            <div class="site-nav mobile-menu-hide">
+                <!-- Main menu -->
+
+
+            </div>
+
+            <!-- Subpages -->
+            <div class="subpages">
+                <!-- About Me Subpage -->
+                <section class="pt-page pt-page-1" data-id="about_me">
+                    <div class="section-title-block">
+                        <h2 class="section-title">About Me</h2>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            {% for c in list %}
+                <form>
+
+
+                {% if (c.prenom != null) and (c.nom != null) and (c.dateNais != null)  and (c.adresse != null)
+                    and (c.adrMail != null) and (c.tele != null) %}
+
+<br>
+
+                    <br>
+                    <br>
+                     <div class="col-sm-6 col-md-6 subpage-block">
+                  <div class="block-title">
+                    <h3>Nom : </h3>
+                      {{ c.nom }}
+                  </div>
+
+
+
+                         <div class="block-title">
+                             <h3>Prenom : </h3>
+                             {{ c.prenom }}
+                             <br>
+                             <br>
+                         </div>
+
+                         <div class="block-title">
+                             <h3>Date de naissance : </h3>
+                             {{ c.dateNais|date('Y-m-d ') }}
+                             <br>
+                             <br>
+                         </div>
+
+                         <div class="block-title">
+                             <h3>adresse mail : </h3>
+                             {{ c.adrMail }}
+                             <br>
+                             <br>
+                         </div>
+
+                         <div class="block-title">
+                             <h3>adresse : </h3>
+                             {{ c.adresse }}
+                             <br>
+                             <br>
+                         </div>
+
+                         <div class="block-title">
+                             <h3>telephone : </h3>
+                             {{ c.tele }}
+                         </div>
+
+
+                     </div>
+
+
+                {% endif %}
+            {% else  %}
+                {#<h4>vous n'avez pas encore rédiger votre CV </h4>#}
+                <script> alert( "vous n'avez pas encore rédiger votre CV ");</script>
+
+                </form>
+            {% endfor %}
+        </div>
+        <!-- /Page changer wrapper -->
+    </div>
+    <!-- /Main Content -->
+</div>
+
+
+
+<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('jss/page-transition.js') }}"></script>
+<script src="{{ asset('jss/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ asset('jss/validator.js') }}"></script>
+<script src="{{ asset('jss/jquery.shuffle.min.js') }}"></script>
+<script src="{{ asset('jss/masonry.pkgd.min.js') }}"></script>
+<script src="{{ asset('jss/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('jss/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('jss/jquery.hoverdir.js') }}"></script>
+<script src="{{ asset('jss/main.js') }}"></script>
+
+<!-- Demo Color changer Script -->
+<script src="preview/lmpixels-demo-panel.js"></script>
+<!-- /Demo Color changer Script -->
+</body>
+
+<!-- Mirrored from lmpixels.com/demo/sunshine-demo/sunshine-version-1/sunshine-v1-html-template/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Feb 2019 02:02:26 GMT -->
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

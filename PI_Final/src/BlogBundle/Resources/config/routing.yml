@@ -1,0 +1,27 @@
+blog_article:
+    resource: "@BlogBundle/Resources/config/routing/article.yml"
+    prefix:   /article
+
+blog_categorie:
+    resource: "@BlogBundle/Resources/config/routing/categorie.yml"
+    prefix:   /categorie
+
+blog_Blog:
+    resource: "@BlogBundle/Resources/config/routing/blog.yml"
+    prefix:   /blog
+
+blog_homepage:
+    path:     /{id}
+    defaults: { _controller: BlogBundle:Default:index }
+
+_list_commentaires:
+    path:     /Commentaires/ListCommentaires/
+    defaults: { _controller: BlogBundle:BlogCommentaire:ListCommentaires }
+
+_view_commentaire:
+    path:     /ViewCommentaire/Commentaires/{article}/
+    defaults: { _controller: BlogBundle:BlogCommentaire:ViewCommentaireByAuteur }
+
+_create_commentaire:
+    path:     /CreateCommentaire/Commentaires/{id}
+    defaults: { _controller: BlogBundle:BlogCommentaire:CreateCommentaire }

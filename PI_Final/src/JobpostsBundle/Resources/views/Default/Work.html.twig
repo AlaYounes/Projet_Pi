@@ -1,0 +1,264 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+<body>
+<script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
+
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+
+<!-- Start of Async Drift Code -->
+<script>
+    "use strict";
+
+    !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+            if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+            t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+                t.factory = function(e) {
+                    return function() {
+                        var n = Array.prototype.slice.call(arguments);
+                        return n.unshift(e), t.push(n), t;
+                    };
+                }, t.methods.forEach(function(e) {
+                t[e] = t.factory(e);
+            }), t.load = function(t) {
+                var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+                o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+                var i = document.getElementsByTagName("script")[0];
+                i.parentNode.insertBefore(o, i);
+            };
+        }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('kka5nte7n5ub');
+</script>
+<!-- End of Async Drift Code -->
+
+
+<section class="featured-users">
+    <div class="container">
+        <div class="section-title" style="padding-top: 20px;">
+            <h1>Jobs</h1>
+              <a href="{{ path('AjouterAnnonce') }}" >
+                  <button class="btn btn-success" >Ajouter Annonce</button>
+              </a>
+            <a href="{{ path('ListeAnnoncesdatatable') }}" >
+                <button class="btn btn-success" >Mes Annonces</button>
+            </a>
+
+            <a href="{{ path('Listedemandes') }}" >
+                <button class="btn btn-success" >Mes Demandes</button>
+            </a>
+            <br>
+            <br>
+
+            <input id="myInput" type="text" placeholder="Search..">
+
+
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9">
+                <div class="work">
+
+
+                    {{ socialButtons( {'googleplus':false} ) }}
+                    {% for annonce in listeannonce %}
+                        <div class="myDIV">
+                    <div class="job" >
+
+                        <div class="row top-sec">
+                            <div class="col-lg-12">
+                                <div class="col-lg-12 col-xs-12">
+                                    <h4>{{ annonce.titre }}</h4>
+                                    <h6>Hourly  {{ annonce.salaire }} $$</h6>
+                                    <p><small>Posted few moments ago</small></p>
+                                </div><!-- /.col-lg-10 -->
+
+                            </div><!-- /.col-lg-12 -->
+                        </div><!-- /.row -->
+
+                        <div class="row mid-sec">
+                            <div class="col-lg-12">
+                                <div class="col-lg-12">
+                                    <hr class="small-hr">
+                                    <p>
+                                        {{ annonce.description }}
+                                    </p>
+                                    <span class="label label-success">{{ annonce.speciality }}</span>
+
+                                </div><!-- /.col-lg-12 -->
+                            </div><!-- /.col-lg-12 -->
+                        </div><!-- /.row -->
+
+                        <div class="row bottom-sec">
+                            <div class="col-lg-12">
+
+                                <div class="col-lg-12">
+                                    <hr class="small-hr">
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="pull-left">
+                                        <a href="{{ path('template_Profile') }}">
+
+                                            <img class="img-responsive" src="{{ asset('img/users/'~ annonce.id ~'.jpg') }}" alt="Image">
+                                        </a>
+                                    </div><!-- /.col-lg-2 -->
+                                    <h5> Anna Morgan </h5>
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="pull-right">
+
+
+
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{{annonce.id}}">
+                                            Postuler dans ce travail
+                                        </button>
+
+                                        <!-- The Modal -->
+                                        <center>
+                                        <div class="modal fade" id="{{annonce.id}}">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <!-- Modal Header -->
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">x</button>
+                                                        <h3>Titre:</h3>
+                                                        <h4 class="modal-title">{{annonce.titre}}</h4>
+
+                                                    </div>
+
+                                                    <!-- Modal body -->
+                                                    <h3>Description:</h3>
+                                                    <div class="modal-body">
+                                                        {{annonce.description}}
+                                                        <br>
+                                                        <label for="">Motivation (Pourquoi vous ? ) </label>
+                                                        <br>
+                                                        </div>
+                                                    <form action="{{ path('Listeannonces') }}"  method="post">
+                                                        <textarea name="motivation" rows="4" cols="50"></textarea>
+                                                        <input name="ida" type="hidden" value="{{ annonce.id }}" />
+
+
+                                                        <button type="submit" class="btn btn-success" >Valider</button>
+
+                                                    </form>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        </center>
+
+
+
+                                    </div>
+                                </div>
+
+                            </div><!-- /.col-lg-12 -->
+                        </div><!-- /.row -->
+
+                    </div><!-- /.job -->
+                    </div>
+
+{% endfor %}
+
+                    <div class="paginationCommon blogPagination text-center">
+                        <nav aria-label="Page navigation">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                        <span aria-hidden="true"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                        <span aria-hidden="true"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div><!-- ./work -->
+            </div>
+
+
+            </div><!-- col-md-9 -->
+
+        </div>
+
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
+<script>
+
+    function myFunction() {
+
+        window.open("{{ path('calendar') }}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=1200,height=800");
+    }
+
+
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+
+            var value = $(this).val().toLowerCase();
+            console.log(value);
+            $(".myDIV ").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+
+    if (annyang) {
+
+        annyang.addCallback('result', function(userSaid, commandText, phrases) {
+
+
+            console.log(userSaid); // sample output: 'hello'
+            console.log(commandText); // sample output: 'hello (there)'
+            console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+            if(userSaid[0]!= "calendar") {
+                console.log(userSaid[0]);
+                console.log(userSaid[0]!== 'calendar');
+                document.getElementById('myInput').value = userSaid[0];
+                var value=userSaid[0].toLowerCase();
+                $(".myDIV ").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            }
+        });
+
+        annyang.start();
+    }
+
+
+
+
+
+
+
+
+</script>
+
+
+  {% endblock %}
