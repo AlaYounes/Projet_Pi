@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: PI_DEV
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: smtp.gmail.com
+    mailer_user: ala.younes@esprit.tn
+    mailer_encryptation: ssl
+    mailer_password: 183JMT1941
+    secret: ThisTokenIsNotSoSecretChangeIt
