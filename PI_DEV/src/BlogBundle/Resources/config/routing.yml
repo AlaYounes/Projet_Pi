@@ -1,9 +1,14 @@
 blog_article:
     resource: "@BlogBundle/Resources/config/routing/article.yml"
     prefix:   /article
+
 blog_categorie:
     resource: "@BlogBundle/Resources/config/routing/categorie.yml"
     prefix:   /categorie
+
+blog_Blog:
+    resource: "@BlogBundle/Resources/config/routing/blog.yml"
+    prefix:   /blog
 
 blog_homepage:
     path:     /{id}

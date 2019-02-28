@@ -5,6 +5,9 @@
   {% block container%}
       {{ parent() }}
 <body>
+<script src="{{asset('js/jquery-2.2.4.min.js')}}"></script>
+
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
 
 <!-- Start of Async Drift Code -->
 <script>
@@ -36,18 +39,37 @@
 <!-- End of Async Drift Code -->
 
 
-
 <section class="featured-users">
     <div class="container">
         <div class="section-title" style="padding-top: 20px;">
             <h1>Jobs</h1>
+              <a href="{{ path('AjouterAnnonce') }}" >
+                  <button class="btn btn-success" >Ajouter Annonce</button>
+              </a>
+            <a href="{{ path('ListeAnnoncesdatatable') }}" >
+                <button class="btn btn-success" >Mes Annonces</button>
+            </a>
+
+            <a href="{{ path('Listedemandes') }}" >
+                <button class="btn btn-success" >Mes Demandes</button>
+            </a>
+            <br>
+            <br>
+
+            <input id="myInput" type="text" placeholder="Search..">
+
+
         </div>
 
         <div class="row">
             <div class="col-lg-9">
                 <div class="work">
+
+
+                    {{ socialButtons( {'googleplus':false} ) }}
                     {% for annonce in listeannonce %}
-                    <div class="job">
+                        <div class="myDIV">
+                    <div class="job" >
 
                         <div class="row top-sec">
                             <div class="col-lg-12">
@@ -68,9 +90,7 @@
                                         {{ annonce.description }}
                                     </p>
                                     <span class="label label-success">{{ annonce.speciality }}</span>
-                                    <span class="label label-success">CSS3</span>
-                                    <span class="label label-success">PHP 5.4</span>
-                                    <span class="label label-success">Bootstrap</span>
+
                                 </div><!-- /.col-lg-12 -->
                             </div><!-- /.col-lg-12 -->
                         </div><!-- /.row -->
@@ -128,11 +148,6 @@
                                                         <input name="ida" type="hidden" value="{{ annonce.id }}" />
 
 
-
-
-
-
-
                                                         <button type="submit" class="btn btn-success" >Valider</button>
 
                                                     </form>
@@ -155,6 +170,8 @@
                         </div><!-- /.row -->
 
                     </div><!-- /.job -->
+                    </div>
+
 {% endfor %}
 
                     <div class="paginationCommon blogPagination text-center">
@@ -180,74 +197,68 @@
                     </div>
 
                 </div><!-- ./work -->
-
+            </div>
 
 
             </div><!-- col-md-9 -->
 
-            <div class="col-sm-4 col-md-3">
-
-                <div class="widget">
-                    <h3 class="widget_title">Category</h3>
-                    <ul class="tr-list">
-                        <li><a href="#" onclick="myFunction()" class="active"><i class="fa fa-code"></i> Mon agenda</a></li>
-                    </ul>
-                    <div class="margin-space"></div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="widget_title_small">Payment Type</h3>
-                            <ul class="tr-list">
-                                <li><a href="#" class="active">Any</a></li>
-                                <li><a href="#">By Hour</a></li>
-                                <li><a href="#">Fixed Cost</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <h3 class="widget_title_small">Experience Level</h3>
-                            <ul class="tr-list">
-                                <li><a href="#">Entry Level</a></li>
-                                <li><a href="#">Intermediate</a></li>
-                                <li><a href="#">Expert</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="margin-space"></div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3 class="widget_title_small">Job Duration</h3>
-                            <ul class="tr-list">
-                                <li><a href="#">6+ Months</a></li>
-                                <li><a href="#">3 - 6 Months</a></li>
-                                <li><a href="#">1 - 3 Months</a></li>
-                                <li><a href="#">Below 1 Month</a></li>
-                                <li><a href="#">Below 1 Week</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <h3 class="widget_title_small">Hours Per Week</h3>
-                            <ul class="tr-list">
-                                <li><a href="#">30 - 39</a></li>
-                                <li><a href="#">20 - 29</a></li>
-                                <li><a href="#">10 - 19</a></li>
-                                <li><a href="#">1 - 9</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div><!-- /.widget -->
-
-            </div>
         </div>
 
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+
 <script>
 
     function myFunction() {
 
         window.open("{{ path('calendar') }}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=1200,height=800");
     }
-    </script>
+
+
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+
+            var value = $(this).val().toLowerCase();
+            console.log(value);
+            $(".myDIV ").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+
+
+    if (annyang) {
+
+        annyang.addCallback('result', function(userSaid, commandText, phrases) {
+
+
+            console.log(userSaid); // sample output: 'hello'
+            console.log(commandText); // sample output: 'hello (there)'
+            console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+            if(userSaid[0]!= "calendar") {
+                console.log(userSaid[0]);
+                console.log(userSaid[0]!== 'calendar');
+                document.getElementById('myInput').value = userSaid[0];
+                var value=userSaid[0].toLowerCase();
+                $(".myDIV ").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            }
+        });
+
+        annyang.start();
+    }
+
+
+
+
+
+
+
+
+</script>
 
 
   {% endblock %}

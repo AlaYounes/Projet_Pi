@@ -1,0 +1,158 @@
+{%  extends 'base.html.twig'  %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container %}
+      {{ parent() }}
+      <link rel="stylesheet" type="text/css" href="{{ asset('/css/rating.css') }}" />
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script src="{{ asset('/js/rating.js') }}"></script>
+      <section class="profile-details">
+          <div class="container">
+              <div class="row">
+                  <a href="{{ path('listegenerral') }}" class="kafe-btn kafe-btn-mint-small"> beack</a>
+                  <div class="col-lg-7 col-md-7 col-sm-6 col-xs-12">
+                      <div class="card-box-profile-details">
+
+                          <div class="description-profile">
+
+                              <ul class="tr-list resume-info">
+                                  {% for entity in liste %}
+                                  <li>
+                                      <div class="icon">
+                                          <p class="tr-title"><i class="fa fa-question-circle" aria-hidden="true"></i> {{ entity.titre  }}</p>
+                                          <p class="tr-title"> {{ entity.date|date("m/d/y") }}</p>
+
+                                      </div>
+                                      <div class="media-body">
+                                                  <h3>{{ entity.description  }}</h3>
+                                      </div>
+                                  </li><!-- /.career-objective-->
+
+
+                              </ul><!-- /.ul -->
+
+                          </div><!-- /.description-profile -->
+
+                      </div><!-- .card-box-profile-details -->
+                      {% endfor %}
+
+                      <div class="work">
+
+                          <div class="col-lg-12">
+                              <div class="icon">
+                                  <p class="tr-title"><i class="fa fa-users" aria-hidden="true"></i> comments </p>
+                              </div>
+                          </div>
+
+                          {% for entity in comments %}
+
+
+                          <div class="job">
+
+                              <div class="row bottom-sec">
+                                  <div class="col-lg-12">
+
+                                      <div class="col-lg-12">
+                                          <hr class="small-hr">
+                                      </div>
+
+                                      <div class="col-lg-12">
+                                          <div class="pull-left">
+                                              <a href="#">
+                                                  <img class="img-responsive" src="assets/img/users/1.jpg" alt="Image">
+                                              </a>
+                                          </div><!-- /.col-lg-2 -->
+                              {% for entity2 in users %}
+                                  {% if entity2.id == entity.user.id %}
+                                          <h5><a href="#">  {{ entity2.username }} </a> </h5>
+                                          <p><i class="fa fa-map-marker"></i> {{ entity2.email }}</p>
+                                  {% endif %}
+                              {% endfor %}
+                                          <div class="media-body">
+                                              <h3>  {{ entity.commentaire  }}        </h3>
+                                              <div class="pull-right">
+                                              <a href="{{ path('signaler',{'id':entity.id}) }}" class="btn btn-danger btn-xs" data-toggle="tooltip"
+                                                 title="signal"><span class="fa fa-exclamation-triangle"></span></a>
+                                              </div>
+                                          </div>
+                                          </p>
+                                      </div>
+
+                                  </div><!-- /.col-lg-12 -->
+                              </div><!-- /.row -->
+
+                              <div class="row mid-sec">
+                                  <div class="col-lg-12">
+                                      <div class="col-lg-12">
+
+
+
+                                      </div><!-- /.col-lg-12 -->
+                                  </div><!-- /.col-lg-12 -->
+                              </div><!-- /.row -->
+
+                          </div><!-- /.job -->
+                              {% endfor %}
+                          <!-- /.job -->
+
+                          {% form_theme form 'bootstrap_3_layout.html.twig' %}
+                          {{ form_start(form) }}
+                          {{ form_widget(form) }}
+                          <button type="submit" class="btn btn-success">add</button>
+
+
+
+                          {{ form_end(form) }}
+                      </div><!--/ .work -->
+
+
+                  </div><!-- .col-lg-9 -->
+
+                  <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+
+                      <!-- .stats -->
+                      {% for entity in liste %}
+                      <div class="stats">
+                          <div class="row">
+                              <h5>problem</h5>
+                              <div class="col-sm-4">
+                                  <a href="{{ asset('uploads/images/question/'~ entity.image ) }}">
+                                  <img src=" {{ asset('uploads/images/question/'~ entity.image   ) }} "  alt="Image"height="300px"width="400px"> </a>
+                                  <p class="bottom">click to zoom</p>
+                              </div>
+
+
+                              <p class="bottom"> </p>
+                          </div>
+                      </div><!-- .stats -->
+
+
+
+{% endfor %}
+
+                  </div><!-- .col-lg-3 -->
+
+              </div><!-- .row -->
+          </div><!-- .container -->
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {% endblock %}

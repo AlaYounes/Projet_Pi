@@ -2,6 +2,7 @@
 
 namespace BlogBundle\Repository;
 
+use BlogBundle\Entity\Article;
 use Doctrine\ORM\NonUniqueResultException;
 use Doctrine\ORM\NoResultException;
 
@@ -21,6 +22,17 @@ class ArticleRepository extends \Doctrine\ORM\EntityRepository
 //        $qb->setParameter('categorie', $categorie);
 //        return $qb->getQuery()->getResult();
 //    }
+
+    public function countByAccount()
+    {
+
+        return $this->createQueryBuilder('a')
+            ->select('COUNT(a)')
+            ->where('a.auteur= :auteur')
+            ->setParameter('auteur','coucou')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 
     public function findArticleAuteurQB1($auteur)
     {

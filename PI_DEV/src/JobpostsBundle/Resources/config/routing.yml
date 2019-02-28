@@ -30,11 +30,14 @@ SupprimerAnnonce:
 
 
 
-
 modifierAnnonce:
     path:     /modifierAnnonce/{id}
     defaults: { _controller: JobpostsBundle:Default:modifierAnnonce }
 
+
+Terminerdemande:
+    path:     /Terminerdemande/{id}
+    defaults: { _controller: JobpostsBundle:Default:Terminerdemande }
 
 
 JsonDemandes:
@@ -44,4 +47,16 @@ JsonDemandes:
 calendar:
     path:     /calendar/
     defaults: { _controller: JobpostsBundle:Default:calendar }
+
+Reponse:
+    path:     /Reponse/
+    defaults: { _controller: JobpostsBundle:Default:Reponse }
+
+
+
+ListeDemandedatatable:
+    path:     /ListeDemandedatatable/
+    defaults: { _controller: JobpostsBundle:Default:ListeDemandedatatable }
+
+
 

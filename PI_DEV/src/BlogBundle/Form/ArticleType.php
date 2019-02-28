@@ -2,6 +2,7 @@
 
 namespace BlogBundle\Form;
 
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -19,7 +20,8 @@ class ArticleType extends AbstractType
     {
         $builder->add('titre')
 //            ->add('auteur')
-            ->add('description',TextareaType::class)
+            ->add('description',CKEditorType::class)
+            ->add('contenu',CKEditorType::class)
 //            ->add('dateCreation')
 //            ->add('dateEdition')
             ->add('imageFile',VichImageType::class

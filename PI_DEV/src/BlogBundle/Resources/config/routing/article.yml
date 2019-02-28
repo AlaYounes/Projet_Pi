@@ -27,7 +27,6 @@ article_Order:
     path:     /orderBy
     defaults: { _controller: "BlogBundle:Article:Order" }
 
-#Juste Politique :/
 article_search_Categorie:
     path:     /articleByCategorie/{id}/
     defaults: { _controller: "BlogBundle:Article:findByCategorie" }
@@ -43,6 +42,8 @@ article_searchtest:
 RechercheDQL:
     path:     /RechercheDQL
     defaults: { _controller: "BlogBundle:Article:rechercheIdDQL"}
+
 RechercheAjax:
     path:     /RechercheAjax
     defaults: { _controller: "BlogBundle:Article:search"}
+

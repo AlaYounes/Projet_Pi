@@ -45,7 +45,7 @@ class DemandeRepository extends \Doctrine\ORM\EntityRepository
 
     public function findbestdd()
     {
-        $query = $this->getEntityManager()->createQuery("SELECT p.titre as Subject ,strtodate(p.datedebutD, '%Y/%m/%d') as startHour,strtodate(p.datefinD, '%Y/%m/%d') as endHour FROM JobpostsBundle:Demande p ");
+        $query = $this->getEntityManager()->createQuery("SELECT p.titre as Subject ,strtodate(p.datedebutD, '%Y/%m/%d') as startHour,strtodate(p.datefinD, '%Y/%m/%d') as endHour FROM JobpostsBundle:Demande p  WHERE p.etatd = 1 ");
 
 
         return $query->getResult();

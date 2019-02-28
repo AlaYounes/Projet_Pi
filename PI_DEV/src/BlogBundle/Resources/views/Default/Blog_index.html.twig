@@ -1,7 +1,21 @@
 {% extends 'base.html.twig' %}
+{% block stylesheat %}
+    {{ parent() }}
+    <link href="{{ asset('css/blogcategories.html') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/style1.css') }}" rel="stylesheet" type="text/css"/>
 
+{% endblock %}
 
     {% block container %}
+        {#{% for categorie in categories %}#}
+        {#<li class="header">#}
+
+        {#<a href="{{ path('article_affichage_Categorie',{'id': categorie.id}) }}">{{ categorie.nom }}</a>#}
+        {#<a href="{{ path('article_search_Politique') }}">Politique</a>#}
+        {#</li>#}
+        {#{% endfor %}#}
+
+        {#{{ dump(articless) }}#}
         <!-- ==============================================
         Blog Page Section
         =============================================== -->
@@ -39,6 +53,7 @@
                             </div> <!-- /.col-lg-12 -->
                         </div><!-- /.row -->
 
+                        {#A changer avec un Contenue #}
                         <p>Lorem ipsum dolor sit amet, lorem quaestio similique has at, possit vivendum ne nam. Unum
                             saepe ea vim, ius sensibus volutpat et, eum legere nostrum explicari ei. Sed ex legere
                             hendrerit. Ei saperet officiis has, eu usu prompta mandamus. Vix dicat electram ei, ne sea
@@ -59,84 +74,45 @@
 
                         <section class="articles">
                             <article>
-                                <h2>{{ articles.titre }}</h2>
-                                <div class="metadata">Ecrit par {{ articles.auteur }} ,le
-                                    {{ articles.dateCreation|date('d/m/y') }}
-                                    à {{ articles.dateCreation|date('H:m') }}
-                                    dans la catégorie {{ articles.categorie }}
+                                {#<h2>{{ articles.titre }}</h2>#}
+                                <div class="metadata"><h3>Ecrit par {{ articles.auteur }} ,le
+                                        {{ articles.dateCreation|date('d/m/y') }}
+                                        à {{ articles.dateCreation|date('H:m') }}
+                                        dans la catégorie
+                                        <a href="{{ path('article_rechercher_Auteur', { 'auteur': articles.categorie }) }}"> {{ articles.categorie }}</a>
+                                    </h3>
                                 </div>
+                                <h4>{{ articles.description|raw }}</h4>
                                 <div class="content">
                                     {#Une methode pour concatiner  :p :p#}
                                     <img src="{{ asset('uploads/images/article/'~articles.image ) }}" alt="aa">
 
                                 </div>
-                                <div>
-                                    {{ articles.description|raw }}
-                                </div>
+
 
                             </article>
+
                         </section>
+                        <p>
+                            {{ articles.contenu|raw }}
+                        </p>
 
 
-                        <p>Odio laoreet vivendum ex vis. At mentitum assueverit nam, mel ex dolorem tacimates praesent.
-                            Saepe nemore duo te, no nec cetero eligendi mnesarchum. Ne congue similique eloquentiam has.
-                            Wisi omittantur definitiones vis in.</p>
-                        <p>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid. Eos
-                            meliore interesset id. Ne has fabellas elaboraret.</p>
-                        <p>Ne iriure reprimique vel. Ex alii pericula pri, idque veritus ius id. Etiam doctus aperiam cu
-                            mea, vel cibo dicunt ad, vim luptatum delicatissimi eu. Diam mentitum explicari no vim,
-                            tantas nominavi eos in. Ei pri omnis verterem antiopam.</p>
-
-                        <h4>Lorem ipsum</h4>
-                        <ul class="square">
-                            <li>Lorem ipsum dolor sit amet, lorem quaestio similique has at, possit vivendum ne nam.
-                            </li>
-                            <li>Pro munere assueverit id, debitis scaevola omittantur vim ex, qui meis tantas et.</li>
-                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
-                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
-                        </ul>
-
-                        <h4>Lorem ipsum</h4>
-                        <ul class="square">
-                            <li>Lorem ipsum dolor sit amet, lorem quaestio similique has at, possit vivendum ne nam.
-                            </li>
-                            <li>Pro munere assueverit id, debitis scaevola omittantur vim ex, qui meis tantas et.</li>
-                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
-                            <li>Pertinacia neglegentur vix ne. Illum accusata id quo, vis ex mucius iisque aliquid.</li>
-                        </ul>
                     </div><!-- /.col-lg-8 -->
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section><!-- /section -->
 
-        <section class="articles" id="articles">
-            <div class="container-fluid">
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <a href="#">
-                        <div class="tint">
-                            <div class="featured-thumbnail">
-                                <img class="img-responsive" src="{{ asset('img/users/10.jpg') }}" alt="">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="col-md-12 featured-titles">
-                        <h6>
-                            {#<a href="{{ path('article_search_Politique') }}">Politique</a>#}
-                            a changer pour tirer tous les articles selon categorie pour
-                        </h6>
-                    </div><!-- /.col-md-4 -->
-                </div><!-- /.container -->
-            </div>
-        </section>
+
+
         <section class="blogauthor" id="blogauthor">
             <div class="container animations fade-in d3">
                 <h3 class="text-center title"><span>Author</span></h3>
                 <div class="row text-center">
                     <div class="col-lg-12">
-                        {# Il faut choisir entre l'image et le nom de l'auteur #}
                         <a href="{{ path('article_rechercher_Auteur', { 'auteur': articles.auteur }) }}"> <img
-                                    class="img-circle" src="{{ asset('img/users/1.jpg') }}" alt=""></a>
+                                    class="img-responsive" src="{{ asset('img/users/1.jpg') }}" alt=""></a>
                         <h5>
                             <a href="{{ path('article_rechercher_Auteur', { 'auteur': articles.auteur }) }}">{{ articles.auteur }}</a>
                         </h5>
@@ -147,7 +123,6 @@
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </section>
-
 
     {% endblock %}
 

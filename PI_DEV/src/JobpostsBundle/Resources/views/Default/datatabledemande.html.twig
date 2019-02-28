@@ -1,0 +1,145 @@
+{%  extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+  {% block container%}
+      {{ parent() }}
+
+
+      {% if listeDemande == NULL %}
+      <center><h3> Il n'y a pas de demande </h3></center>
+      {% else %}
+      {% endif %}
+
+      <section class="featured-users">
+    <div class="container">
+        <div class="section-title" style="padding-top: 20px;">
+            <h1>Suivies des travaux</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-9">
+
+                <div class="row">
+
+
+                        <table id="datatable" border="0" class="table table-striped">
+                            <thead>
+                            <tr class="active">
+                                <th>Id</th>
+                                <th>titre</th>
+                                <th>date debut</th>
+                                <th>date fin</th>
+                                <th>etat</th>
+                                <th>Validation</th>
+
+                            </tr>
+                            </thead>
+
+                            {% for Demande in listeDemande %}
+
+                                {% if Demande.etatd == 0 %}
+                                    <tr style="background-color: #ff85f5">
+                                        <td>{{ Demande.id }}</td>
+                                        <td>{{ Demande.titre }}</td>
+                                        <td>{{ Demande.datedebutD }}</td>
+                                        <td>{{ Demande.datefinD }}</td>
+                                        <td><p style="color:red;font-weight: bold;">En Attente</p></td>
+                                        <td></td>
+
+                                    </tr>
+                                {% elseif  Demande.etatd == 1  %}
+                                    <tr style="background-color: #f89d00">
+                                        <td>{{ Demande.id }}</td>
+                                        <td>{{ Demande.titre }}</td>
+                                        <td>{{ Demande.datedebutD }}</td>
+                                        <td>{{ Demande.datefinD }}</td>
+                                        <td><p style="font-weight: bold;">en cours</p>
+                                        <td><a href="{{ path('Terminerdemande',{'id':Demande.id}) }}"><i class="medium material-icons ">Valider le Travail</i></a></td>
+
+                                        </td>
+
+                                    </tr>
+
+
+                            {% elseif  Demande.etatd == 2  %}
+                                <tr style="background-color: #00FFFF">
+                                    <td>{{ Demande.id }}</td>
+                                    <td>{{ Demande.titre }}</td>
+                                    <td>{{ Demande.datedebutD }}</td>
+                                    <td>{{ Demande.datefinD }}</td>
+                                    <td><p style="color:Green;font-weight: bold;">Travail terminé</p>
+                                    <td>
+                                    </td>
+
+                                </tr>
+                            {% endif %}
+
+
+
+
+                            {% endfor %}
+
+                        </table>
+
+
+                </div><!-- row -->
+
+            </div><!-- col-md-9 -->
+
+            <div class="col-sm-4 col-md-3">
+
+                <div class="widget">
+                    <button class="btn btn-success" onclick="myFunction()">Mon agenda</button>
+
+                </div><!-- /.widget -->
+
+            </div>
+        </div>
+
+    </div>
+
+
+          <script src="{{ asset('//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js')}}"></script>
+
+          <script>
+
+              function myFunction() {
+
+                  window.open("{{ path('calendar') }}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=1200,height=800");
+              }
+
+
+
+
+              if (annyang) {
+                  var commands = {
+                      'calendar': function() {     window.open("{{ path('calendar') }}", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=100,width=1200,height=800");
+                      },
+
+                      'Back':function() {window.location="{{ path('Listeannonces') }}"}
+                  };
+                  annyang.addCallback('result', function(userSaid, commandText, phrases) {
+                      console.log(userSaid); // sample output: 'hello'
+                      console.log(commandText); // sample output: 'hello (there)'
+                      console.log(phrases); // sample output: ['hello', 'halo', 'yellow', 'polo', 'hello kitty']
+                      if(userSaid[0]!= "calendar") {
+                          console.log(userSaid[0]);
+                          console.log(userSaid[0]!== 'calendar');
+
+                      }
+                  });
+                  annyang.addCommands(commands);
+                  annyang.start();
+              }
+
+
+
+
+
+          </script>
+</section>
+
+
+
+{% endblock %}

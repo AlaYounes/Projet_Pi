@@ -9,6 +9,7 @@ class AppKernel extends Kernel
     {
         $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
+            new ForumBundle\ForumBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
@@ -20,6 +21,12 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new BlogBundle\BlogBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
+            new Sg\DatatablesBundle\SgDatatablesBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new FOS\CKEditorBundle\FOSCKEditorBundle(),
+            new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
+            new Nomaya\SocialBundle\NomayaSocialBundle(),
+            new \JobpostsBundle\JobpostsBundle(),
 
         ];
 

@@ -1,5 +1,5 @@
-{% extends 'base.html.twig' %}
-{#{% form_theme form 'bootstrap_3_layout.html.twig' %}#}
+{% extends 'base1.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
 {% block container %}
     <h1>Article creation</h1>
 
@@ -7,26 +7,26 @@
     {#{{ form_errors(form) }}#}
 
     {#<div>#}
-        {#{{ form_label(form.titre, "Titre de l'article") }}#}
-        {#{{ form_errors(form.titre) }}#}
-        {#{{ form_widget(form.titre, {'attr': {'class': 'form-controls','placeholder': 'Titre' ,'rows': '20'}}) }}#}
+    {#{{ form_label(form.titre, "Titre de l'article") }}#}
+    {#{{ form_errors(form.titre) }}#}
+    {#{{ form_widget(form.titre, {'attr': {'class': 'form-controls','placeholder': 'Titre' ,'rows': '20'}}) }}#}
     {#</div>#}
 
     {#<div>#}
-        {#{{ form_label(form.description) }}#}
-        {#{{ form_errors(form.description)}}#}
-        {#{{ form_widget(form.description, {'attr': {'class': 'form-controls','placeholder': 'Provide a detailed description'#}
-            {#,'rows': '5'}})  }}#}
+    {#{{ form_label(form.description) }}#}
+    {#{{ form_errors(form.description)}}#}
+    {#{{ form_widget(form.description, {'attr': {'class': 'form-controls','placeholder': 'Provide a detailed description'#}
+    {#,'rows': '5'}})  }}#}
     {#</div>#}
 
     {#<div>#}
-        {#{{ form_widget(form.imageFile) }}#}
+    {#{{ form_widget(form.imageFile) }}#}
     {#</div>#}
 
     {#<div>#}
-        {#{{ form_label(form.categorie) }}#}
-        {#{{ form_errors(form.categorie) }}#}
-        {#{{ form_widget(form.categorie) }}#}
+    {#{{ form_label(form.categorie) }}#}
+    {#{{ form_errors(form.categorie) }}#}
+    {#{{ form_widget(form.categorie) }}#}
     {#</div>#}
     {#{{ form_end(form) }}#}
 
@@ -39,12 +39,18 @@
 
     {{ form_start(form) }}
     {{ form_widget(form) }}
-    <input type="submit" value="Create"/>
+    <ul>
+        <li>
+            <input class="btn btn-block btn-info" type="submit" value="Créer"/>
+        </li>
+    </ul>
     {{ form_end(form) }}
 
-    <ul class="kafe-btn kafe-btn-mint-small full-width">
+    <ul>
         <li>
-            <a href="{{ path('article_index') }}">Back to the list</a>
+
+            <a href="{{ path('article_index') }}">
+                <input class="btn btn-block btn-info" type="submit" value="Retourner Vers La Liste"></a>
         </li>
     </ul>
 {% endblock %}

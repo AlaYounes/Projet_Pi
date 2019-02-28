@@ -2,12 +2,13 @@
 
 namespace BlogBundle\Controller;
 
-use AppBundle\Entity\User;
 use BlogBundle\Entity\Article;
 use BlogBundle\Entity\Categorie;
-use BlogBundle\Form\ArticleRechercheType;
+use BlogBundle\Form\BlogRechercheType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
+
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -26,27 +27,35 @@ class ArticleController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $article = new Article();
-        $form = $this->createForm('BlogBundle\Form\ArticleRechercheType', $article);
-        $form->handleRequest($request);
-        $em = $this->getDoctrine()->getManager();
-        $categories = $em ->getRepository('BlogBundle:Categorie')->findAll();
+        if ($this->getUser() !== null) {
+
+            $article = new Article();
+            $form = $this->createForm('BlogBundle\Form\ArticleRechercheType', $article);
+            $form->handleRequest($request);
+            $em = $this->getDoctrine()->getManager();
+            $categories = $em->getRepository('BlogBundle:Categorie')->findAll();
 //        if (!$form->isSubmitted()) {
 //            throw $this->createNotFoundException("La page n'existe pas");
 //        }
 
-        if ($form->isSubmitted() && $form->isValid()) {
+            if ($form->isSubmitted() && $form->isValid()) {
 
-            $articles = $this->getDoctrine()->getRepository('BlogBundle:Article')->findBy(array('titre'
-            => $article->getTitre()));
+                $articles = $this->getDoctrine()->getRepository('BlogBundle:Article')->findBy(array('titre'
+                => $article->getTitre()));
+            } else {
+                $articles = $this->getDoctrine()->getRepository('BlogBundle:Article')->findAll();
+            }
+
+
+            return $this->render('article/index.html.twig', array('form' => $form->createView(),
+                'articles' => $articles,
+                'categories' => $categories,
+
+            ));
         } else {
-            $articles = $this->getDoctrine()->getRepository('BlogBundle:Article')->findAll();
+            return $this->redirectToRoute('fos_user_security_login');
         }
 
-        return $this->render('article/index.html.twig', array('form' => $form->createView(),
-            'articles' => $articles,
-            'categories'=>$categories,
-        ));
     }
 
 //    Zayda :/
@@ -62,7 +71,7 @@ class ArticleController extends Controller
             => $article->getTitre()));
         } else {
             $articles = $em->getRepository('BlogBundle:Article')->findBy(array(),
-                array('dateEdition' => 'ASC'));
+                array('dateEdition' => 'DESC'));
 
         }
         $categorie = $this->getDoctrine()->getRepository('BlogBundle:Categorie')->findAll();
@@ -78,40 +87,50 @@ class ArticleController extends Controller
      */
     public function newAction(Request $request)
     {
-        $article = new Article();
-        $form = $this->createForm('BlogBundle\Form\ArticleType', $article);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
+        if ($this->getUser() !== null) {
+            $article = new Article();
+            $form = $this->createForm('BlogBundle\Form\ArticleType', $article);
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
 
-            $article->setAuteur($this->getUser());
-            $article->setDateCreation(new \DateTime());
-            $article->setDateEdition(new \DateTime());
+                $article->setAuteur($this->getUser());
+                $article->setDateCreation(new \DateTime());
+                $article->setDateEdition(new \DateTime());
 
-            $em->persist($article);
-            $em->flush();
+                $em->persist($article);
+                $em->flush();
 
-            return $this->redirectToRoute('article_show', array('id' => $article->getId()));
+                return $this->redirectToRoute('article_show', array('id' => $article->getId()));
+            }
+
+            return $this->render('article/new.html.twig', array(
+                'article' => $article,
+                'form' => $form->createView(),
+            ));
+        } else {
+            return $this->redirectToRoute('fos_user_security_login');
         }
-
-        return $this->render('article/new.html.twig', array(
-            'article' => $article,
-            'form' => $form->createView(),
-        ));
     }
 
     /**
      * Finds and displays a article entity.
-     *
+     * @param Article $article
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
      */
     public function showAction(Article $article)
     {
-        $deleteForm = $this->createDeleteForm($article);
+        if ($this->getUser() !== null) {
 
-        return $this->render('article/show.html.twig', array(
-            'article' => $article,
-            'delete_form' => $deleteForm->createView(),
-        ));
+            $deleteForm = $this->createDeleteForm($article);
+
+            return $this->render('article/show.html.twig', array(
+                'article' => $article,
+                'delete_form' => $deleteForm->createView(),
+            ));
+        }
+
+        return $this->redirectToRoute('fos_user_security_login');
     }
 
     /**
@@ -120,7 +139,9 @@ class ArticleController extends Controller
      */
     public function editAction(Request $request, Article $article)
     {
-        $user = $this->getUser();
+        if ($this->getUser() !== null) {
+
+            $user = $this->getUser();
         $nomUser = $user->getName();
         $AuteurUser = $article->getAuteur();
 //Je veux pas que tous les admins peuvent editer les artciles
@@ -128,26 +149,30 @@ class ArticleController extends Controller
         $editForm = $this->createForm('BlogBundle\Form\ArticleType', $article);
         $editForm->handleRequest($request);
 //        if ($AuteurUser == $nomUser && $this->get('security.authorization_checker')->isGranted('ROLE_ADMIN')) {
-            if ($editForm->isSubmitted() && $editForm->isValid()) {
-                if (!$article->getId()) {
-                    $article->setDateEdition(new \DateTime());
-                    $article->setDateCreation(new \DateTime());
-                }
-//            la date d'edition change seulement :p
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            if (!$article->getId()) {
                 $article->setDateEdition(new \DateTime());
-                $article->setAuteur($this->getUser());
-                $this->getDoctrine()->getManager()->flush();
-
-                return $this->redirectToRoute('article_edit', array('id' => $article->getId()));
+                $article->setDateCreation(new \DateTime());
             }
+//            la date d'edition change seulement :p
+            $article->setDateEdition(new \DateTime());
+            $article->setAuteur($this->getUser());
+            $this->getDoctrine()->getManager()->flush();
 
+            return $this->redirectToRoute('article_edit', array('id' => $article->getId()));
+        }
 
+        $count = $this->getDoctrine()->getRepository('BlogBundle:Article')->countByAccount();
 
         return $this->render('article/edit.html.twig', array(
             'article' => $article,
             'edit_form' => $editForm->createView(),
             'delete_form' => $deleteForm->createView(),
+            'count' => $count,
         ));
+        }
+
+        return $this->redirectToRoute('fos_user_security_login');
     }
 
     /**
@@ -156,16 +181,20 @@ class ArticleController extends Controller
      */
     public function deleteAction(Request $request, Article $article)
     {
-        $form = $this->createDeleteForm($article);
-        $form->handleRequest($request);
+        if ($this->getUser() !== null) {
+            $form = $this->createDeleteForm($article);
+            $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($article);
-            $em->flush();
+            if ($form->isSubmitted() && $form->isValid()) {
+                $em = $this->getDoctrine()->getManager();
+                $em->remove($article);
+                $em->flush();
+            }
+
+            return $this->redirectToRoute('article_index');
+        }else{
+            return $this->redirectToRoute('fos_user_security_login');
         }
-
-        return $this->redirectToRoute('article_index');
     }
 
     /**
@@ -185,8 +214,11 @@ class ArticleController extends Controller
 
     /**
      * @ParamConverter("Categorie", options={"mapping":{"id":"id"}})
+     * @param Request $request
+     * @param Categorie $categorie
+     * @return Response
      */
-    public function findByCategorieAction(Request $request,Categorie $categorie)
+    public function findByCategorieAction(Request $request, Categorie $categorie)
     {
 ////        $articles = $this->getDoctrine()->getRepository('BlogBundle:Article')->findBy(array('categorie' =>
 ////            '1'));
@@ -210,12 +242,12 @@ class ArticleController extends Controller
 //           ->search($id);
 //
         $em = $this->getDoctrine()->getManager();
-        $articles = $em->getRepository('BlogBundle:Article')->findBy(array('categorie'=>$categorie));
-        $categories = $em ->getRepository('BlogBundle:Categorie')->findAll();
+        $articles = $em->getRepository('BlogBundle:Article')->findBy(array('categorie' => $categorie));
+        $categories = $em->getRepository('BlogBundle:Categorie')->findAll();
         return $this->render('article/index.html.twig', array(
 //            'form' => $form->createView(),
             'articles' => $articles,
-            'categories'=>$categories,
+            'categories' => $categories,
         ));
 
     }
@@ -237,7 +269,7 @@ class ArticleController extends Controller
         return $this->render('article/index.html.twig', array('form' => $form->createView(),
             'articles' => $articles,
             'categories' => $categorie
-            ));
+        ));
     }
 
     public function SearchArticleAction(Request $request)
@@ -286,6 +318,7 @@ class ArticleController extends Controller
             $result['entities']['error'] = "not found";
         } else {
             $result['entities'] = $this->getRealEntities($entities);
+
         }
         return new Response(json_encode($result));
     }
@@ -294,30 +327,26 @@ class ArticleController extends Controller
     {
         foreach ($entities as $entity) {
 //            $realEntities[$entity->getId()] = [$entity->getTitre(), $entity->getImage()];
-            $realEntities[$entity->getId()] = [$entity->getTitre(), $entity->getAuteur(),$entity->getDescription()
-                ,$entity->getDateCreation()];
+            $realEntities[$entity->getId()] = [$entity->getTitre(), $entity->getAuteur(), $entity->getDescription()
+                , $entity->getDateCreation()];
 //            ,$entity->getDateEdition(),$entity->getImage(),$entity->getCatégorie_Name()];
         }
         return $realEntities;
     }
 
-// Ajax search 2 TEST TEST
-//    public function searchAjaxAction(Request $request)
-//    {
-//        $em = $this->getDoctrine()->getManager();
-//        $user = $this->getUser();
-//
-//        $article = $em->getRepository('BlogBundle:Article')->findAll();
-//        $queryBuilder = $em->getRepository("BlogBundle:Article")->createQueryBuilder('x');
-//        if ($request->query->getAlnum('filter')) {
-//            $queryBuilder->where('x.auteur LIKE :auteur')
-//                ->setParameter('auteur', '%' . $request->query->getAlnum('filter') . '%');
-//        }
-//        $query = $queryBuilder->getQuery();
-//        return $this->render('article/index.html.twig', array(
-//            'clubs' => $article,
-//        ));
-//    }
-
-
+    public function rechercheAction(Request $request, Article $article)
+    {
+        $searchForm = $this->createForm(BlogRechercheType::class, $article);
+        $searchForm->handleRequest($request);
+        if ($searchForm->isSubmitted() && $searchForm->isValid()) {
+            $searchQuery = $this->getDoctrine()->getRepository('BlogBundle:Article')->createQueryBuilder('b')
+                ->where('b.title LIKE :word')->setParameter('word', '%' . $article->getTitle() . '%')
+                ->getQuery();
+            $blogs = $searchQuery->getResult();
+            return $this->render('blog/searchBlog.html.twig', array('searchForm' => $searchForm->createView()
+            , 'blogs' => $blogs));
+        }
+        return $this->render('blog/searchBlog.html.twig', array('searchForm' => $searchForm->createView()
+        , 'articles' => $article));
+    }
 }

@@ -17,7 +17,7 @@ class AnnoncesPostsRepository extends \Doctrine\ORM\EntityRepository
 
     public function findbest()
     {
-        $query = $this->getEntityManager()->createQuery("SELECT strtodate(p.datedebut, '%Y/%m/%d') FROM JobpostsBundle:AnnoncesPosts p ");
+        $query = $this->getEntityManager()->createQuery("SELECT strtodate(p.datedebut, '%Y%/%m%/%d%') FROM JobpostsBundle:AnnoncesPosts p ");
         return $query->getResult();
     }
 

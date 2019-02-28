@@ -31,7 +31,6 @@ use Symfony\Component\Serializer\Normalizer\GetSetMethodNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
-
 class DefaultController extends Controller
 {
     public function indexAction()
@@ -113,7 +112,7 @@ return $this->redirectToRoute('AjouterAnnonce');
             $motivation=$_POST["motivation"];
             $ida=$_POST["ida"];
 
-            $annonce=new AnnoncesPosts();
+
             $annonce= $this->getDoctrine()->getManager()->getRepository(AnnoncesPosts::class)->find($ida);
             $dated=$annonce->getDatedebut();
            $datef= $annonce->getDatefin();
@@ -121,7 +120,7 @@ return $this->redirectToRoute('AjouterAnnonce');
 
             if(sizeof($Demande)>0){
 
-                return $this->redirectToRoute('Listeannonces');
+                return $this->redirectToRoute('Reponse');
 
             }
             else{
@@ -173,6 +172,10 @@ return $this->redirectToRoute('AjouterAnnonce');
 
     public function ListedemandesAction(Request $request)
     {
+
+
+
+
         $listeDemande = $this->getDoctrine()->getManager()->getRepository(Demande::class)->findDemandeDQL(1);
 
 
@@ -271,6 +274,22 @@ return $this->redirectToRoute('AjouterAnnonce');
     }
 
 
+    public function ListeDemandedatatableAction(Request $request)
+    {
+
+        $listeDemande = $this->getDoctrine()->getManager()->getRepository(Demande::class)->findByIduserA(1);
+
+
+        $data = array(
+            'listeDemande' => $listeDemande,
+
+
+        );
+
+
+        return $this->render('@Jobposts/Default/datatabledemande.html.twig', $data);
+    }
+
 
     public function ApprouverdemandeAction(Request $request,$id)
     {
@@ -304,7 +323,32 @@ return $this->redirectToRoute('AjouterAnnonce');
         }
 
 
+        public function TerminerdemandeAction(Request $request,$id)
+    {
 
+        $em = $this->getDoctrine()->getManager();
+        $Demande = $this->getDoctrine()->getManager()->getRepository(Demande::class)->find($id);
+
+
+        $Demande->setEtatd(2);
+
+        $em->persist($Demande);
+        $em->flush();
+
+
+
+        return $this->redirectToRoute('ListeDemandedatatable');
+
+    }
+
+
+    public function ReponseAction()
+    {
+
+
+
+        return $this->render('@Jobposts/Default/reponse.html.twig');
+    }
 
 
 
